@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
   Shield, 
@@ -543,7 +543,10 @@ const ProfessionalAlarm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    const isStaticEnv = window.location.hostname.includes('github.io') || window.location.hostname === 'localhost';
+    
     try {
+      // Intentamos llamar a la API, pero en GitHub Pages fallará (404)
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -561,19 +564,15 @@ const ProfessionalAlarm = () => {
           prioridad: ''
         });
         
-        // Reset check consent if possible (though it's usually handled by the required attribute and browser state, 
-        // we'll just let the state handle the fields)
         const consentCheckbox = document.getElementById('consent') as HTMLInputElement;
         if (consentCheckbox) consentCheckbox.checked = false;
 
-        // Reset state after 3 seconds
-        setTimeout(() => {
-          setIsSent(false);
-        }, 3000);
+        setTimeout(() => setIsSent(false), 3000);
+      } else {
+        throw new Error('API not available or error occurred');
       }
     } catch (error) {
-      console.error('Error al enviar:', error);
-      // Fallback a mailto si falla la API
+      console.log('Ambiente estático detectado o API no disponible, usando fallback mailto');
       const body = `
 Nueva Solicitud de Estudio de Seguridad - TISA
 ----------------------------------------------
@@ -589,9 +588,7 @@ Urgencia: ${formData.prioridad}
       window.location.href = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(body)}`;
       setIsSent(true);
       
-      setTimeout(() => {
-        setIsSent(false);
-      }, 3000);
+      setTimeout(() => setIsSent(false), 3000);
     } finally {
       setIsSubmitting(false);
     }
@@ -970,7 +967,7 @@ const Home = () => {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <ScrollToTop />
       <ScrollToHashElement />
       <div className="font-sans antialiased bg-neutral-950 text-neutral-50 min-h-screen">
@@ -986,7 +983,7 @@ export default function App() {
         
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

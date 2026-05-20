@@ -27,12 +27,11 @@ jobs:
       - name: Configurar Node.js (Node 24)
         uses: actions/setup-node@v4
         with:
-          node-version: 24 # Actualizado para evitar el aviso de obsolescencia
+          node-version: 24
           cache: 'npm'
 
-      - name: Instalar dependencias
-        # Usamos --legacy-peer-deps por si React 19 tiene conflictos con librerías antiguas
-        run: npm install --legacy-peer-deps 
+      - name: Instalar dependencias limpias (con Lockfile)
+        run: npm ci
 
       - name: Construir aplicación (Build)
         run: npm run build

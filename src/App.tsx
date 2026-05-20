@@ -39,7 +39,6 @@ import BlogList from './components/BlogList';
 import BlogPostDetail from './components/BlogPost';
 import SolutionDetail from './components/SolutionDetail';
 import SecurityQuiz from './components/SecurityQuiz';
-import AllSolutions from './components/AllSolutions';
 import LegalNotice from './pages/LegalNotice';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import CookiePolicy from './pages/CookiePolicy';

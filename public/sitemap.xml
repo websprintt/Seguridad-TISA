@@ -1,33 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://seguridadeficaz.es/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <loc>https://tisaseguridad.shop/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://seguridadeficaz.es/blog</loc>
-    <lastmod>2026-05-08</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://tisaseguridad.shop/blog</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/servicios-de-blindaje</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seguridadeficaz.es/blog/mejores-camaras-vigilancia-exterior-2026</loc>
-    <lastmod>2026-05-15</lastmod>
+    <loc>https://tisaseguridad.shop/evaluacion</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://seguridadeficaz.es/blog/evitar-okupas-ciudad-real-guia-2026</loc>
+    <loc>https://tisaseguridad.shop/contacto</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Soluciones -->
+  <url>
+    <loc>https://tisaseguridad.shop/soluciones/vivienda</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/soluciones/negocios</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/soluciones/residencias</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://tisaseguridad.shop/blog/evitar-okupas-guia-segunda-vivienda</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://seguridadeficaz.es/blog/diferencia-alarma-camara-realidad</loc>
-    <lastmod>2026-06-20</lastmod>
+    <loc>https://tisaseguridad.shop/blog/mejor-camara-exterior-wifi-2026</loc>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/blog/errores-comunes-instalacion-alarmas</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/blog/opiniones-tecnicas-suscripciones-seguridad</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/blog/verisure-vale-la-pena-analisis</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/blog/guia-configuracion-cctv-segura</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://tisaseguridad.shop/politica-de-privacidad</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/politica-de-cookies</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tisaseguridad.shop/aviso-legal</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

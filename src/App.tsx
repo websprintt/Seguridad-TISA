@@ -35,16 +35,26 @@ import {
   ShieldCheck,
   Send
 } from 'lucide-react';
-import BlogList from './components/BlogList';
-import BlogPostDetail from './components/BlogPost';
-import SolutionDetail from './components/SolutionDetail';
-import SecurityQuiz from './components/SecurityQuiz';
-import AllSolutions from './components/AllSolutions';
-import LegalNotice from './pages/LegalNotice';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import CookiePolicy from './pages/CookiePolicy';
-import Contact from './pages/Contact';
 import { blogPosts } from './data/blogPosts';
+
+const BlogList = React.lazy(() => import('./components/BlogList'));
+const BlogPostDetail = React.lazy(() => import('./components/BlogPost'));
+const SolutionDetail = React.lazy(() => import('./components/SolutionDetail'));
+const SecurityQuiz = React.lazy(() => import('./components/SecurityQuiz'));
+const AllSolutions = React.lazy(() => import('./components/AllSolutions'));
+const LegalNotice = React.lazy(() => import('./pages/LegalNotice'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+const CookiePolicy = React.lazy(() => import('./pages/CookiePolicy'));
+const Contact = React.lazy(() => import('./components/ContactPage'));
+
+const RootLoader = () => (
+  <div className="flex items-center justify-center min-h-[60vh] text-neutral-400">
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-8 h-8 rounded-full border-2 border-neutral-800 border-t-blue-500 animate-spin" />
+      <span className="text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-500">Cargando...</span>
+    </div>
+  </div>
+);
 
 import { 
   ENCODED_PHONE, 
@@ -1237,23 +1247,25 @@ export default function App() {
         <div className="relative z-10">
           <Navbar />
           
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/diagnostico" element={<Home />} />
-            <Route path="/soluciones" element={<Home />} />
-            <Route path="/escuela" element={<Home />} />
-            <Route path="/blog-seccion" element={<Home />} />
-            <Route path="/experiencia" element={<Home />} />
-            <Route path="/blog" element={<BlogList />} />
-            <Route path="/blog/:id" element={<BlogPostDetail />} />
-            <Route path="/soluciones/:id" element={<SolutionDetail />} />
-            <Route path="/servicios-de-blindaje" element={<AllSolutions />} />
-            <Route path="/evaluacion" element={<SecurityQuiz />} />
-            <Route path="/aviso-legal" element={<LegalNotice />} />
-            <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
-            <Route path="/politica-de-cookies" element={<CookiePolicy />} />
-            <Route path="/contacto" element={<Contact />} />
-          </Routes>
+          <React.Suspense fallback={<RootLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/diagnostico" element={<Home />} />
+              <Route path="/soluciones" element={<Home />} />
+              <Route path="/escuela" element={<Home />} />
+              <Route path="/blog-seccion" element={<Home />} />
+              <Route path="/experiencia" element={<Home />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:id" element={<BlogPostDetail />} />
+              <Route path="/soluciones/:id" element={<SolutionDetail />} />
+              <Route path="/servicios-de-blindaje" element={<AllSolutions />} />
+              <Route path="/evaluacion" element={<SecurityQuiz />} />
+              <Route path="/aviso-legal" element={<LegalNotice />} />
+              <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
+              <Route path="/politica-de-cookies" element={<CookiePolicy />} />
+              <Route path="/contacto" element={<Contact />} />
+            </Routes>
+          </React.Suspense>
           
           <Footer />
         </div>

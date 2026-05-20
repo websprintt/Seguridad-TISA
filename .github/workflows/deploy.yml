@@ -3,15 +3,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Se ejecutará cada vez que hagas un push a la rama main
+      - main
 
-# Permisos necesarios para interactuar con GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Evita que múltiples despliegues simultáneos se pisen entre sí
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -26,14 +24,15 @@ jobs:
       - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: Configurar Node.js (Node 24)
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm' # Cachea las dependencias para que el deploy sea ultra rápido
+          node-version: 24 # Actualizado para evitar el aviso de obsolescencia
+          cache: 'npm'
 
       - name: Instalar dependencias
-        run: npm ci # Instalación limpia basada estrictamente en tu package-lock.json
+        # Usamos --legacy-peer-deps por si React 19 tiene conflictos con librerías antiguas
+        run: npm install --legacy-peer-deps 
 
       - name: Construir aplicación (Build)
         run: npm run build
@@ -44,7 +43,7 @@ jobs:
       - name: Subir artefacto para Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Sube la carpeta 'dist' que genera Vite
+          path: './dist'
 
       - name: Desplegar en GitHub Pages
         id: deployment

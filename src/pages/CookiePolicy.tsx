@@ -1,10 +1,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Database, Info, ExternalLink } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const CookiePolicy: React.FC = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen">
+      <Helmet>
+        <title>Política de Cookies | TISA Seguridad</title>
+        <meta name="description" content="Información transparente sobre el uso de cookies propias y de terceros para analítica y rendimiento en TISA." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://tisaseguridad.shop/politica-de-cookies" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

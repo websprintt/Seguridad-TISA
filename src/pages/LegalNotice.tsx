@@ -1,10 +1,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, Scale, Info } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const LegalNotice: React.FC = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen">
+      <Helmet>
+        <title>Aviso Legal | TISA Seguridad</title>
+        <meta name="description" content="Aviso legal, términos de uso y condiciones de navegación para el portal de Seguridad TISA." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://tisaseguridad.shop/aviso-legal" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

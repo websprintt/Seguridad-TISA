@@ -1,10 +1,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, Eye, Lock } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="pt-32 pb-20 min-h-screen">
+      <Helmet>
+        <title>Política de Privacidad | TISA Seguridad</title>
+        <meta name="description" content="Información detallada sobre el tratamiento de tus datos personales, cumplimiento del RGPD y privacidad en TISA." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://tisaseguridad.shop/politica-de-privacidad" />
+      </Helmet>
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

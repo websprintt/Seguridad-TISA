@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
@@ -23,6 +23,7 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.15.0",
     "remark-breaks": "^4.0.0",
+    "remark-gfm": "^4.0.1",
     "vite": "^6.2.3"
   },
   "devDependencies": {

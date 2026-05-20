@@ -437,7 +437,10 @@ export default function SecurityQuiz() {
     return (
       <div className="pt-40 pb-32 bg-neutral-950 min-h-screen bg-grid">
         <Helmet>
-          <title>Resultado de Evaluación de Seguridad | TISA</title>
+          <title>Resultado de tu Evaluación de Seguridad | TISA Seguridad</title>
+          <meta name="description" content="Resultados personalizados del test de seguridad de TISA. Comprobación de vulnerabilidades y de consejos de protección recomendados." />
+          <meta name="robots" content="noindex, follow" />
+          <link rel="canonical" href="https://tisaseguridad.shop/evaluacion" />
         </Helmet>
         <div className="container mx-auto px-6 max-w-4xl">
           <motion.div 
@@ -718,6 +721,21 @@ export default function SecurityQuiz() {
     <div className="pt-40 pb-32 bg-neutral-950 min-h-screen bg-grid">
       <Helmet>
         <title>Test de Seguridad Escudo TISA | Evalúa tu Vivienda</title>
+        <meta name="description" content="Realiza nuestro test de seguridad gratuito en 10 minutos para auditar los puntos vulnerables de tu hogar o negocio con consejos prácticos personalizados." />
+        <link rel="canonical" href="https://tisaseguridad.shop/evaluacion" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Test de Seguridad Escudo TISA | Evalúa tu Vivienda" />
+        <meta property="og:description" content="Realiza nuestro test de seguridad gratuito en 10 minutos para auditar los puntos vulnerables de tu hogar o negocio." />
+        <meta property="og:url" content="https://tisaseguridad.shop/evaluacion" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Test de Seguridad Escudo TISA | Evalúa tu Vivienda" />
+        <meta name="twitter:description" content="Realiza nuestro test de seguridad gratuito en 10 minutos para auditar los puntos vulnerables de tu hogar o negocio." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-20">

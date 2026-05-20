@@ -13,7 +13,21 @@ const ContactPage = () => {
     <div className="pt-40 pb-32 bg-neutral-950 min-h-screen bg-grid">
       <Helmet>
         <title>Contacto | TISA Seguridad</title>
-        <meta name="description" content="Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías y asesoramiento técnico profesional." />
+        <meta name="description" content="Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías y asesoramiento técnico profesional en España." />
+        <link rel="canonical" href="https://tisaseguridad.shop/contacto" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Contacto | TISA Seguridad" />
+        <meta property="og:description" content="Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías y asesoramiento técnico profesional en España." />
+        <meta property="og:url" content="https://tisaseguridad.shop/contacto" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contacto | TISA Seguridad" />
+        <meta name="twitter:description" content="Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías y asesoramiento técnico profesional en España." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
       </Helmet>
 
       <div className="container mx-auto px-6 max-w-6xl">

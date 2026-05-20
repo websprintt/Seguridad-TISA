@@ -29,6 +29,20 @@ const BlogList = () => {
       <Helmet>
         <title>Blog de Seguridad y Alarmas | TISA Seguridad</title>
         <meta name="description" content="Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España." />
+        <link rel="canonical" href="https://tisaseguridad.shop/blog" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Blog de Seguridad y Alarmas | TISA Seguridad" />
+        <meta property="og:description" content="Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España." />
+        <meta property="og:url" content="https://tisaseguridad.shop/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog de Seguridad y Alarmas | TISA Seguridad" />
+        <meta name="twitter:description" content="Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
       </Helmet>
       
       <div className="container mx-auto px-6">

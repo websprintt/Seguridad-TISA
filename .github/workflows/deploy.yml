@@ -24,14 +24,14 @@ jobs:
       - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Configurar Node.js (Node 24)
+      - name: Configurar Node.js (Forzar Node 24)
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'npm'
 
-      - name: Instalar dependencias limpias (con Lockfile)
-        run: npm ci
+      - name: Instalar dependencias a la fuerza
+        # Forzamos la instalación ignorando bloqueos del lockfile viejo
+        run: npm install --legacy-peer-deps --no-audit --no-fund
 
       - name: Construir aplicación (Build)
         run: npm run build

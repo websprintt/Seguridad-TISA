@@ -11,7 +11,7 @@ const INDEX_HTML_PATH = path.join(DIST_DIR, 'index.html');
 // Slugs of blog posts matching filenames in src/data/posts/
 const SLUG_TO_FILE = {
   'guia-configuracion-cctv-segura': 'configuracion-cctv.ts',
-  'verisure-vale-la-pena-analisis': 'analisis-verisure.ts',
+  'alarmas-cuota-mensual-vale-la-pena': 'alarmas-cuota-mensual-vale-la-pena',
   'opiniones-tecnicas-suscripciones-seguridad': 'suscripciones-seguridad.ts',
   'errores-comunes-instalacion-alarmas': 'errores-instalacion.ts',
   'mejor-camara-exterior-wifi-2026': 'mejor-camara-wifi.ts',

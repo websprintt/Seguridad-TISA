@@ -40,9 +40,9 @@ const ROUTE_META = {
     title: 'Guía profesional para configurar CCTV en 2026 | TISA Seguridad',
     description: 'Optimización de bitrate, analítica perimetral, seguridad de red y ajuste nocturno de nivel forense para tus cámaras de vigilancia.',
   },
-  'blog/verisure-vale-la-pena-analisis': {
-    title: '¿Verisure vale la pena en 2026? Análisis técnico | TISA Seguridad',
-    description: '¿Realmente Verisure justifica su cuota mensual? Analizamos precios, tecnología PreSense, CRA y alternativas sin cuotas.',
+  'blog/alarmas-cuota-mensual-vale-la-pena': {
+    title: '¿Alarmas con cuota mensual? Análisis técnico | TISA Seguridad',
+    description: '¿Valen la pena las alarmas con cuota mensual? Analizamos precios, tecnología PreSense, CRA y alternativas sin cuotas.',
   },
   'blog/opiniones-tecnicas-suscripciones-seguridad': {
     title: 'El negocio de las suscripciones en seguridad | TISA Seguridad',

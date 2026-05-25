@@ -25,14 +25,14 @@ El cambio de generación no viene solo por resolución o diseño. Viene por tres
 
 ## Top 5 cámaras exteriores WiFi en 2026 (Comparativa real)
 
-1. **[Reolink OMVI X16 (La Bestia Pro)](https://www.amazon.es/s?k=reolink+outdoor+camera+4k)**
-Presentada en el CES de este año, es la primera cámara de 24 MP reales con sistema de triple lente.
+1. **[Reolink OMVI X16 (La Bestia Pro)](https://amzn.to/3RveknF)**
+Presentada en el CES de este año 2026, es la primera cámara de 24 MP reales con sistema de triple lente.
 
 * **Lo nuevo:** Combina una visión panorámica de 180° con un teleobjetivo PTZ de 16x que hace seguimiento automático sin perder calidad.
 * **IA ReoNeura:** No solo detecta personas; analiza "intenciones" (ej: alguien saltando una valla).
 * **Veredicto:** Si quieres la máxima evidencia pericial sin pagar cuotas, es esta.
 
- 2. **[EufyCam S380 (EufyCam 4) con BionicMind 3.0](https://www.amazon.es/s?k=eufycam+s330)**
+ 2. **[EufyCam S380 (EufyCam 4) con BionicMind 3.0](https://amzn.to/4tTQrDC)**
 La sucesora de la mítica S330. Ha perfeccionado lo que fallaba: la carga solar en invierno.
 
 * **Lo nuevo:** Panel solar de alta eficiencia (células de perovskita) que carga incluso con luz ambiental mínima.
@@ -42,21 +42,21 @@ La sucesora de la mítica S330. Ha perfeccionado lo que fallaba: la carga solar 
 ### Evalúa qué sistema de cámaras encaja con las características de tu propiedad
 (Garantiza que la infraestructura de tu inmueble soporte la calidad que necesitas)
 
- 3. **[TP-Link Tapo C460 (Calidad-Precio 2.0)](https://www.amazon.es/s?k=tapo+outdoor+camera+4k)**
+ 3. **[TP-Link Tapo C460 (Calidad-Precio 2.0)](https://amzn.to/4uvLDFB)**
 TP-Link ha ganado la carrera de la gama media con este modelo que humilla a las gamas altas de 2024.
 
 * **Lo nuevo:** Conectividad WiFi 6E/7, lo que elimina el lag al ver el directo en 4K.
 * **Detección "Edge":** Todo el procesamiento ocurre en la cámara, reduciendo las falsas alarmas por lluvia o insectos al 1%.
 * **Veredicto:** El equilibrio perfecto entre hardware robusto y una app que no falla. 
 
- 4. **[Ring Spotlight Cam Pro (Edición 2026)](https://www.amazon.es/s?k=ring+spotlight+cam+pro)**
+ 4. **[Ring Spotlight Cam Pro (Edición 2026)](https://amzn.to/4fGJbrj)**
 Ring ha tenido que claudicar ante la presión del mercado y por fin ofrece funciones avanzadas fuera de su suscripción, aunque el "corazón" sigue siendo Amazon.
 
 * **Lo nuevo:** Radar de Distancia (Bird’s Eye View 2.0) mucho más preciso. Ahora dibuja en un mapa el recorrido exacto del intruso en tu jardín.
 * **Matter Nativo:** Ya no estás encerrado en Alexa; funciona de maravilla en Google Home y Apple Home.
 * **Veredicto:** Para los que ya tienen un ecosistema Amazon y quieren la mejor integración con el timbre y la alarma.
 
- 5. **[Aqara Camera Hub G5 (La joya de la domótica)](https://www.amazon.es/s?k=aqara+camera+hub)**
+ 5. **[Aqara Camera Hub G5 (La joya de la domótica)](https://amzn.to/3PNgRJc)**
 Más que una cámara, es el cerebro de tu casa.
 
 * **Lo nuevo:** Funciona como Hub Matter y Thread. Al instalarla fuera, amplías la red para tus sensores de jardín.
@@ -67,11 +67,11 @@ Más que una cámara, es el cerebro de tu casa.
 
 | Modelo | Resolución | Innovación clave | Almacenamiento | Energía |
 | :--- | :--- | :--- | :--- | :--- |
-| [Reolink OMVI X16](https://www.amazon.es/s?k=reolink+outdoor+camera+4k) | 24 MP | Triple lente + IA | Local (SD/NVR) | Cable / PoE |
-| [EufyCam S380](https://www.amazon.es/s?k=eufycam+s330) | 4K HDR | IA generativa local | Local expandible | Solar |
-| [Tapo C460](https://www.amazon.es/s?k=tapo+outdoor+camera+4k) | 4K | WiFi 6E + Edge AI | Local SD | Batería |
-| [Ring Spotlight](https://www.amazon.es/s?k=ring+spotlight+cam+pro) | 2K+ | Radar de movimiento | Cloud (Nube) | Batería / Solar |
-| [Aqara G5](https://www.amazon.es/s?k=aqara+camera+hub) | 2K | Hub Matter + Thread | Local / NAS | Cable |
+| [Reolink OMVI X16](https://amzn.to/3RveknF) | 24 MP | Triple lente + IA | Local (SD/NVR) | Cable / PoE |
+| [EufyCam S380](https://amzn.to/4tTQrDC) | 4K HDR | IA generativa local | Local expandible | Solar |
+| [Tapo C460](https://amzn.to/4uvLDFB) | 4K | WiFi 6E + Edge AI | Local SD | Batería |
+| [Ring Spotlight](https://amzn.to/4fGJbrj) | 2K+ | Radar de movimiento | Cloud (Nube) | Batería / Solar |
+| [Aqara G5](https://amzn.to/3PNgRJc) | 2K | Hub Matter + Thread | Local / NAS | Cable |
 
 **Análisis técnico:** Lo que realmente importa en 2026 no es solo la resolución, sino la combinación entre IA local, privacidad, latencia y autonomía energética.
 
@@ -83,7 +83,7 @@ Más que una cámara, es el cerebro de tu casa.
 
 ### Mi visión como ingeniero: Más allá del marketing
 
-He comprobado en campo que el 90% de las cámaras WiFi fallan en lo básico: estabilidad de conexión y calidad de imagen con poca luz. Mi consejo personal es que busques equipos que te permitan ser el dueño real de tus grabaciones. La privacidad es un derecho, pero la seguridad real requiere ingeniería y criterio, no solo una app con un diseño bonito. Reolink y Eufy lideran este cambio alejándose de las [suscripciones abusivas](/blog/opiniones-tecnicas-suscripciones-seguridad) y el modelo de hardware cautivo y mensualidades infinitas que analizamos en la reseña de [si vale la pena Verisure](/blog/verisure-vale-la-pena-analisis).
+He comprobado en campo que el 90% de las cámaras WiFi fallan en lo básico: estabilidad de conexión y calidad de imagen con poca luz. Mi consejo personal es que busques equipos que te permitan ser el dueño real de tus grabaciones. La privacidad es un derecho, pero la seguridad real requiere ingeniería y criterio, no solo una app con un diseño bonito. Reolink y Eufy lideran este cambio alejándose de las [suscripciones abusivas](/blog/opiniones-tecnicas-suscripciones-seguridad) y el modelo de hardware cautivo y mensualidades infinitas que analizamos en la reseña de [si vale la pena Verisure](/blog/alarmas-cuota-mensual-vale-la-pena).
 
 ## Conclusión: Cuál elegir realmente en 2026
 

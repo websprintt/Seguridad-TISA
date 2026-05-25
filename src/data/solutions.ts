@@ -171,7 +171,7 @@ export const solutionCategories: SolutionCategory[] = [
       },
       {
         id: "n5",
-        name: "Eufy Security Cam 3C - Kit de 2 Cámaras",
+        name: "Eufy Security Cam 3C (S300)",
         description: "Sistema de cámaras 100% inalámbrico con resolución 4K nativa y central inteligente local, ideal para locales de alquiler sin opción a cableado u obras.",
         advantages: [
           "Resolución 4K Inalámbrica: Máxima calidad del mercado sin necesidad de cables de vídeo.",
@@ -179,7 +179,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Batería de larga duración: Hasta 180 días de autonomía con una sola carga."
         ],
         whyRecommend: "Si tu local es de alquiler o la normativa de tu oficina te impide hacer obras para pasar cables, esta es la única opción inalámbrica que me atrevo a recomendarte como profesional. La elijo porque su señal encriptada es sumamente estable frente a interferencias y porque su resolución 4K real te asegura el nivel de detalle que vas a necesitar ante cualquier reclamación o incidente legal en tu empresa.",
-        amazonUrl: "https://www.amazon.es/s?k=eufy+Security+Cam+3C",
+        amazonUrl: "https://www.amazon.es/dp/B0B7NNL1R3?&linkCode=ll2&tag=tisaseguridad-21&linkId=cfae9860b54205ee925fcd5e58195bde&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/51iX6MRu1+L._AC_SL1125_.jpg",
         category: "Inalámbrico Pro"
       },
@@ -193,7 +193,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Resistencia térmica: Componentes preparados para soportar el calor constante dentro de los armarios de servidores de los negocios."
         ],
         whyRecommend: "Insisto firmemente en que no escatimes en el almacenamiento. Mi recomendación por la gama 'Purple Pro' se basa en la experiencia: un negocio exige cámaras de mucha resolución grabando 24/7 y procesando datos de inteligencia artificial a la vez. Este componente es el único que te garantiza que el día que necesites descargar una prueba crucial para un seguro o un juicio, el vídeo estará ahí, intacto y sin saltos de fotogramas.",
-        amazonUrl: "https://www.amazon.es/s?k=WD+Purple+Pro+4TB",
+        amazonUrl: "https://www.amazon.es/Western-Digital-Purple-4000GB-Serial/dp/B071KVB4F8?dib=eyJ2IjoiMSJ9.OAtK_ovmYSOKvpmNf8GdnqVaXA5OiZkotqEqEhTIfgJPoem7We7lUPRZgADrKR9y29DEQBl6bjqG-oJXQGxkQ0IMP0SnO0oo1GaqwHBdjFS2IB3sm0LNMVvJtTx2lQ71ZmjBzP9IKXPIi1ZAfDrJecHEFo3BHzWn32nEwXif0DzqFpdamoqKtkHaL6t-Q_qznReSNZIVAyw8Gk8a7CAYpApFzpsZM-wiqFQvGcaYsrnmCsD5SXx0MohKM9HBlRjyqPQByGc7m_I5NlQVW4_EbglJqStP1MbcEvHHP0Nz7Xk.fLm8gilAr4KgXmtWoLhW_YxyqqA9nus299A7jJqptD4&dib_tag=se&keywords=WD+Purple+Pro+4TB&qid=1779721499&sr=8-1&ufe=app_do%3Aamzn1.fos.4c3f56c3-e485-4a35-9abc-6532b61c3b62&linkCode=ll2&tag=tisaseguridad-21&linkId=75596a316f9ff62e8cb329f9843c55e6&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/81gNvA7tOpL._AC_SX679_.jpg",
         category: "Almacenamiento"
       }
@@ -214,7 +214,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Plena validez legal: Acelera el desalojo inmediato al aportar pruebas en flagrante delito que exige la policía para intervenir."
         ],
         whyRecommend: "Para una segunda residencia, una cámara WiFi común no basta, ya que los ocupas saben que basta con bajar el plomo de la luz para apagarla. Recomiendo el ecosistema de Ajax porque cumple de verdad con mi promesa de 'Anti-ocupación Real'. Te asegura el control total a distancia y te da la verificación visual instantánea que exige la policía para intervenir de inmediato, todo sin depender de la corriente eléctrica.",
-        amazonUrl: "https://www.amazon.es/s?k=Ajax+StarterKit+Cam",
+        amazonUrl: "https://www.amazon.es/Alarm-Security-STARTERKIT-White-20288/dp/B0C25MFNQS?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=XNHUJ8IOHKV1&dib=eyJ2IjoiMSJ9.44V1bF842VszX9I87V-ml0DcumGHK_bkDvepd6kx70gkhodIWGvdlGHm17ostcnoLCB7qGra0T53CqYg7T4c7LDd71JPFagPoUbBRJ2TYAFPzGBLeWvYQTN3FDLyG087F3X1WEO47o4O_82ivsC8uzQOHCUZvCf5fBSZvTmS62kZtY-UxPLjnlp4cYmU7RheZzg_cvoqaagM_XkeFdYfcGTTKXPkW04YkeHX_N8TjqUQShL-GuvnlUQvom3grsI1GmQtpWmNFJgxx7svivMvEGwHvdvUrawV8T_I2nbr5X8.kmawhsvPFiDfa-X2vxEPnP7pkxYHIQiBbHcnmFL7yGQ&dib_tag=se&keywords=Ajax+StarterKit+Cam+fotoverificacion&qid=1779721657&sprefix=ajax+starterkit+cam+fotoverificacion%2Caps%2C82&sr=8-3&ufe=app_do%3Aamzn1.fos.4c3f56c3-e485-4a35-9abc-6532b61c3b62&linkCode=ll2&tag=tisaseguridad-21&linkId=128865431cd4f24041428c31df9fc4db&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/5137yX3icxL._AC_SL1500_.jpg",
         category: "Sistema Anti-Ocupación"
       },
@@ -228,7 +228,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Detección Inteligente IA: Su motor integrado filtra movimientos de viento y animales, alertándote solo de personas."
         ],
         whyRecommend: "Mantengo el concepto de cámara 4G de tu lista, pero doy el salto a la versión Go Ultra 4K. Es mi elección experta para segundas residencias porque, al no depender del router de la casa ni de la red eléctrica, se convierte en tu vigilante perimetral más fiable. Aunque saboteen la electricidad de la vivienda, esta cámara te seguirá transmitiendo vídeo en directo en la máxima resolución del mercado.",
-        amazonUrl: "https://www.amazon.es/s?k=Reolink+Go+Ultra",
+        amazonUrl: "https://www.amazon.es/Reolink-Bidireccional-Ultra-Panel-Solar/dp/B0C2ZBFYQ9?dib=eyJ2IjoiMSJ9.6uJlnoG5XKRSRuSbbmA45l_wMZKSkcJbg0215RLsb660Qm6f1lM7Afc2eF3K5c6BEYf2D0-Tf7dh-7T7FtuKowNaB2-4oSQxSdYNmnRHetOWOgG42xnOnmjqqQeum9NetYcWIczxrPgJ2zi-X_n8rOSN7q9HB-ETBJQM0OwQnkPCIHUZ9--WOjaf_WDnoT2CCZngzDMKbTo-t0IGu4jOu_Bi8ZPcmBxxugACScAj0JD3qcjrZ_XvQRaN-dSLCFz8cjR2ZsXJ3rgwRKGctO_pghM_58-twzV0ZKNU20D1H3g.nTEgVXJ_DxeUW2GuwhiOy_MPXMLUrHAzR85YZ-iHDfg&dib_tag=se&keywords=Reolink%2BGo%2BUltra&qid=1779721922&sr=8-4&ufe=app_do%3Aamzn1.fos.4c3f56c3-e485-4a35-9abc-6532b61c3b62&th=1&linkCode=ll2&tag=tisaseguridad-21&linkId=96b7be7210b74174584bb6980a0f115b&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/61w5k1SUxOL._AC_SL1500_.jpg",
         category: "Cámara 4G Autónoma"
       },
@@ -242,7 +242,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Almacenamiento Local Gratuito: Guarda clips históricos internamente en la HomeBase sin suscripciones adicionales."
         ],
         whyRecommend: "He seleccionado la SoloCam S340 como la cámara exterior principal porque soluciona el gran problema de las casas de vacaciones: los meses de ausencia. Al cargarse con el sol, mi criterio para recomendarla es que elimina el riesgo de quedarte a ciegas por un fallo de batería. Además, su doble lente te ofrece una capacidad de verificación visual rápida y de alta fidelidad que las cámaras tradicionales fijas no pueden igualar.",
-        amazonUrl: "https://www.amazon.es/s?k=eufy+SoloCam+S340",
+        amazonUrl: "https://www.amazon.es/eufy-Security-inal%C3%A1mbrica-vigilancia-Compatible/dp/B0CF8R2P24?dib=eyJ2IjoiMSJ9.AiQmQzs32GHo7PrXT0OkuPv4UrZCUOdDn46on8kVhZkvCuECD2wMo9MmZ1W0tGmFvOuqgjJhMLZjauPBk73OJiLINxrUjw_dieyWpJuBI4DDNGo4SJla_GIB7fG63znbXpHGGmiWeNkrFLzdKnJsr3nsxOtKoOP8pa19SXHqe30T9rsXTAtOa1iVz-hy-oEWNI6IC82yJYu570lGQ6Wq7JTp3OV4WNiNu_239xoxLmntjKo6BOM9tBXfa8fkW_WCBdg5V34PMFWd0mz-StefxJ6639jDvHEHJQ1wnw6bqYw.-QZLnbE3flPqZ46ngl1jP-8QfMdUswZ4H6DxeEKyT8s&dib_tag=se&keywords=eufy%2BSoloCam%2BS340&qid=1779721994&sr=8-1&th=1&linkCode=ll2&tag=tisaseguridad-21&linkId=370122e838a7b6bdb73c33b24c278348&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/61f+qXLtQcL._AC_SL1500_.jpg",
         category: "Solar con Rotación"
       },
@@ -256,7 +256,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Alertas en red compartida: Enlaza múltiples smartphones para avisar a vecinos o familiares cercanos si estás de viaje."
         ],
         whyRecommend: "El vandalismo no es el único peligro cuando una casa pasa meses cerrada; un cortocircuito puede destruirla por completo. Recomiendo mantener este dispositivo de X-Sense porque su fiabilidad está más que contrastada. Es mi sugerencia imprescindible para garantizarte la tranquilidad total a distancia, permitiéndote reaccionar y llamar a los bomberos antes de que el fuego se propague.",
-        amazonUrl: "https://www.amazon.es/s?k=X-Sense+XS01-WX",
+        amazonUrl: "https://www.amazon.es/X-Sense-XS01-M-ProConnected-fotoel%C3%A9ctrico-Compatible/dp/B0BMQ52BC8?dib=eyJ2IjoiMSJ9.rgojgF2QWnIqzSsG0ERwhRg4dLd-p6lmBgrsVz9IJ1cJFs2n9HxbcAXkDpjytsjMeS0YGFoeSUZsGIRWLDVURWeKJHvmVpHmG05_AZcIcRwYIcfyuv4FJ2BYyPTGO_hLCGpBX8PuWVHMylcFNNEBakwAzlNIbN10_tHoCZdp5NFxbebAdAXWQ1RaSc91bXEM0p1HBtVPPakz_kcmBz7d8ZNVJ7LTjJz33s7cm9zjHPznYGb7xB2F5UrqaHaoyhEqjW292SP3ouMzWdtmRoj3zQH_e7p9iv4f9zwBgn1cT6Y.0kEuEz53fr-AND2wckF272CxN0OJajth2pSSU24S0f8&dib_tag=se&keywords=X-Sense%2BXS01-WX&qid=1779722057&sr=8-1-spons&ufe=app_do%3Aamzn1.fos.4c3f56c3-e485-4a35-9abc-6532b61c3b62&aref=L4Qc2NLKVU&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=tisaseguridad-21&linkId=7f54d341fd527c02444377c95533c3f5&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/61EhpGxZ4iL._AC_SL1500_.jpg",
         category: "Seguridad Incendio"
       },
@@ -270,7 +270,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Instalación interna invisible: Se monta sobre el bombín actual interior sin alterar el aspecto exterior de la vivienda."
         ],
         whyRecommend: "He sustituido la opción de SwitchBot por el nuevo estándar de Nuki porque en una segunda residencia necesitas la máxima fiabilidad mecánica. Recomiendo este modelo porque su sistema de encriptación es de nivel bancario y te permite solucionar imprevistos a distancia (como dejar pasar a un fontanero si hay una fuga) sin tener que conducir durante horas para abrir la puerta tú mismo.",
-        amazonUrl: "https://www.amazon.es/s?k=Nuki+Smart+Lock+Ultra",
+        amazonUrl: "https://www.amazon.es/cerradura-electr%C3%B3nica-Bluetooth-Integraci%C3%B3n-diferentes/dp/B0DN1SZCTL?dib=eyJ2IjoiMSJ9.I3a5LNrwae8WlGLCbRTysdbYef7uwG5lw9M4Ha2ohGnEmax1FQrVX5ccpLuv8WsoLKk5BMBK3sz5VzfBQklgN9bsbpyeCObQNmTexJU8dkH7Koh6LjJvzaVQN_qqdP4GQ6E8txWhCqfGwW2UqaNrC8_uGGHKns2aKH_kKhATrTOA8nIUk_QaUgV3O3NOO6Gn3GxWmViFpRXkbhVd3XeXvxwn4kLuKwrHH2YTAPg3KWHQgW6xawrpk6vrnGcOLCJuhnSn2MUHw5t0Ix7gAioNecSEusigRimejE71Phnu6gc.l4U9ghqj5WpoXDnHsNIjAC79L3SYg3Av2uJQgaeZ7c4&dib_tag=se&keywords=Nuki+Smart+Lock+Ultra&qid=1779722095&sr=8-1&ufe=app_do%3Aamzn1.fos.73cb57b4-37b0-490e-9d49-9873e628f7ec&linkCode=ll2&tag=tisaseguridad-21&linkId=21ccf7ec0327ba31b06bbd7937308108&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/71KS2hREWwL._AC_SL1500_.jpg",
         category: "Control de Acceso"
       },
@@ -284,7 +284,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Ecosistema expandible: El hub local activa sirenas sonoras disuasorias disuadiendo al sospechoso en el momento."
         ],
         whyRecommend: "Recomiendo colocar estos sensores en todos los puntos vulnerables de tu segunda residencia porque actúan como tu primera línea de defensa activa. Mi criterio técnico para elegirlos por encima de los sensores WiFi comunes es su velocidad: te avisarán al móvil de inmediato si alguien intenta manipular una persiana, permitiéndote abrir las cámaras de seguridad al instante para realizar una verificación rápida de la situación.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Tapo+T110+Hub+H100",
+        amazonUrl: "https://www.amazon.es/Bundle-TP-Link-Sensor-Contacto-Inteligente/dp/B0C25173HH?dib=eyJ2IjoiMSJ9.FAqU-4c0nGT1beIcuvg1JFv8wh-2c1p73bjRd3ZpkrSXVicHoW6Ms2Op-9TRngOq3OyWzuBw_mGDiN6n08O2YhkcCGKoW-NvGv1acOrKI97sl-xPvbq7lD367G9CXoC_-TLxhoVR44iQ52rx8OfVyqKzsT96YDX0e03Gphh802OTBcfDQ7tLaU1iZbsmUX-9sch54uC5slyMuReqpEZkZOmF_QzbrG7pCuZW4mWkqQz-_ayXiQdZFQcJXXhhnZkCkDmZBbCT57ol08E-qRFbbZBxnvXA9G9mPFWYIjvIqGc.hnS35TavA4Hdzggow2hvzk5jMNDaUBl70wB9e7G-onE&dib_tag=se&keywords=TP-Link+Tapo+T110+Hub+H100&qid=1779722144&sr=8-2&linkCode=ll2&tag=tisaseguridad-21&linkId=c6c88d8a4b96216ae9a9be6bbea534e0&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/51ouEZ2OcML._AC_SX679_.jpg",
         category: "Alerta Perimetral"
       }

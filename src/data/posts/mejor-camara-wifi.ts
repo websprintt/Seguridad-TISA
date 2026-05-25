@@ -32,7 +32,7 @@ Presentada en el CES de este año 2026, es la primera cámara de 24 MP reales co
 * **IA ReoNeura:** No solo detecta personas; analiza "intenciones" (ej: alguien saltando una valla).
 * **Veredicto:** Si quieres la máxima evidencia pericial sin pagar cuotas, es esta.
 
- 2. **[EufyCam S380 (EufyCam 4) con BionicMind 3.0](https://amzn.to/4tTQrDC)**
+ 2. **[EufyCam S3 PRO (EufyCam 4) con BionicMind 3.0](https://amzn.to/4e2apHz)**
 La sucesora de la mítica S330. Ha perfeccionado lo que fallaba: la carga solar en invierno.
 
 * **Lo nuevo:** Panel solar de alta eficiencia (células de perovskita) que carga incluso con luz ambiental mínima.
@@ -68,7 +68,7 @@ Más que una cámara, es el cerebro de tu casa.
 | Modelo | Resolución | Innovación clave | Almacenamiento | Energía |
 | :--- | :--- | :--- | :--- | :--- |
 | [Reolink OMVI X16](https://amzn.to/3RveknF) | 24 MP | Triple lente + IA | Local (SD/NVR) | Cable / PoE |
-| [EufyCam S380](https://amzn.to/4tTQrDC) | 4K HDR | IA generativa local | Local expandible | Solar |
+| [EufyCam S3 PRO](https://amzn.to/4e2apHz) | 4K HDR | IA generativa local | Local expandible | Solar |
 | [Tapo C460](https://amzn.to/4uvLDFB) | 4K | WiFi 6E + Edge AI | Local SD | Batería |
 | [Ring Spotlight](https://amzn.to/4fGJbrj) | 2K+ | Radar de movimiento | Cloud (Nube) | Batería / Solar |
 | [Aqara G5](https://amzn.to/3PNgRJc) | 2K | Hub Matter + Thread | Local / NAS | Cable |

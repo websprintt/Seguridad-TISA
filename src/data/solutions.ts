@@ -24,7 +24,7 @@ export const solutionCategories: SolutionCategory[] = [
     products: [
       {
         id: "v1",
-        name: "TP-Link Tapo C335",
+        name: "TP-Link Tapo C225",
         description: "Protege tu hogar con resolución 2K y privacidad absoluta. Cuenta con un obturador físico que esconde mecánicamente la lente cuando estás en casa.",
         advantages: [
           "Privacidad física real: La lente se oculta físicamente dentro de la carcasa cuando la desactivas.",
@@ -32,7 +32,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Inteligencia Artificial Avanzada: Distingue entre personas, mascotas, vehículos y sonidos anómalos (como la rotura de un cristal) para evitar alertas falsas."
         ],
         whyRecommend: "Porque la seguridad en el hogar no debe comprometer tu privacidad. Es la cámara interior más inteligente del mercado actual, con un precio imbatible y una calidad de imagen nocturna impecable.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Tapo+C335",
+        amazonUrl: "https://www.amazon.es/Tapo-C225-Inteligente-Bidireccional-configuraci%C3%B3n/dp/B0BN4BQ1DM?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3902AME2PW3SV&dib=eyJ2IjoiMSJ9.0RT6g7mwlKM6GUnhQQEJg-punoT-EmT1T9ahFsV3yHGB_r5lhWQjMoK4WR2dokOD-qztdYrnAwhcPlBaAkHzRuMCqjf5k7Z6Zd4Rliod1C6tRevTxrTgAauLbhKkThKxykWtlNU_7K54MV1uxKGh2bVizoFPhsvUsRNH0egZ2bBfImiNxaF_xPLCJxabq7MFnp6K7Ep18MUHSY0hpgn856A9VR0QRBaSXOR1ya2ZvkBD6281OkgdnvNfiBDLlZv9PSj_BFvVITYsno_CZRsB6cysvwHBqhieeclE2c8fnWo.QYdRSsMnB5TsOMFgdYjF77uuXRIMA3_EFvm91Hpb9r8&dib_tag=se&keywords=Tapo%2BC335&qid=1779720112&sprefix=tapo%2Bc335%2Caps%2C81&sr=8-1&th=1&linkCode=ll2&tag=tisaseguridad-21&linkId=05ba7b63fd8c4109d2f1f4ecbc2a0474&ref_=as_li_ss_tl",
         image: "https://m.media-amazon.com/images/I/71PBEdXg96L._AC_SL1500_.jpg",
         category: "Cámara Interior"
       },

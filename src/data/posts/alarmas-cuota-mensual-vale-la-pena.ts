@@ -52,7 +52,7 @@ Muchas empresas de alarmas conectadas operan con ecosistemas y protocolos de com
 
 ¿La consecuencia directa? **Si decides rescindir tu contrato y dejar de abonar las cuotas mensuales, gran parte del sistema puede quedar inutilizable o extremadamente limitado.** En muchos casos, los dispositivos no pueden reutilizarse fácilmente fuera del ecosistema original.
 
-En 2026, la industria de la domótica avanza hacia la interoperabilidad abierta y el control en manos del consumidor. Por ejemplo, si diseñas un sistema profesional empleando dispositivos líderes como la plataforma [Ajax Systems en Amazon](https://www.amazon.es/s?k=ajax+alarma+sistema), eres el dueño del hardware. Si por cualquier motivo decides cambiar de central receptora o proveedor de monitorización, el equipo puede seguir funcionando de forma autónoma.
+En 2026, la industria de la domótica avanza hacia la interoperabilidad abierta y el control en manos del consumidor. Por ejemplo, si diseñas un sistema profesional empleando dispositivos líderes como la plataforma [Ajax Systems en Amazon](https://amzn.to/3PXxPot), eres el dueño del hardware. Si por cualquier motivo decides cambiar de central receptora o proveedor de monitorización, el equipo puede seguir funcionando de forma autónoma.
 
 ## El gran mito de la CRA: la policía no sale corriendo de inmediato
 

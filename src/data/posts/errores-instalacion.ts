@@ -65,7 +65,7 @@ Basta un corte limpio con unos alicates y la cámara desaparece antes incluso de
 
 En instalaciones exteriores de alto nivel, es indispensable usar componentes de calidad que aíslen la infraestructura de sabotajes físicos y agua:
 
-* Cableado oculto o protegido mediante [canalización de tubo rígido metálico o PVC reforzado en Amazon](https://amzn.to/4wLrfSF)
+* Cableado oculto o protegido mediante canalización de [tubo rígido metálico o PVC reforzado en Amazon](https://amzn.to/4wLrfSF)
 * Uso de [cajas de conexiones estancas IP66 o superior en Amazon](https://amzn.to/4e2OYGl) para proteger empalmes y conectores
 * Empleo de [cables Ethernet Cat6 aptos para exterior en Amazon](https://amzn.to/4vdkqru) con cubierta con protección UV
 * Cero cable de red expuesto o visible junto al soporte de la cámara

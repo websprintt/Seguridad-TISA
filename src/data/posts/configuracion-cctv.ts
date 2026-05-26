@@ -73,7 +73,7 @@ Para impedir estos sucesos y evitar fallar de la forma que describimos en nuestr
 
 * **Evita el Port Forwarding:** No expongas nunca servicios locales directamente al puerto público de internet.
 * **Implementa redes Zero Trust:** Utiliza herramientas sencillas, gratuitas y de grado industrial como **WireGuard** o **Tailscale**. Permiten crear una red privada virtual (VPN) sumamente ágil entre tu smartphone y tu grabador local, sin abrir un solo puerto de tu router hacia el exterior.
-* **Usa cableado de calidad:** Para cámaras cableadas externas, prefiere conexiones alimentadas por el propio cable de datos PoE conectados a un [Switch PoE Gigabit de alto rendimiento en Amazon](https://amzn.to/4e0gAvT), blindándolo del sabotaje electromagnético provocado por los inhibidores inalámbricos tradicionales.
+* **Usa cableado de calidad:** Para cámaras cableadas externas, prefiere conexiones alimentadas por el propio cable de datos PoE conectados a un [Switch PoE Gigabit de alto rendimiento en Amazon](https://amzn.to/4tRTA7b), blindándolo del sabotaje electromagnético provocado por los inhibidores inalámbricos tradicionales.
 
 ### 4. Ajuste forense nocturno: donde se gana o se pierde la evidencia
 

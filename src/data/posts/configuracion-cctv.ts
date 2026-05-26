@@ -103,7 +103,7 @@ Un CCTV profesionalmente ajustado en local te otorga la soberanía del sistema d
 ## FAQ: Configuración CCTV Avanzada
 
 **¿Cuál es el mejor disco duro para montar en un grabador NVR?**
-No uses jamás discos duros convencionales para PC. Emplea exclusivamente unidades con firmware especializado en escritura secuencial continua 24/7 y gestión inteligente de vibraciones, de las que destacan la línea [Western Digital Purple en Amazon](alarmas-cuota-mensual-vale-la-pena) o la familia [Seagate SkyHawk en Amazon](https://amzn.to/3PXWvgy).
+No uses jamás discos duros convencionales para PC. Emplea exclusivamente unidades con firmware especializado en escritura secuencial continua 24/7 y gestión inteligente de vibraciones, de las que destacan la línea [Western Digital Purple en Amazon](https://amzn.to/49oh8ZX) o la familia [Seagate SkyHawk en Amazon](https://amzn.to/3PXWvgy).
 
 **¿Debo programar grabación continua o solo videorregistro por eventos?**
 La mejor configuración técnica para seguridad crítica consiste en programar grabación continua (24/7) en un flujo de transmisión secundario de menor resolución (Substream) y activar la grabación a máxima resolución UltraHD (Mainstream) únicamente cuando se active una regla de analítica de cruce de línea o intrusión. Así contarás con todo el contexto temporal sin saturar innecesariamente tus sistemas de almacenamiento.

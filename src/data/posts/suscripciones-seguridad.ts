@@ -92,7 +92,7 @@ Ventajas técnicas:
 * Cifrado local de datos.
 * Sin pagar mensualidades recurrentes.
 
-Además, suelen consumir menos electricidad que una bombilla LED estándar. Si buscas dar el salto a un ecosistema fiable sin suscripciones, te sugiero mirar los [Sistemas de Cámaras y NVR Reolink en Amazon](https://amzn.to/3Pou6jH) o las opciones de almacenamiento avanzado de la [Eufy HomeBase 3 en Amazon](https://amzn.to/4wQTq2k), que procesan toda la IA de reconocimiento en local de manera integrada.
+Además, suelen consumir menos electricidad que una bombilla LED estándar. Si buscas dar el salto a un ecosistema fiable sin suscripciones, te sugiero mirar los [Sistemas de Cámaras y NVR Reolink en Amazon](https://amzn.to/3Pou6jH) o las opciones de almacenamiento avanzado de la [Eufy HomeBase 3 en Amazon](https://amzn.to/4nLYTU2), que procesan toda la IA de reconocimiento en local de manera integrada.
 
 Y un detalle clave que pocas marcas de nube mencionan: un sistema NVR seguirá grabando todo lo que ocurra de manera ininterrumpida incluso si la conexión a internet de la casa se cae por completo.
 

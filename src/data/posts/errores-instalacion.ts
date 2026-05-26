@@ -65,8 +65,8 @@ Basta un corte limpio con unos alicates y la cámara desaparece antes incluso de
 
 En instalaciones exteriores de alto nivel, es indispensable usar componentes de calidad que aíslen la infraestructura de sabotajes físicos y agua:
 
-* Cableado oculto o protegido mediante canalización de tubo rígido metálico o PVC reforzado
-* Uso de [cajas de conexiones estancas IP66 o superior en Amazon](https://amzn.to/4vdkDeg) para proteger empalmes y conectores
+* Cableado oculto o protegido mediante [canalización de tubo rígido metálico o PVC reforzado en Amazon](https://amzn.to/4wLrfSF)
+* Uso de [cajas de conexiones estancas IP66 o superior en Amazon](https://amzn.to/4e2OYGl) para proteger empalmes y conectores
 * Empleo de [cables Ethernet Cat6 aptos para exterior en Amazon](https://amzn.to/4vdkqru) con cubierta con protección UV
 * Cero cable de red expuesto o visible junto al soporte de la cámara
 
@@ -137,7 +137,7 @@ Además, este modelo genera grandes y continuos gastos mensuales por almacenamie
 La mejor configuración siempre es un diseño híbrido con varias capas de seguridad independientes de fallos de red:
 
 * Capa 1 (Nube): Para la visualización remota y recibir alertas rápidas al móvil de inmediato.
-* Capa 2 (Grabación local): Un [Kit de NVR y cámaras PoE Reolink en Amazon](https://amzn.to/42Ut7uA) o almacenamiento físico oculto e independiente de internet.
+* Capa 2 (Grabación local): Un [Kit de NVR y cámaras PoE Reolink en Amazon](https://amzn.to/3RuCQ8q) o almacenamiento físico oculto e independiente de internet.
 * Capa 3 (Respaldo de energía): Un pequeño sistema de alimentación ininterrumpida como un [SAI para router y alarmas en Amazon](https://amzn.to/4wOcH4z) para mantener funcionando el router y el grabador aunque corten la luz exterior.
 
 Si cortan la luz o el suministro de fibra de internet, el sistema sigue vivo. Eso es seguridad activa real.

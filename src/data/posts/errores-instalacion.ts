@@ -130,7 +130,7 @@ Esto se está volviendo peligrosamente común. Todo depende de la aplicación m�
 
 Muchos intrusos especializados saben perfectamente por dónde entra la fibra óptica de una vivienda. Un corte rápido en la fachada y listo; el sistema sigue encendido pero ya es incapaz de subir nada al servidor. Te quedas sin grabación externa, sin avisos y sin acceso remoto en tiempo real.
 
-Además, este modelo genera grandes y continuos gastos mensuales por almacenamiento remoto; si quieres optimizar tu presupuesto te sugiero informarte profundamente sobre [el negocio de las suscripciones en seguridad residencial](/blog/opiniones-tecnicas-suscripciones-seguridad) para no convertirte en rehén de cuotas temporales infinitas.
+Además, recuerda que sufrir un asalto puede acarrear graves facturas inesperadas; te sugiero informarte profundamente sobre [el coste real oculto de un robo en el hogar](/blog/coste-oculto-robo-hogar) para ver el impacto operacional real que el seguro no te cuenta, o analizar convenientemente si [vale la pena contratar alarmas con cuota mensual](/blog/alarmas-cuota-mensual-vale-la-pena).
 
 ### Cómo debería diseñarse un sistema serio
 

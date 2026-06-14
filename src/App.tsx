@@ -843,9 +843,9 @@ const BlogSEO = () => {
       tags: ["Errores Comunes"]
     },
     {
-      id: "opiniones-tecnicas-suscripciones-seguridad",
-      title: "Opinión técnica: El negocio de las cuotas",
-      excerpt: "¿Merece la pena pagar 10€ al mes? Analizamos el coste real de la nube.",
+      id: "coste-oculto-robo-hogar",
+      title: "Coste oculto de un robo: Más allá de lo robado",
+      excerpt: "Pensamos que un robo cuesta solo el laptop o la TV. El impacto psicológico y operacional cuesta mucho más.",
       tags: ["Opiniones Técnicas"]
     },
     {

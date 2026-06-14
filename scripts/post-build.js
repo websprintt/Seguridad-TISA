@@ -12,7 +12,7 @@ const INDEX_HTML_PATH = path.join(DIST_DIR, 'index.html');
 const SLUG_TO_FILE = {
   'guia-configuracion-cctv-segura': 'configuracion-cctv.ts',
   'alarmas-cuota-mensual-vale-la-pena': 'alarmas-cuota-mensual-vale-la-pena.ts',
-  'opiniones-tecnicas-suscripciones-seguridad': 'suscripciones-seguridad.ts',
+  'coste-oculto-robo-hogar': 'coste-oculto-robo.ts',
   'errores-comunes-instalacion-alarmas': 'errores-instalacion.ts',
   'mejor-camara-exterior-wifi-2026': 'mejor-camara-wifi.ts',
   'evitar-okupas-guia-segunda-vivienda': 'evitar-okupas.ts',
@@ -23,18 +23,22 @@ const ROUTE_META = {
   'servicios-de-blindaje': {
     title: 'Sistemas de Blindaje y Seguridad | TISA Seguridad',
     description: 'Soluciones diseñadas específicamente para cada escenario real que enfrentas cada día. Análisis de sistemas para viviendas, negocios y segundas residencias.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp',
   },
   'evaluacion': {
     title: 'Test de Seguridad Escudo TISA | Evalúa tu Vivienda',
     description: 'Realiza nuestro test de seguridad profesional gratuito para auditar puntos vulnerables en tu vivienda o comercio.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'contacto': {
     title: 'Contacto | TISA Seguridad',
     description: 'Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías de alarmas y asesoramiento técnico profesional en España.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'blog': {
     title: 'Blog de Seguridad y Alarmas | TISA Seguridad',
     description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'blog/guia-configuracion-cctv-segura': {
     title: 'Guía profesional para configurar CCTV en 2026 | TISA Seguridad',
@@ -44,9 +48,9 @@ const ROUTE_META = {
     title: '¿Valen la pena las alarmas con cuota mensual? | TISA Seguridad',
     description: '¿Realmente las alarmas con cuota mensual justifican su coste? Analizamos CRA, hardware propietario, inhibidores, permanencias y alternativas.',
   },
-  'blog/opiniones-tecnicas-suscripciones-seguridad': {
-    title: 'El negocio de las suscripciones en seguridad | TISA Seguridad',
-    description: '¿Merece la pena pagar una suscripción mensual por cada cámara de seguridad? Analizamos almacenamiento local vs nube y privacidad.',
+  'blog/coste-oculto-robo-hogar': {
+    title: 'El coste real y oculto de un robo en el hogar | TISA Seguridad',
+    description: '¿Cuánto cuesta realmente un robo en el hogar? Analizamos daños físicos, costes imprevistos urgentes e impacto psicológico familiar.',
   },
   'blog/errores-comunes-instalacion-alarmas': {
     title: 'Errores críticos al instalar tu sistema de seguridad | TISA Seguridad',
@@ -63,26 +67,32 @@ const ROUTE_META = {
   'soluciones/vivienda': {
     title: 'Sistemas de Seguridad para tu Vivienda | TISA Seguridad',
     description: 'Cámaras WiFi inteligentes con obturador físico antiespía, sensores perimetrales de ventanas y videoporteros sin cuotas.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp',
   },
   'soluciones/negocios': {
     title: 'CCTV y Seguridad Profesional para Negocios | TISA Seguridad',
     description: 'Sistemas CCTV de alta definición 4K PoE estables, almacenamiento de alta de capacidad de vídeo y seguridad de red local.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/negocios.webp',
   },
   'soluciones/residencias': {
     title: 'Alarmas y Protección para Segundas Residencias | TISA Seguridad',
     description: 'Sistemas anti-ocupas autónomos homologados, alimentados por panel solar y conectividad 4G para proteger tu residencia vacacional.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/okupas.webp',
   },
   'aviso-legal': {
     title: 'Aviso Legal | TISA Seguridad',
     description: 'Aviso legal, términos de uso y condiciones de navegación para el portal de Seguridad TISA.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'politica-de-privacidad': {
     title: 'Política de Privacidad | TISA Seguridad',
     description: 'Información detallada sobre el tratamiento de tus datos personales, cumplimiento del de RGPD y privacidad en TISA.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'politica-de-cookies': {
     title: 'Política de Cookies | TISA Seguridad',
     description: 'Uso de cookies propias y de terceros para analítica web y personalización de enlaces de afiliados en TISA.',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   }
 };
 
@@ -179,10 +189,13 @@ function parseBlogPostFile(slug) {
   const readTimeMatch = code.match(/readTime:\s*["']([\s\S]*?)["'],/);
   const readTime = readTimeMatch ? readTimeMatch[1] : '';
 
+  const imageMatch = code.match(/image:\s*["']([\s\S]*?)["'],/);
+  const image = imageMatch ? imageMatch[1] : '';
+
   const contentMatch = code.match(/content:\s*`([\s\S]*?)`/);
   const content = contentMatch ? contentMatch[1] : '';
 
-  return { slug, title, excerpt, date, readTime, content };
+  return { slug, title, excerpt, date, readTime, content, image };
 }
 
 /**
@@ -260,6 +273,16 @@ function run() {
     // Perform specific replacements
     let pageHtml = baseHtml;
 
+    // Determine the route-specific preview image
+    let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp';
+    if (route.startsWith('blog/')) {
+      const slug = route.substring(5);
+      const post = allPosts.find(p => p.slug === slug);
+      if (post && post.image) {
+        routeImage = post.image;
+      }
+    }
+
     // 1. Title replacement
     pageHtml = pageHtml.replace(
       /<title>[\s\S]*?<\/title>/i,
@@ -291,6 +314,10 @@ function run() {
       /<meta\s+property="og:url"\s+content="[\s\S]*?"\s*\/?>/i,
       `<meta property="og:url" content="${canonicalUrl}" />`
     );
+    pageHtml = pageHtml.replace(
+      /<meta\s+property="og:image"\s+content="[\s\S]*?"\s*\/?>/i,
+      `<meta property="og:image" content="${routeImage}" />`
+    );
 
     // 5. Twitter replacements
     pageHtml = pageHtml.replace(
@@ -304,6 +331,10 @@ function run() {
     pageHtml = pageHtml.replace(
       /<meta\s+property="twitter:url"\s+content="[\s\S]*?"\s*\/?>/i,
       `<meta property="twitter:url" content="${canonicalUrl}" />`
+    );
+    pageHtml = pageHtml.replace(
+      /<meta\s+(?:property|name)="twitter:image"\s+content="[\s\S]*?"\s*\/?>/i,
+      `<meta property="twitter:image" content="${routeImage}" />`
     );
 
     // --- SECOND STAGE: PRE-RENDER SECTIONS INSIDE <div id="root"> ---

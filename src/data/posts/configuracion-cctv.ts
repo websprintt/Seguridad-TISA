@@ -34,7 +34,7 @@ En otras palabras: se instala un hardware de coste elevado sobre una arquitectur
 
 El bitrate es el parámetro más crítico y más ignorado de cualquier CCTV. Dejarlo en “Automático” o con valores máximos descontrolados es un fallo de aficionado: el sistema reacciona a la escena sin control, devorando la capacidad del disco y saturando el tráfico local.
 
-Para un diseño robusto frente a las limitaciones que analizamos en la investigación sobre [el negocio de las suscripciones cloud en seguridad residencial](/blog/opiniones-tecnicas-suscripciones-seguridad), se deben aplicar los siguientes valores:
+Para un diseño robusto frente a las limitaciones que analizamos en la investigación sobre [el negocio de las alarmas con cuota mensual](/blog/alarmas-cuota-mensual-vale-la-pena), se deben aplicar los siguientes valores:
 
 * **Compresión inteligente:** Usa obligatoriamente **H.265+** o AV1 si tu hardware y software lo soportan. Reduce drásticamente el espacio exigido.
 * **Control de flujo:** CBR (Bitrate Constante) si requieres una absoluta previsibilidad de almacenamiento o VBR (Bitrate Variable) con un límite muy estricto de picos técnicos.

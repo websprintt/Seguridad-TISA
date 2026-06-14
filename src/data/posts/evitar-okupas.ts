@@ -10,7 +10,7 @@ export const post: BlogPost = {
   tags: ["Guías Prácticas"],
   image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/okupas.webp",
   metaDescription: "Descubre cómo evitar okupas en tu segunda vivienda en España en 2026. Claves legales (Morada vs. Usurpación), domótica avanzada y hábitos reales para proteger tu casa.",
-  content: `## Introducción: La realidad de la seguridad residencial en 2026
+  content: `## La realidad de la seguridad residencial en 2026
 
 Imagínate llegar a tu casa de la playa, del pueblo o a tu apartamento vacacional después de unos meses sin visitarla… y descubrir que la cerradura ha sido cambiada y no puedes entrar. Aunque las estadísticas demuestran que la okupación no es un fenómeno masivo, para los propietarios de segundas residencias en España la preocupación es real y legítima.
 
@@ -79,7 +79,7 @@ Antes de cerrar tu segunda residencia por una larga temporada, asegúrate de cum
 
 ## Las falseas soluciones que debes evitar
 
-* **Instalar cámaras falsas:** En 2026, los delincuentes distinguen perfectamente un dispositivo real. Además, renunciar a la verificación real te quita la [prueba judicial necesaria](/blog/opiniones-tecnicas-suscripciones-seguridad).
+* **Instalar cámaras falsas:** En 2026, los delincuentes distinguen perfectamente un dispositivo real. Además, renunciar a la verificación real te quita la [prueba judicial necesaria](/blog/coste-oculto-robo-hogar).
 * **Confiar solo en una puerta blindada:** Una buena puerta no sirve si las ventanas traseras o el garaje mantienen cierres estándar débiles.
 * **El silencio digital:** No publiques en redes sociales abiertas que vas a dejar tu residencia vacacional vacía durante los próximos meses.
 
@@ -105,5 +105,5 @@ Lo importante es la verificación por vídeo inmediata. Muchos sistemas autogest
 No, es una señal de casa vacía. Lo efectivo es la simulación de presencia aleatoria mediante sistemas domóticos que imiten el comportamiento humano real.
 
 **¿Qué pasa si mi WiFi se corta mientras estoy fuera meses?**
-Por eso recomendamos sistemas con [almacenamiento local (SD)](/blog/opiniones-tecnicas-suscripciones-seguridad) que sigan grabando incluso sin internet.`
+Por eso recomendamos sistemas con [almacenamiento local (SD)](/blog/guia-configuracion-cctv-segura) que sigan grabando incluso sin internet.`
 };

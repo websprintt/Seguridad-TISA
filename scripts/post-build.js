@@ -11,7 +11,7 @@ const INDEX_HTML_PATH = path.join(DIST_DIR, 'index.html');
 // Slugs of blog posts matching filenames in src/data/posts/
 const SLUG_TO_FILE = {
   'guia-configuracion-cctv-segura': 'configuracion-cctv.ts',
-  'alarmas-cuota-mensual-vale-la-pena': 'alarmas-cuota-mensual-vale-la-pena',
+  'alarmas-cuota-mensual-vale-la-pena': 'alarmas-cuota-mensual-vale-la-pena.ts',
   'opiniones-tecnicas-suscripciones-seguridad': 'suscripciones-seguridad.ts',
   'errores-comunes-instalacion-alarmas': 'errores-instalacion.ts',
   'mejor-camara-exterior-wifi-2026': 'mejor-camara-wifi.ts',
@@ -41,8 +41,8 @@ const ROUTE_META = {
     description: 'Optimización de bitrate, analítica perimetral, seguridad de red y ajuste nocturno de nivel forense para tus cámaras de vigilancia.',
   },
   'blog/alarmas-cuota-mensual-vale-la-pena': {
-    title: '¿Alarmas con cuota mensual? Análisis técnico | TISA Seguridad',
-    description: '¿Valen la pena las alarmas con cuota mensual? Analizamos precios, tecnología PreSense, CRA y alternativas sin cuotas.',
+    title: '¿Valen la pena las alarmas con cuota mensual? | TISA Seguridad',
+    description: '¿Realmente las alarmas con cuota mensual justifican su coste? Analizamos CRA, hardware propietario, inhibidores, permanencias y alternativas.',
   },
   'blog/opiniones-tecnicas-suscripciones-seguridad': {
     title: 'El negocio de las suscripciones en seguridad | TISA Seguridad',

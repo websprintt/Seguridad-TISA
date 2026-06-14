@@ -851,7 +851,7 @@ const BlogSEO = () => {
     {
       id: "alarmas-cuota-mensual-vale-la-pena",
       title: "¿Alarmas con cuotas valen la pena? Análisis honesto",
-      excerpt: "Análisis técnico de los equipos de muchas marcas líderes frente a alternativas.",
+      excerpt: "Análisis técnico de los equipos y servicios de alarmas con cuotas frente a alternativas.",
       tags: ["Opiniones Técnicas"]
     },
     {

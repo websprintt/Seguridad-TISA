@@ -97,6 +97,7 @@ const BlogList = () => {
                       src={post.image} 
                       alt={post.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0"
+                      loading="lazy"
                     />
                     <div className="absolute top-6 left-6 flex gap-2">
                       {post.tags.map(tag => (

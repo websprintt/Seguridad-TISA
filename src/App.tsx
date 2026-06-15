@@ -378,6 +378,7 @@ const Problems = () => {
                   src={problem.image} 
                   alt={problem.title} 
                   className="w-full h-full object-cover grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000" 
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent" />
               </div>
@@ -455,6 +456,7 @@ const SecurityAssessmentSection = () => {
                           alt={`User ${i + 1}`} 
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
+                          loading="lazy"
                         />
                       </div>
                     ))}
@@ -569,6 +571,7 @@ const RecommendedSystems = () => {
               src={cases[0].image} 
               alt={cases[0].title} 
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent" />
             
@@ -605,6 +608,7 @@ const RecommendedSystems = () => {
               src={cases[1].image} 
               alt={cases[1].title} 
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent" />
             
@@ -641,6 +645,7 @@ const RecommendedSystems = () => {
               src={cases[2].image} 
               alt={cases[2].title} 
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent" />
             

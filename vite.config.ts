@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     // Relative base path ensures build targets resolve perfectly on both custom domain and subpaths
-    base: '/Seguridad-TISA/',
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

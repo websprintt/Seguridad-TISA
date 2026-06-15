@@ -7,8 +7,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   
   return {
-    // Detecta automáticamente si estás en GitHub Pages (production) o en tu PC (development)
-    base: mode === 'production' ? '/Seguridad-TISA/' : '/',
+    // Relative base path ensures build targets resolve perfectly on both custom domain and subpaths
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

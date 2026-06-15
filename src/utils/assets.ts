@@ -13,8 +13,8 @@ export function getAssetPath(path: string): string {
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   
   // Dynamically determine the base path based on the browser's URL location.
-  // Since we use HashRouter, the window.location.pathname stays stable
-  // (e.g. '/' locally, and '/Seguridad-TISA/' on GitHub Pages).
+  // Since we use BrowserRouter, we determine whether the active path
+  // includes the GitHub Pages project subkey '/Seguridad-TISA/'.
   let base = '/';
   if (typeof window !== 'undefined' && window.location) {
     const pathname = window.location.pathname;

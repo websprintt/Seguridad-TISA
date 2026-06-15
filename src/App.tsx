@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { 
   Shield, 
@@ -1091,9 +1091,16 @@ const Home = () => {
   );
 };
 
+const getBasename = () => {
+  if (typeof window !== 'undefined' && window.location.pathname.includes('/Seguridad-TISA')) {
+    return '/Seguridad-TISA';
+  }
+  return '/';
+};
+
 export default function App() {
   return (
-    <Router>
+    <Router basename={getBasename()}>
       <ScrollToTop />
       <ScrollToHashElement />
       <div className="font-sans antialiased bg-[#050505] text-neutral-50 min-h-screen relative overflow-x-hidden">

@@ -44,7 +44,7 @@ const ContactPage = () => {
               <span className="text-blue-500">de seguridad</span>
             </h1>
             <p className="text-lg md:text-xl text-neutral-400 mb-12 leading-relaxed font-light max-w-xl italic">
-              "Mi objetivo es que entiendas qué estás comprando. Si tienes dudas sobre un sistema específico o una instalación compleja, hablemos."
+              "Mi objetivo es compartir mi opinión técnica objetiva. Si tienes dudas sobre qué equipos elegir en mis comparativas o cómo autogestionar el sistema de tu casa con Amazon, escríbeme."
             </p>
 
             <div className="space-y-6">
@@ -71,7 +71,7 @@ const ContactPage = () => {
                   <MessageCircle className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-1">WhatsApp Directo (1ª Consulta Gratis)</div>
+                  <div className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-1">WhatsApp Directo (Consulta Rápida)</div>
                   <div className="text-lg md:text-2xl font-display font-bold text-white tracking-tight">+34 742 090 991</div>
                 </div>
               </a>
@@ -124,8 +124,8 @@ const ContactPage = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 tracking-tight">Respuesta en 24/48h</h4>
-                  <p className="text-neutral-400 font-light text-sm leading-relaxed">Priorizo consultas técnicas sobre diagnósticos y auditorías en curso.</p>
+                  <h4 className="text-white font-bold mb-2 tracking-tight">Soporte y Consultas de Equipos</h4>
+                  <p className="text-neutral-400 font-light text-sm leading-relaxed">Priorizo consultas técnicas sobre los dispositivos y guías de configuración recomendados en el blog y el test.</p>
                 </div>
               </li>
               <li className="flex gap-6">
@@ -133,8 +133,8 @@ const ContactPage = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 tracking-tight">Asesoramiento Independiente</h4>
-                  <p className="text-neutral-400 font-light text-sm leading-relaxed">No tengo contratos de exclusividad con marcas. Mi sugerencia se basa en lo mejor para tu caso.</p>
+                  <h4 className="text-white font-bold mb-2 tracking-tight">Opinión 100% Independiente</h4>
+                  <p className="text-neutral-400 font-light text-sm leading-relaxed">No tengo contratos de exclusividad con marcas de alarmas o instaladoras. Mi sugerencia se basa exclusivamente en lo mejor para tu caso.</p>
                 </div>
               </li>
               <li className="flex gap-6">
@@ -142,8 +142,8 @@ const ContactPage = () => {
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                 </div>
                 <div>
-                  <h4 className="text-white font-bold mb-2 tracking-tight">Protección de Datos</h4>
-                  <p className="text-neutral-400 font-light text-sm leading-relaxed">Tu información técnica y planos se manejan con estricta confidencialidad bajo estándares de ingeniería.</p>
+                  <h4 className="text-white font-bold mb-2 tracking-tight">Enlaces de Afiliados de Amazon</h4>
+                  <p className="text-neutral-400 font-light text-sm leading-relaxed">Los productos recomendados redirigen de manera transparente a Amazon. Al adquirir tus equipos a través de ellos, apoyas mi blog sin costes adicionales para ti.</p>
                 </div>
               </li>
             </ul>

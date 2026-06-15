@@ -254,7 +254,7 @@ const SolutionDetail = () => {
               {!['vivienda', 'negocios', 'vulnerabilidades'].includes(category.id) && "Obtén el asesoramiento experto de TISA para implementar un escudo de seguridad robusto, duradero y sin costes permanentes."}
             </p>
 
-            <div className="flex flex-col xl:flex-row gap-6 items-stretch sm:items-start xl:items-center">
+            <div className="flex flex-col sm:flex-row gap-6 items-stretch sm:items-center">
               <Link 
                 to="/evaluacion" 
                 className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest text-[10px] shadow-2xl shadow-blue-600/20 active:scale-[0.98]"
@@ -270,24 +270,6 @@ const SolutionDetail = () => {
                 <Info className="w-4 h-4 text-emerald-500" />
                 {category.id === 'vivienda' ? "2. Aprender más sobre alarmas en el Blog" : "2. Resolver dudas en el Blog"}
               </Link>
-
-              <a 
-                href="#contacto" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Dispatch scroll event or simply redirect to contact form
-                  const element = document.getElementById('contacto') || document.getElementById('footer') || document.getElementsByTagName('footer')[0];
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-                  }
-                }}
-                className="bg-neutral-900 border border-white/5 hover:border-blue-500/30 hover:bg-neutral-800 text-neutral-300 hover:text-white px-10 py-5 rounded-2xl font-bold transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest text-[10px] active:scale-[0.98]"
-              >
-                <ShieldCheck className="w-4 h-4 text-orange-500" />
-                {category.id === 'vivienda' ? "3. Solicitar un Diseño Personalizado" : "3. Solicitar Diseño de Seguridad"}
-              </a>
             </div>
           </div>
         </div>

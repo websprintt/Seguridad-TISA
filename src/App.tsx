@@ -953,151 +953,6 @@ const BlogSEO = () => {
   );
 };
 
-const ContactFormSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    propertyType: 'residencial',
-    message: ''
-  });
-  const [isSent, setIsSent] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Contacto enviado:', formData);
-    setIsSent(true);
-    setFormData({ name: '', email: '', propertyType: 'residencial', message: '' });
-    setTimeout(() => setIsSent(false), 5000);
-  };
-
-  return (
-    <section id="contacto" className="py-24 relative overflow-hidden bg-neutral-950/40 border-t border-white/5 scroll-mt-32">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 py-1 px-3 rounded-full glass border border-blue-500/20 text-blue-400 text-[9px] font-bold uppercase tracking-[0.2em] mb-6">
-              ¿Hablamos de tu Seguridad?
-            </span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-white tracking-tight mb-6">
-              Solicita un <span className="text-blue-500">Diseño Técnico</span> gratuito
-            </h2>
-            <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mx-auto font-light">
-              Analizo tu caso y te propongo una solución óptima y objetiva sin ganchos comerciales ni suscripciones obligatorias.
-            </p>
-          </div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass p-8 md:p-12 rounded-3xl border border-white/5 relative overflow-hidden shadow-2xl"
-          >
-            {isSent && (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="absolute inset-0 bg-neutral-950/95 z-20 flex flex-col items-center justify-center text-center p-8"
-              >
-                <div className="w-20 h-20 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 mb-6 border border-blue-500/30">
-                  <CheckCircle2 className="w-10 h-10 animate-pulse" />
-                </div>
-                <h3 className="text-2xl font-display font-bold text-white mb-3 tracking-tight">¡Mensaje enviado con éxito!</h3>
-                <p className="text-neutral-400 max-w-md mx-auto font-light">
-                  He recibido tus datos correctamente. Revisaré la información y te contactaré personalmente en un plazo de 24-48 horas.
-                </p>
-              </motion.div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-8 font-display">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase font-bold text-neutral-500 tracking-widest px-1">Tu Nombre</label>
-                  <input 
-                    type="text" 
-                    required
-                    value={formData.name}
-                    onChange={e => setFormData({...formData, name: e.target.value})}
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 transition-all text-sm font-light"
-                    placeholder="Ej: Manuel Pérez"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase font-bold text-neutral-500 tracking-widest px-1">Tu Email de contacto</label>
-                  <input 
-                    type="email" 
-                    required
-                    value={formData.email}
-                    onChange={e => setFormData({...formData, email: e.target.value})}
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 transition-all text-sm font-light"
-                    placeholder="Ej: manuel@empresa.com"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <label className="text-[10px] uppercase font-bold text-neutral-500 tracking-widest px-1">Tipo de Propiedad a proteger</label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {[
-                    { val: 'residencial', label: 'Residencial / Vivienda', icon: HomeIcon },
-                    { val: 'negocio', label: 'Negocio / Almacén', icon: Warehouse },
-                    { val: 'segunda-vivienda', label: 'Segunda Residencia', icon: Briefcase }
-                  ].map(item => {
-                    const IconComp = item.icon;
-                    const isSelected = formData.propertyType === item.val;
-                    return (
-                      <button
-                        key={item.val}
-                        type="button"
-                        onClick={() => setFormData({...formData, propertyType: item.val})}
-                        className={`p-4 rounded-xl border flex items-center gap-3 transition-all text-left text-sm font-medium ${
-                          isSelected 
-                            ? 'bg-blue-600/15 border-blue-500 text-white shadow-lg shadow-blue-600/10' 
-                            : 'bg-white/[0.02] border-white/5 text-neutral-400 hover:border-white/10 hover:bg-white/[0.04]'
-                        }`}
-                      >
-                        <IconComp className={`w-4 h-4 ${isSelected ? 'text-blue-400' : 'text-neutral-500'}`} />
-                        <span>{item.label}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-[10px] uppercase font-bold text-neutral-500 tracking-widest px-1">Describe tu necesidad o dudas del sistema</label>
-                <textarea 
-                  required
-                  rows={4}
-                  value={formData.message}
-                  onChange={e => setFormData({...formData, message: e.target.value})}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 transition-all resize-none text-sm font-light"
-                  placeholder="Ej: Quiero una comparativa de cámaras PoE locales para un chalet, o dudo si instalar alarma sin cuotas..."
-                />
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 border-t border-white/5">
-                <p className="text-[10px] text-neutral-500 leading-relaxed max-w-md italic">
-                  Al solicitar este contacto gratuito, trataremos tus datos de forma confidencial y exclusivamente para resolver tu consulta técnica, conforme a nuestra política de privacidad.
-                </p>
-                <button 
-                  type="submit"
-                  className="w-full sm:w-auto px-8 h-14 bg-blue-600 hover:bg-blue-500 text-white font-bold uppercase tracking-widest text-xs rounded-xl transition-all flex items-center justify-center gap-3 active:scale-[0.98] cursor-pointer shadow-lg shadow-blue-600/20"
-                >
-                  Enviar Solicitud
-                  <Send className="w-4 h-4" />
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Footer = () => {
   return (
     <footer className="bg-black pt-32 pb-20 border-t border-white/5 relative overflow-hidden">
@@ -1114,7 +969,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-xl text-neutral-400 max-w-sm mb-12 leading-relaxed font-light">
-              No solo analizo equipos. Diseño <span className="text-white font-medium">fortalezas digitales</span> y asesoro con honestidad absoluta.
+              Opinión técnica independiente. Te ayudo a configurar tus propios <span className="text-white font-medium">sistemas de seguridad</span> recomendados en Amazon, de forma transparente.
             </p>
             <div className="flex items-center gap-6">
               <Link 
@@ -1231,7 +1086,6 @@ const Home = () => {
       <RecommendedSystems />
       <TrustSection />
       <BlogSEO />
-      <ContactFormSection />
     </>
   );
 };

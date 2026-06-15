@@ -38,7 +38,7 @@ const AllSolutions = () => {
         
         {/* Open Graph */}
         <meta property="og:title" content="Catálogo de Blindaje Técnico | Seguridad TISA" />
-        <meta property="og:description" content="No vendo productos, diseño tranquilidad. Explora mis soluciones para cada tipo de escenario." />
+        <meta property="og:description" content="Opinión técnica independiente de sistemas de seguridad. Explora las soluciones recomendadas sin cuotas." />
         <meta property="og:url" content="https://tisaseguridad.shop/servicios-de-blindaje" />
         <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp" />
       </Helmet>
@@ -64,10 +64,10 @@ const AllSolutions = () => {
               Catálogo de Escenarios
             </div>
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-10 tracking-tighter leading-tight text-white">
-              No vendo productos, <span className="text-blue-500">diseño tranquilidad</span>
+              Análisis honesto, <span className="text-blue-500">sistemas sin cuotas</span>
             </h1>
             <p className="text-xl text-neutral-400 leading-relaxed font-light">
-              Soluciones diseñadas específicamente para cada escenario real que enfrentas cada día.
+              Opiniones técnicas independientes e información detallada de los mejores equipos recomendados en Amazon para cada escenario real.
             </p>
           </div>
 

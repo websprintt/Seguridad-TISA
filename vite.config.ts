@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     // Detecta automáticamente si estás en GitHub Pages (production) o en tu PC (development)
-    base: mode === 'production' ? '/Seguridad-TISA/' : '/',
+    base: mode === 'production' ? '/Seguridad-TISA/' : './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

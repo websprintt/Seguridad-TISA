@@ -9,6 +9,7 @@ import remarkBreaks from 'remark-breaks';
 import remarkGfm from 'remark-gfm';
 import { blogPosts } from '../data/blogPosts';
 import ShareButtons from './ShareButtons';
+import { getAssetPath } from '../utils/assets';
 
 const FAQItem = ({ question, answer }: { question: string, answer: string }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -197,7 +198,7 @@ const BlogPostDetail = () => {
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full glass overflow-hidden border border-blue-500/20 group-hover:border-blue-500 transition-colors">
                   <img 
-                    src="/img/perfil-7.webp" 
+                    src={getAssetPath("/img/perfil-7.webp")} 
                     alt="Fredys Matos Borges"
                     className="w-full h-full object-cover object-top"
                   />
@@ -231,7 +232,7 @@ const BlogPostDetail = () => {
             className="mb-20 rounded-5xl overflow-hidden glass p-4"
           >
             <img 
-              src={post.image} 
+              src={getAssetPath(post.image)} 
               alt={post.title} 
               className="w-full aspect-[21/9] object-cover rounded-4xl grayscale hover:grayscale-0 transition-all duration-1000"
             />
@@ -364,9 +365,9 @@ const BlogPostDetail = () => {
                       </p>
                     );
                   },
-                  img: ({ node, ...props }) => (
+                  img: ({ node, src, ...props }) => (
                     <div className="my-16 rounded-3xl overflow-hidden glass p-3 group">
-                      <img {...props} className="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700" />
+                      <img {...props} src={getAssetPath(src || '')} className="w-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700" />
                       {props.alt && <div className="text-center text-[10px] uppercase tracking-widest text-neutral-500 mt-4 font-bold">{props.alt}</div>}
                     </div>
                   ),
@@ -447,7 +448,7 @@ const BlogPostDetail = () => {
               <div className="relative">
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-3xl glass border border-blue-500/20 flex items-center justify-center text-3xl font-display font-bold text-blue-500 shadow-2xl overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
                   <img 
-                    src="/img/perfil-7.webp" 
+                    src={getAssetPath("/img/perfil-7.webp")} 
                     alt="Fredys Matos Borges"
                     className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity"
                     onError={(e) => {

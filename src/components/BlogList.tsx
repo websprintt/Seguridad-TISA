@@ -5,6 +5,7 @@ import { Shield, ChevronLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogPosts } from '../data/blogPosts';
+import { getAssetPath } from '../utils/assets';
 
 const BlogList = () => {
   const [activeCategory, setActiveCategory] = React.useState('Guías Prácticas');
@@ -94,7 +95,7 @@ const BlogList = () => {
                 >
                   <Link to={`/blog/${post.id}`} className="block aspect-[16/10] overflow-hidden relative glass m-4 rounded-4xl">
                     <img 
-                      src={post.image} 
+                      src={getAssetPath(post.image)} 
                       alt={post.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0"
                       loading="lazy"

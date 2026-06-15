@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ArrowRight, Zap } from 'lucide-react';
+import { getAssetPath } from '../utils/assets';
 
 const AllSolutions = () => {
   const cases = [
@@ -83,7 +84,7 @@ const AllSolutions = () => {
               >
                 <div className="absolute inset-0 z-0">
                   <img 
-                    src={sc.image} 
+                    src={getAssetPath(sc.image)} 
                     alt={sc.title} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60" 
                     referrerPolicy="no-referrer"

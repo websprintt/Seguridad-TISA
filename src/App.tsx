@@ -36,6 +36,7 @@ import {
   Send
 } from 'lucide-react';
 import { blogPosts } from './data/blogPosts';
+import { getAssetPath } from './utils/assets';
 
 const BlogList = React.lazy(() => import('./components/BlogList'));
 const BlogPostDetail = React.lazy(() => import('./components/BlogPost'));
@@ -86,7 +87,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <img 
-            src="/img/logo-full.webp" 
+            src={getAssetPath("/img/logo-full.webp")} 
             alt="TISA SEGURIDAD" 
             className="h-9 md:h-11 w-auto object-contain transition-transform group-hover:scale-105"
             referrerPolicy="no-referrer"
@@ -232,7 +233,7 @@ const Hero = () => {
       {/* Background Image with Blur */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/img/banner.webp"
+          src={getAssetPath("/img/banner.webp")}
           alt="Sistemas de seguridad y alarmas profesionales"
           className="w-full h-full object-cover blur-[1px] opacity-20 scale-105"
           referrerPolicy="no-referrer"
@@ -375,7 +376,7 @@ const Problems = () => {
             >
               <div className="absolute inset-0 z-0">
                 <img 
-                  src={problem.image} 
+                  src={getAssetPath(problem.image)} 
                   alt={problem.title} 
                   className="w-full h-full object-cover grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-40 group-hover:scale-110 transition-all duration-1000" 
                   loading="lazy"
@@ -452,7 +453,7 @@ const SecurityAssessmentSection = () => {
                     ].map((url, i) => (
                       <div key={i} className="w-9 h-9 rounded-full border-2 border-neutral-950 overflow-hidden bg-neutral-800">
                         <img 
-                          src={url} 
+                          src={getAssetPath(url)} 
                           alt={`User ${i + 1}`} 
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"
@@ -568,7 +569,7 @@ const RecommendedSystems = () => {
             className="group relative aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] md:rounded-[3rem] overflow-hidden glass border border-white/5 hover:border-blue-500/30 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/10"
           >
             <img 
-              src={cases[0].image} 
+              src={getAssetPath(cases[0].image)} 
               alt={cases[0].title} 
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               loading="lazy"
@@ -605,7 +606,7 @@ const RecommendedSystems = () => {
             className="group relative aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] md:rounded-[3rem] overflow-hidden glass border border-white/5 hover:border-blue-500/30 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/10"
           >
             <img 
-              src={cases[1].image} 
+              src={getAssetPath(cases[1].image)} 
               alt={cases[1].title} 
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               loading="lazy"
@@ -642,7 +643,7 @@ const RecommendedSystems = () => {
             className="group relative aspect-square md:aspect-auto md:h-[500px] rounded-[2rem] md:rounded-[3rem] overflow-hidden glass border border-white/5 hover:border-blue-500/30 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/10"
           >
             <img 
-              src={cases[2].image} 
+              src={getAssetPath(cases[2].image)} 
               alt={cases[2].title} 
               className="absolute inset-0 w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               loading="lazy"
@@ -731,7 +732,7 @@ const TrustSection = () => {
                   <div className="flex items-center gap-6">
                     <div className="relative w-20 h-20 rounded-2xl glass border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
                        <img 
-                         src="/img/perfil-7.webp" 
+                         src={getAssetPath("/img/perfil-7.webp")} 
                          alt="Fredys Matos Borges" 
                          className="w-full h-full object-cover object-top"
                        />
@@ -909,7 +910,7 @@ const BlogSEO = () => {
                     {/* Background principal image with clarify and scale hover transitions */}
                     {imageSrc && (
                       <img 
-                        src={imageSrc} 
+                        src={getAssetPath(imageSrc)} 
                         alt={post.title}
                         className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105"
                         referrerPolicy="no-referrer"
@@ -962,7 +963,7 @@ const Footer = () => {
           <div className="md:col-span-5">
             <div className="flex items-center mb-10">
               <img 
-                src="/img/logo.webp" 
+                src={getAssetPath("/img/logo.webp")} 
                 alt="TISA SEGURIDAD" 
                 className="h-16 w-auto object-contain"
                 referrerPolicy="no-referrer"

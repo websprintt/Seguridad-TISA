@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ShoppingCart, ExternalLink, ShieldCheck, Zap, Info, Award, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { solutionCategories, SolutionProduct } from '../data/solutions';
 import ShareButtons from './ShareButtons';
+import { getAssetPath } from '../utils/assets';
 
 const ProductCard = ({ product, idx }: { product: SolutionProduct; idx: number }) => {
   const [showAdvantages, setShowAdvantages] = useState(false);
@@ -26,7 +27,7 @@ const ProductCard = ({ product, idx }: { product: SolutionProduct; idx: number }
     >
       <div className="w-full aspect-square bg-white rounded-4xl overflow-hidden mb-10 relative border border-white/5">
         <img 
-          src={product.image} 
+          src={getAssetPath(product.image)} 
           alt={product.name} 
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" 
           referrerPolicy="no-referrer"

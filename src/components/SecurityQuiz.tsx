@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import ShareButtons from './ShareButtons';
 import { solutionCategories } from '../data/solutions';
+import { getAssetPath } from '../utils/assets';
 
 interface Question {
   id: number;
@@ -657,7 +658,7 @@ export default function SecurityQuiz() {
                     <div className="w-full">
                       <div className="w-full aspect-square bg-white rounded-3xl overflow-hidden mb-6 relative border border-white/10 flex items-center justify-center">
                         <img 
-                          src={rec.image} 
+                          src={getAssetPath(rec.image)} 
                           alt={rec.name} 
                           className="w-full h-full object-contain p-4 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
                           referrerPolicy="no-referrer" 

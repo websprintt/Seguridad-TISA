@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     // Absolute base path ensures assets resolve correctly from domain root
-    base: './',
+    base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

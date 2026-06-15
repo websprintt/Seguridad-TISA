@@ -7,8 +7,8 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   
   return {
-    // Relative base path ensures build targets resolve perfectly on both custom domain and subpaths
-    base: './',
+    // Absolute base path ensures assets resolve correctly from domain root
+    base: '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

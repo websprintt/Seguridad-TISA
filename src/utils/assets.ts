@@ -10,18 +10,6 @@ export function getAssetPath(path: string): string {
     return path;
   }
   
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  
-  // Dynamically determine the base path based on the browser's URL location.
-  // Since we use BrowserRouter, we determine whether the active path
-  // includes the GitHub Pages project subkey '/Seguridad-TISA/'.
-  let base = '/';
-  if (typeof window !== 'undefined' && window.location) {
-    const pathname = window.location.pathname;
-    if (pathname.includes('/Seguridad-TISA')) {
-      base = '/Seguridad-TISA/';
-    }
-  }
-  
-  return `${base}${cleanPath}`;
+  // Guarantee absolute path starting with /
+  return path.startsWith('/') ? path : `/${path}`;
 }

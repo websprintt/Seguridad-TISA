@@ -1091,16 +1091,9 @@ const Home = () => {
   );
 };
 
-const getBasename = () => {
-  if (typeof window !== 'undefined' && window.location.pathname.includes('/Seguridad-TISA')) {
-    return '/Seguridad-TISA';
-  }
-  return '/';
-};
-
 export default function App() {
   return (
-    <Router basename={getBasename()}>
+    <Router basename="/">
       <ScrollToTop />
       <ScrollToHashElement />
       <div className="font-sans antialiased bg-[#050505] text-neutral-50 min-h-screen relative overflow-x-hidden">

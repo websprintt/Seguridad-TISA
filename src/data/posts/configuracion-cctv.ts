@@ -7,7 +7,7 @@ export const post: BlogPost = {
   date: "01 Mayo, 2026",
   readTime: "8 min",
   tags: ["Guías Prácticas"],
-  image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/configura-cctv.webp",
+  image: "/img/blog/configura-cctv.webp",
   content: `La mayoría de los sistemas de videovigilancia no fallan por hardware... fallan por configuración.
 
 En 2026 sigue siendo habitual ver instalaciones con cámaras 4K de última generación, grabadores potentes y discos duros de alta capacidad funcionando con valores por defecto, como si fueran sistemas domésticos básicos. El resultado es siempre el mismo: grabaciones nocturnas borrosas e inutilizables, almacenamiento saturado en pocos días, falsas alarmas constantes y una exposición innecesaria de la red local.
@@ -58,7 +58,7 @@ Para blindar estratégicamente y de manera eficaz tu propiedad, tal y como detal
 * **Región de intrusión (ROI):** Define las superficies exactas críticas (puerta de garaje, ventanal lateral, acceso principal) y descarta por completo las zonas vecinales o públicas.
 * **Tiempo de permanencia (Loitering):** Programa una alerta enérgica e inmediata únicamente si un objeto sospechoso merodea dentro de la región definida por más de 10 o 15 segundos seguidos.
 
-![Configuración gráfica de áreas de intrusión inteligente y zonas de exclusión en panel de analítica de vídeo local](https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/zonas-exclusion.webp)
+![Configuración gráfica de áreas de intrusión inteligente y zonas de exclusión en panel de analítica de vídeo local](/img/blog/zonas-exclusion.webp)
 
 Esto transforma por completo tu sistema tradicional de grabación pasiva en un eficaz filtro forense de eventos determinantes.
 

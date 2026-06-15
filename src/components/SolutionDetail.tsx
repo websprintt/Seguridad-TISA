@@ -169,13 +169,13 @@ const SolutionDetail = () => {
         <meta property="og:description" content={category.description} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={category.products[0]?.image || "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp"} />
+        <meta property="og:image" content={category.products[0]?.image ? `https://tisaseguridad.shop${category.products[0].image}` : "https://tisaseguridad.shop/img/logo-full.webp"} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={category.description} />
-        <meta name="twitter:image" content={category.products[0]?.image || "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp"} />
+        <meta name="twitter:image" content={category.products[0]?.image ? `https://tisaseguridad.shop${category.products[0].image}` : "https://tisaseguridad.shop/img/logo-full.webp"} />
       </Helmet>
       
       <div className="container mx-auto px-6">

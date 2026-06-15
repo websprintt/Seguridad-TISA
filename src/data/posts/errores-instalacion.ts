@@ -7,7 +7,7 @@ export const post: BlogPost = {
   date: "13 Mayo, 2026",
   readTime: "13 min",
   tags: ["Errores Comunes", "Guías Prácticas"],
-  image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/errores-criticos.webp",
+  image: "/img/blog/errores-criticos.webp",
   metaDescription: "Muchos sistemas de seguridad de más de 2.000€ fallan por errores básicos de instalación. Descubre los fallos críticos que dejan tu casa o negocio vulnerable.",
   content: `## ¿Tu sistema de seguridad realmente te protege?
 
@@ -142,7 +142,7 @@ La mejor configuración siempre es un diseño híbrido con varias capas de segur
 
 Si cortan la luz o el suministro de fibra de internet, el sistema sigue vivo. Eso es seguridad activa real.
 
-![Inspección técnica de instalación y cableado estructurado de seguridad](https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/inspeccion.webp)
+![Inspección técnica de instalación y cableado estructurado de seguridad](/img/blog/inspeccion.webp)
 
 ## Lo que he visto en cientos de instalaciones
 

@@ -8,7 +8,7 @@ export const post: BlogPost = {
   date: "20 Mayo, 2026",
   readTime: "9 min",
   tags: ["Guías Prácticas"],
-  image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/okupas.webp",
+  image: "/img/okupas.webp",
   metaDescription: "Descubre cómo evitar okupas en tu segunda vivienda en España en 2026. Claves legales (Morada vs. Usurpación), domótica avanzada y hábitos reales para proteger tu casa.",
   content: `## La realidad de la seguridad residencial en 2026
 
@@ -42,7 +42,7 @@ La diferencia legal es drástica:
 
 Por lo tanto, tu estrategia de seguridad no debe ser solo física; debe estar diseñada para demostrar de inmediato que la casa es tu morada activa y detectar la intrusión en el minuto uno.
 
-![Sistema central domótico y de verificación de seguridad para el hogar](https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/verificacion.webp)
+![Sistema central domótico y de verificación de seguridad para el hogar](/img/blog/verificacion.webp)
 
 ## Las 5 medidas tecnológicas realmente efectivas en 2026
 

@@ -8,7 +8,7 @@ export const post: BlogPost = {
   date: "16 Mayo, 2026",
   readTime: "7 min",
   tags: ["Comparativas", "Guías Prácticas"],
-  image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/mejor-camara.webp",
+  image: "/img/blog/mejor-camara.webp",
   content: `## El mercado de seguridad cambió radicalmente en 2026
 
 En 2026, hablar de “cámaras WiFi exteriores” como simples dispositivos de grabación ya es obsoleto. Hoy, una cámara no solo vigila: interpreta escenas, entiende contexto, responde a lenguaje natural y se integra en ecosistemas domóticos completos.

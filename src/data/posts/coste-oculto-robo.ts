@@ -7,7 +7,7 @@ export const post: BlogPost = {
   date: "14 Junio, 2026",
   readTime: "9 min",
   tags: ["Opiniones Técnicas", "Guías Prácticas"],
-  image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/838f981dfea78a71e738fb7bc7b221cbf7b63cb6/img/blog/Costos%20real.webp",
+  image: "/img/blog/Costos_real.webp",
   metaDescription: "Análisis técnico y criminológico del impacto económico y psicológico real de un robo en el hogar. Costos directos, ocultos y la importancia de la detección temprana.",
   content: `## El error más común después de un robo
 
@@ -38,7 +38,7 @@ Un robo en el hogar no es un evento aislado; es una costosa cadena de acontecimi
 
 ### Representación real del coste de un robo
 
-![Grafismo detallado del iceberg de pérdidas reales de un asalto o robo en el hogar con costes directos visibles y gastos ocultos](https://raw.githubusercontent.com/websprintt/Seguridad-TISA/1fc1ae6f0b08962a6b1f56de6108268d2d02a269/img/blog/Costos%20reale%20de%20un%20robo.webp)
+![Grafismo detallado del iceberg de pérdidas reales de un asalto o robo en el hogar con costes directos visibles y gastos ocultos](/img/blog/Costos_reales_de_un_robo.webp)
 
 ## El coste real de un robo en casa (calculado de forma realista)
 

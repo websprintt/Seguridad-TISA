@@ -9,21 +9,21 @@ const AllSolutions = () => {
     {
       id: "vivienda",
       title: "Para tu vivienda",
-      image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp",
+      image: "/img/casas.webp",
       items: ["Cámaras WiFi Inteligentes", "Sensores de Puertas/Ventanas", "Videoporteros de alta resolución"],
       gridClass: "lg:col-span-2"
     },
     {
       id: "negocios",
       title: "Para negocios",
-      image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/negocios.webp",
+      image: "/img/negocios.webp",
       items: ["CCTV Profesional", "Grabación 24/7 en Nube o Local"],
       gridClass: "lg:col-span-1"
     },
     {
       id: "residencias",
       title: "Segundas residencias",
-      image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/okupas.webp",
+      image: "/img/okupas.webp",
       items: ["Alarmas Anti Okupas", "Sensores por Infrarrojos"],
       gridClass: "lg:col-span-3"
     }
@@ -40,7 +40,7 @@ const AllSolutions = () => {
         <meta property="og:title" content="Catálogo de Blindaje Técnico | Seguridad TISA" />
         <meta property="og:description" content="Opinión técnica independiente de sistemas de seguridad. Explora las soluciones recomendadas sin cuotas." />
         <meta property="og:url" content="https://tisaseguridad.shop/servicios-de-blindaje" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp" />
+        <meta property="og:image" content="https://tisaseguridad.shop/img/casas.webp" />
       </Helmet>
 
       <div className="container mx-auto px-6">

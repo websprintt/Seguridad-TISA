@@ -86,7 +86,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <img 
-            src="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" 
+            src="/img/logo-full.webp" 
             alt="TISA SEGURIDAD" 
             className="h-9 md:h-11 w-auto object-contain transition-transform group-hover:scale-105"
             referrerPolicy="no-referrer"
@@ -232,7 +232,7 @@ const Hero = () => {
       {/* Background Image with Blur */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp"
+          src="/img/banner.webp"
           alt="Sistemas de seguridad y alarmas profesionales"
           className="w-full h-full object-cover blur-[1px] opacity-20 scale-105"
           referrerPolicy="no-referrer"
@@ -313,28 +313,28 @@ const Problems = () => {
       icon: AlertTriangle,
       title: "Ola de Robos crecientes",
       description: "Los robos en viviendas y locales han aumentado un 15% este año. No esperes a ser el siguiente objetivo.",
-      image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/problem-robo.jpg",
       intensity: "border-red-500/20"
     },
     {
       icon: Shield,
       title: "Amenaza de Okupas",
       description: "La desprotección legal exige una respuesta rápida. Detectar la entrada en los primeros minutos es clave.",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/problem-okupacion.jpg",
       intensity: "border-orange-500/20"
     },
     {
       icon: Eye,
       title: "Falta de control real",
       description: "¿Qué pasa en tu casa o negocio cuando no estás? Necesitas ojos inteligentes, no solo una caja que pita.",
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/problem-sabotaje.jpg",
       intensity: "border-blue-500/20"
     },
     {
       icon: Lock,
       title: "Sistemas obsoletos",
       description: "Las alarmas antiguas son fáciles de inhibir. Actualízate a tecnología redundante e inatacable hoy mismo.",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/problem-vulnerabilidades.jpg",
       intensity: "border-neutral-500/20"
     }
   ];
@@ -446,9 +446,9 @@ const SecurityAssessmentSection = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex -space-x-3">
                     {[
-                      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=100",
-                      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100",
-                      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=100"
+                      "/img/unsplash/avatar-1.jpg",
+                      "/img/unsplash/avatar-2.jpg",
+                      "/img/unsplash/avatar-3.jpg"
                     ].map((url, i) => (
                       <div key={i} className="w-9 h-9 rounded-full border-2 border-neutral-950 overflow-hidden bg-neutral-800">
                         <img 
@@ -517,21 +517,21 @@ const RecommendedSystems = () => {
     {
       title: "Para tu vivienda",
       icon: HomeIcon,
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/case-vivienda.jpg",
       description: "Blindaje doméstico inteligente. Seguridad invisible que protege a tu familia 24/7 sin convertir tu hogar en una cárcel.",
       features: ["Detección anticipada", "Control de accesos", "Simulación de presencia"]
     },
     {
       title: "Para negocios",
       icon: Briefcase,
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/case-negocios.jpg",
       description: "Protección activa de activos. Continuidad de negocio y vigilancia inteligente que reduce pérdidas y optimiza tu tranquilidad.",
       features: ["Gestión de aforo", "Análisis de video IA", "Alertas críticas 24h"]
     },
     {
       title: "2das residencias",
       icon: Warehouse,
-      image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=800",
+      image: "/img/unsplash/case-residencias.jpg",
       description: "Control total a distancia. Blindaje contra la ocupación y el vandalismo. Mantén tu refugio seguro aunque estés lejos.",
       features: ["Anti-ocupación Real", "Aviso corte eléctrico", "Verificación rápida"]
     }
@@ -731,7 +731,7 @@ const TrustSection = () => {
                   <div className="flex items-center gap-6">
                     <div className="relative w-20 h-20 rounded-2xl glass border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
                        <img 
-                         src="https://raw.githubusercontent.com/MbFredys/mbfredys.github.io/1cf4ac79438449a681739dc196ab0b0b4e40d845/images/perfil-7.webp" 
+                         src="/img/perfil-7.webp" 
                          alt="Fredys Matos Borges" 
                          className="w-full h-full object-cover object-top"
                        />
@@ -962,7 +962,7 @@ const Footer = () => {
           <div className="md:col-span-5">
             <div className="flex items-center mb-10">
               <img 
-                src="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo.webp" 
+                src="/img/logo.webp" 
                 alt="TISA SEGURIDAD" 
                 className="h-16 w-auto object-contain"
                 referrerPolicy="no-referrer"
@@ -1078,7 +1078,7 @@ const Home = () => {
         <meta property="og:description" content="Especialista en proteger lo que más importa. Sistemas de seguridad avanzados para hogares y empresas." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tisaseguridad.shop" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        <meta property="og:image" content="https://tisaseguridad.shop/img/logo-full.webp" />
       </Helmet>
       <Hero />
       <Problems />

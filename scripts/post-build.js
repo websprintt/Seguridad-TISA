@@ -273,6 +273,14 @@ function run() {
     // Perform specific replacements
     let pageHtml = baseHtml;
 
+    // Fix relative assets path for subdirectories when base is "./"
+    const depth = route.split('/').filter(Boolean).length;
+    if (depth > 0) {
+      const relPrefix = '../'.repeat(depth);
+      pageHtml = pageHtml.replace(/\.\/assets\//g, `${relPrefix}assets/`);
+      pageHtml = pageHtml.replace(/\.\/manifest\.json/g, `${relPrefix}manifest.json`);
+    }
+
     // Determine the route-specific preview image
     let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp';
     if (route.startsWith('blog/')) {

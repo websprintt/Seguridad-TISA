@@ -10,9 +10,18 @@ export function getAssetPath(path: string): string {
     return path;
   }
   
-  const baseUrl = (import.meta as any).env?.BASE_URL || '/';
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   
-  return `${cleanBase}${cleanPath}`;
+  // Dynamically determine the base path based on the browser's URL location.
+  // Since we use HashRouter, the window.location.pathname stays stable
+  // (e.g. '/' locally, and '/Seguridad-TISA/' on GitHub Pages).
+  let base = '/';
+  if (typeof window !== 'undefined' && window.location) {
+    const pathname = window.location.pathname;
+    if (pathname.includes('/Seguridad-TISA')) {
+      base = '/Seguridad-TISA/';
+    }
+  }
+  
+  return `${base}${cleanPath}`;
 }

@@ -10,7 +10,15 @@ export function getAssetPath(path: string): string {
     return path;
   }
   
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  // Guard against accidental leading 'public/' or '/public/' prefixes
+  let cleanPath = path;
+  if (cleanPath.startsWith('/public/')) {
+    cleanPath = cleanPath.slice(8);
+  } else if (cleanPath.startsWith('public/')) {
+    cleanPath = cleanPath.slice(7);
+  } else if (cleanPath.startsWith('/')) {
+    cleanPath = cleanPath.slice(1);
+  }
   
   // Dynamically determine the base path depending on whether the site
   // is loaded from a subpath (e.g. /Seguridad-TISA/ on GitHub Pages)

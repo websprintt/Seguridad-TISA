@@ -7,7 +7,7 @@ export const post: BlogPost = {
   date: "05 Mayo, 2026",
   readTime: "12 min",
   tags: ["Opiniones Técnicas", "Comparativas"],
-  image: "./img/blog/alarmas-genericas.webp",
+  image: "./public/img/blog/alarmas-genericas.webp",
   metaDescription: "¿Realmente las alarmas con cuota mensual justifican su coste? Analizamos CRA, hardware propietario, inhibidores, permanencias y alternativas profesionales.",
   content: `La publicidad de muchas compañías de alarmas monitorizadas vende tranquilidad instantánea.
 

@@ -10,6 +10,17 @@ export function getAssetPath(path: string): string {
     return path;
   }
   
-  // Guarantee absolute path starting with /
-  return path.startsWith('/') ? path : `/${path}`;
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  
+  // Dynamically determine the base path depending on whether the site
+  // is loaded from a subpath (e.g. /Seguridad-TISA/ on GitHub Pages)
+  // or a custom domain root (e.g. /). This guarantees absolute paths
+  // that do not break inside deep routes like /blog/some-article.
+  if (typeof window !== 'undefined' && window.location) {
+    if (window.location.pathname.includes('/Seguridad-TISA')) {
+      return `/Seguridad-TISA/${cleanPath}`;
+    }
+  }
+  
+  return `/${cleanPath}`;
 }

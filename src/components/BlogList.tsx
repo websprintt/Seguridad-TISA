@@ -5,7 +5,6 @@ import { Shield, ChevronLeft, Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { blogPosts } from '../data/blogPosts';
-import { getAssetPath } from '../utils/assets';
 
 const BlogList = () => {
   const [activeCategory, setActiveCategory] = React.useState('Guías Prácticas');
@@ -37,13 +36,13 @@ const BlogList = () => {
         <meta property="og:description" content="Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España." />
         <meta property="og:url" content="https://tisaseguridad.shop/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://tisaseguridad.shop/img/logo-full.webp" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog de Seguridad y Alarmas | TISA Seguridad" />
         <meta name="twitter:description" content="Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España." />
-        <meta name="twitter:image" content="https://tisaseguridad.shop/img/logo-full.webp" />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
       </Helmet>
       
       <div className="container mx-auto px-6">
@@ -95,7 +94,7 @@ const BlogList = () => {
                 >
                   <Link to={`/blog/${post.id}`} className="block aspect-[16/10] overflow-hidden relative glass m-4 rounded-4xl">
                     <img 
-                      src={getAssetPath(post.image)} 
+                      src={post.image} 
                       alt={post.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60 group-hover:opacity-100 grayscale group-hover:grayscale-0"
                       loading="lazy"

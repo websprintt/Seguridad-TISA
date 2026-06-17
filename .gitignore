@@ -6,7 +6,3 @@ coverage/
 *.log
 .env*
 !.env.example
-
-# Asegurar explícitamente que Git incluya la carpeta de imágenes
-!public/img/
-!public/img/**/*

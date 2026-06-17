@@ -23,22 +23,22 @@ const ROUTE_META = {
   'servicios-de-blindaje': {
     title: 'Sistemas de Blindaje y Seguridad | TISA Seguridad',
     description: 'Soluciones diseñadas específicamente para cada escenario real que enfrentas cada día. Análisis de sistemas para viviendas, negocios y segundas residencias.',
-    image: 'https://tisaseguridad.shop/img/casas.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp',
   },
   'evaluacion': {
     title: 'Test de Seguridad Escudo TISA | Evalúa tu Vivienda',
     description: 'Realiza nuestro test de seguridad profesional gratuito para auditar puntos vulnerables en tu vivienda o comercio.',
-    image: 'https://tisaseguridad.shop/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'contacto': {
     title: 'Contacto | TISA Seguridad',
     description: 'Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías de alarmas y asesoramiento técnico profesional en España.',
-    image: 'https://tisaseguridad.shop/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'blog': {
     title: 'Blog de Seguridad y Alarmas | TISA Seguridad',
     description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España.',
-    image: 'https://tisaseguridad.shop/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'blog/guia-configuracion-cctv-segura': {
     title: 'Guía profesional para configurar CCTV en 2026 | TISA Seguridad',
@@ -67,32 +67,32 @@ const ROUTE_META = {
   'soluciones/vivienda': {
     title: 'Sistemas de Seguridad para tu Vivienda | TISA Seguridad',
     description: 'Cámaras WiFi inteligentes con obturador físico antiespía, sensores perimetrales de ventanas y videoporteros sin cuotas.',
-    image: 'https://tisaseguridad.shop/img/casas.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp',
   },
   'soluciones/negocios': {
     title: 'CCTV y Seguridad Profesional para Negocios | TISA Seguridad',
     description: 'Sistemas CCTV de alta definición 4K PoE estables, almacenamiento de alta de capacidad de vídeo y seguridad de red local.',
-    image: 'https://tisaseguridad.shop/img/negocios.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/negocios.webp',
   },
   'soluciones/residencias': {
     title: 'Alarmas y Protección para Segundas Residencias | TISA Seguridad',
     description: 'Sistemas anti-ocupas autónomos homologados, alimentados por panel solar y conectividad 4G para proteger tu residencia vacacional.',
-    image: 'https://tisaseguridad.shop/img/okupas.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/okupas.webp',
   },
   'aviso-legal': {
     title: 'Aviso Legal | TISA Seguridad',
     description: 'Aviso legal, términos de uso y condiciones de navegación para el portal de Seguridad TISA.',
-    image: 'https://tisaseguridad.shop/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'politica-de-privacidad': {
     title: 'Política de Privacidad | TISA Seguridad',
     description: 'Información detallada sobre el tratamiento de tus datos personales, cumplimiento del de RGPD y privacidad en TISA.',
-    image: 'https://tisaseguridad.shop/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'politica-de-cookies': {
     title: 'Política de Cookies | TISA Seguridad',
     description: 'Uso de cookies propias y de terceros para analítica web y personalización de enlaces de afiliados en TISA.',
-    image: 'https://tisaseguridad.shop/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   }
 };
 
@@ -102,6 +102,7 @@ const ROUTE_META = {
 function markdownToHtml(md) {
   if (!md) return '';
 
+  // Escaping angle brackets minimally
   let html = md
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -151,6 +152,7 @@ function markdownToHtml(md) {
 
   let finalHtml = result.join('\n');
 
+  // Markdown inline formats
   finalHtml = finalHtml.replace(/\*\*([\s\S]*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>');
   finalHtml = finalHtml.replace(/\*([\s\S]*?)\*/g, '<em class="text-neutral-200">$1</em>');
   finalHtml = finalHtml.replace(/_([\s\S]*?)_/g, '<em class="text-neutral-200">$1</em>');
@@ -160,6 +162,9 @@ function markdownToHtml(md) {
   return finalHtml;
 }
 
+/**
+ * Extracts fields from the TS files in src/data/posts/
+ */
 function parseBlogPostFile(slug) {
   const fileName = SLUG_TO_FILE[slug];
   if (!fileName) return null;
@@ -193,6 +198,9 @@ function parseBlogPostFile(slug) {
   return { slug, title, excerpt, date, readTime, content, image };
 }
 
+/**
+ * Extracts solutions products from src/data/solutions.ts
+ */
 function parseSolutionsProducts(categoryKey) {
   const filePath = path.join(__dirname, '../src/data/solutions.ts');
   if (!fs.existsSync(filePath)) {
@@ -211,6 +219,7 @@ function parseSolutionsProducts(categoryKey) {
   }
 
   const products = [];
+  // Split products by their open bracket
   const productBlocks = segment.split('{\n        id: "');
 
   for (let i = 1; i < productBlocks.length; i++) {
@@ -223,7 +232,7 @@ function parseSolutionsProducts(categoryKey) {
     const description = descMatch ? descMatch[1] : '';
 
     const whyMatch = block.match(/whyRecommend:\s*"(.*?)"/);
-    const whyRecommend = whyMatch ? whyRecommend[1] : '';
+    const whyRecommend = whyMatch ? whyMatch[1] : '';
 
     if (name && description) {
       products.push({ name, description, whyRecommend });
@@ -241,9 +250,11 @@ function run() {
 
   const baseHtml = fs.readFileSync(INDEX_HTML_PATH, 'utf-8');
 
+  // Copy a generic fallback for standard SPA fallback 404
   console.log('Generating general 404 fallback from index.html...');
   fs.writeFileSync(path.join(DIST_DIR, '404.html'), baseHtml, 'utf-8');
 
+  // Parse all posts beforehand so we can list them on the '/blog' route
   const allPosts = [];
   for (const slug of Object.keys(SLUG_TO_FILE)) {
     const parsed = parseBlogPostFile(slug);
@@ -258,18 +269,12 @@ function run() {
     }
 
     const canonicalUrl = `https://tisaseguridad.shop/${route}`;
+
+    // Perform specific replacements
     let pageHtml = baseHtml;
 
-    // Al usar base fija '/' en Vite, las llamadas a assets e imágenes se mantienen fijas absolutas desde la raíz.
-    // Solo ajustamos rutas relativas si se detecta un patrón local explícito.
-    const depth = route.split('/').filter(Boolean).length;
-    if (depth > 0) {
-      const relPrefix = '../'.repeat(depth);
-      pageHtml = pageHtml.replace(/\.\/assets\//g, `${relPrefix}assets/`);
-      pageHtml = pageHtml.replace(/\.\/manifest\.json/g, `${relPrefix}manifest.json`);
-    }
-
-    let routeImage = meta.image || 'https://tisaseguridad.shop/img/logo-full.webp';
+    // Determine the route-specific preview image
+    let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp';
     if (route.startsWith('blog/')) {
       const slug = route.substring(5);
       const post = allPosts.find(p => p.slug === slug);
@@ -364,6 +369,7 @@ function run() {
         `;
       }
     } else if (route === 'blog') {
+      // List all posts dynamically so Google can crawl and parse all internal links
       const postsListHtml = allPosts.map(post => `
         <div class="p-8 rounded-xl border border-neutral-900 bg-neutral-950 hover:border-blue-500/30 transition-all duration-300">
           <span class="text-xs text-blue-400 font-mono font-bold uppercase tracking-widest block mb-2">${post.date} • ${post.readTime}</span>
@@ -391,7 +397,7 @@ function run() {
         </div>
       `;
     } else if (route.startsWith('soluciones/')) {
-      const catKey = route.substring(11);
+      const catKey = route.substring(11); // Solutions list: "vivienda", "negocios", or "residencias"
       const products = parseSolutionsProducts(catKey);
 
       const productsHtml = products.map(prod => `
@@ -419,6 +425,7 @@ function run() {
         </div>
       `;
     } else {
+      // Basic aesthetic structured page placeholder inside root for other legal/generic pages
       preRenderedContent = `
         <div class="pt-40 pb-32 bg-neutral-950 min-h-screen">
           <div class="container mx-auto px-6 max-w-3xl">
@@ -433,6 +440,7 @@ function run() {
       `;
     }
 
+    // Embed the static render right inside <div id="root">
     pageHtml = pageHtml.replace(
       /<div\s+id="root">\s*<\/div>/i,
       `<div id="root">${preRenderedContent}</div>`

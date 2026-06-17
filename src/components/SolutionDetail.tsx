@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronLeft, ShoppingCart, ExternalLink, ShieldCheck, Zap, Info, Award, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { solutionCategories, SolutionProduct } from '../data/solutions';
 import ShareButtons from './ShareButtons';
-import { getAssetPath } from '../utils/assets';
 
 const ProductCard = ({ product, idx }: { product: SolutionProduct; idx: number }) => {
   const [showAdvantages, setShowAdvantages] = useState(false);
@@ -27,7 +26,7 @@ const ProductCard = ({ product, idx }: { product: SolutionProduct; idx: number }
     >
       <div className="w-full aspect-square bg-white rounded-4xl overflow-hidden mb-10 relative border border-white/5">
         <img 
-          src={getAssetPath(product.image)} 
+          src={product.image} 
           alt={product.name} 
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000" 
           referrerPolicy="no-referrer"
@@ -170,13 +169,13 @@ const SolutionDetail = () => {
         <meta property="og:description" content={category.description} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={category.products[0]?.image ? `https://tisaseguridad.shop${category.products[0].image}` : "https://tisaseguridad.shop/img/logo-full.webp"} />
+        <meta property="og:image" content={category.products[0]?.image || "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp"} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={category.description} />
-        <meta name="twitter:image" content={category.products[0]?.image ? `https://tisaseguridad.shop${category.products[0].image}` : "https://tisaseguridad.shop/img/logo-full.webp"} />
+        <meta name="twitter:image" content={category.products[0]?.image || "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp"} />
       </Helmet>
       
       <div className="container mx-auto px-6">

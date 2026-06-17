@@ -7,7 +7,7 @@ export const post: BlogPost = {
   date: "05 Mayo, 2026",
   readTime: "12 min",
   tags: ["Opiniones Técnicas", "Comparativas"],
-  image: "/img/blog/alarmas-genericas.webp",
+  image: "https://raw.githubusercontent.com/websprintt/Seguridad-TISA/main/img/blog/alarmas-genericas.webp",
   metaDescription: "¿Realmente las alarmas con cuota mensual justifican su coste? Analizamos CRA, hardware propietario, inhibidores, permanencias y alternativas profesionales.",
   content: `La publicidad de muchas compañías de alarmas monitorizadas vende tranquilidad instantánea.
 
@@ -100,7 +100,7 @@ Sin embargo, frente a intrusiones planificadas, la arquitectura inalámbrica sig
 1. **La vulnerabilidad de la conexión a internet:** un corte físico de fibra puede dejar fuera de servicio gran parte de la conectividad del sistema.
 2. **Por qué el cableado sigue siendo clave:** como desarrollamos en nuestra [guía técnica para configurar CCTV de manera segura](/blog/guia-configuracion-cctv-segura), una infraestructura cableada correctamente diseñada sigue siendo una de las soluciones más robustas frente a sabotajes y cortes de comunicación.
 
-![Cámara de videovigilancia IP instalada de manera segura para evitar sabotajes técnicos y cortes de fibra](/img/blog/camara-instalada.webp)
+![Cámara de videovigilancia IP instalada de manera segura para evitar sabotajes técnicos y cortes de fibra](https://raw.githubusercontent.com/websprintt/Seguridad-TISA/a33c8ef0350d9c5c23c7f869fa1ba71955fe06ae/img/blog/camara-instalada.webp)
 
 ### Realiza un diagnóstico de vulnerabilidad independiente de tu vivienda
 Responde a unas breves preguntas en nuestro test gratuito de 2 minutos para conocer de forma objetiva qué tipo de sistema se adapta realmente a tu propiedad.

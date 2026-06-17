@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import ShareButtons from './ShareButtons';
 import { solutionCategories } from '../data/solutions';
-import { getAssetPath } from '../utils/assets';
 
 interface Question {
   id: number;
@@ -658,7 +657,7 @@ export default function SecurityQuiz() {
                     <div className="w-full">
                       <div className="w-full aspect-square bg-white rounded-3xl overflow-hidden mb-6 relative border border-white/10 flex items-center justify-center">
                         <img 
-                          src={getAssetPath(rec.image)} 
+                          src={rec.image} 
                           alt={rec.name} 
                           className="w-full h-full object-contain p-4 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
                           referrerPolicy="no-referrer" 
@@ -730,13 +729,13 @@ export default function SecurityQuiz() {
         <meta property="og:description" content="Realiza nuestro test de seguridad gratuito en 10 minutos para auditar los puntos vulnerables de tu hogar o negocio." />
         <meta property="og:url" content="https://tisaseguridad.shop/evaluacion" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://tisaseguridad.shop/img/logo-full.webp" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Test de Seguridad Escudo TISA | Evalúa tu Vivienda" />
         <meta name="twitter:description" content="Realiza nuestro test de seguridad gratuito en 10 minutos para auditar los puntos vulnerables de tu hogar o negocio." />
-        <meta name="twitter:image" content="https://tisaseguridad.shop/img/logo-full.webp" />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
       </Helmet>
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-20">

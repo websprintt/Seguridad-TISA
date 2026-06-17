@@ -37,10 +37,21 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci # Usa 'npm ci' en entornos de despliegue para una instalación exacta y limpia
+        run: npm ci
 
       - name: Build
         run: npm run build
+
+      - name: Force copy images at server root
+        run: |
+          if [ -d "public/img" ]; then
+            mkdir -p dist/img
+            cp -r public/img/* dist/img/
+            echo "Imágenes copiadas de forma segura en el servidor."
+          else
+            echo "ERROR CRÍTICO: La carpeta public/img no existe en el repositorio."
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -48,9 +59,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Subimos explícitamente el contenido generado de dist garantizando el estándar de Vite
           path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages-with-fallback@v4 || uses: actions/deploy-pages@v4

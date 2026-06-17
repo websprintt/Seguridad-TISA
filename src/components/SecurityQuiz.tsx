@@ -14,10 +14,12 @@ import {
   ArrowRight,
   ShoppingCart,
   Award,
-  Lock
+  Lock,
+  Download
 } from 'lucide-react';
 import ShareButtons from './ShareButtons';
 import { solutionCategories } from '../data/solutions';
+import { generateSecurityReportPDF } from '../utils/pdfGenerator';
 
 interface Question {
   id: number;
@@ -34,7 +36,7 @@ const questions: Question[] = [
     id: 1,
     text: "¿De qué tipo es tu vivienda principal?",
     options: [
-      { text: "Piso en bloque de vecinos", score: 10 },
+      { text: "Piso central o Ático (en bloque de vecinos)", score: 10 },
       { text: "Chalet / Casa independiente", score: 5 },
       { text: "Bajo o 1ª planta con terraza", score: 3 },
       { text: "Nave o Negocio", score: 5 }
@@ -138,7 +140,7 @@ interface ProductRecommendation {
 
 export default function SecurityQuiz() {
   const [step, setStep] = useState<number>(0); 
-  const [answers, setAnswers] = useState<number[]>([]); // Almacena el índice de la opción seleccionada para cada pregunta
+  const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null)); // Almacena el índice o null
   const [isFinished, setIsFinished] = useState(false);
   const [score, setScore] = useState(0);
   const [isDictamenOpen, setIsDictamenOpen] = useState(false);
@@ -147,15 +149,62 @@ export default function SecurityQuiz() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Determinar si una pregunta debe ser omitida
+  const shouldSkipQuestion = (questionIdx: number, currentAnswers: (number | null)[]) => {
+    const viviendaType = currentAnswers[0];
+    // Solución de ramificación inteligente:
+    // 1. Si vive en Piso/Ático (índice 0), omitir preguntas de iluminación de jardines / exterior (índice 6 - Q7)
+    if (viviendaType === 0) {
+      if (questionIdx === 6) { // ID 7 de iluminación exterior es el índice 6
+        return true;
+      }
+    }
+    // 2. Si es Nave o Negocio (índice 3), omitir preguntas residenciales irrelevantes:
+    // - Viajes y segundas residencias (índice 4 - Q5)
+    // - Videoportero y mirilla tradicionales (índice 5 - Q6)
+    // - Iluminación de jardines exterior (índice 6 - Q7)
+    if (viviendaType === 3) {
+      if (questionIdx === 4 || questionIdx === 5 || questionIdx === 6) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const getNextStep = (currentStep: number, currentAnswers: (number | null)[]) => {
+    let next = currentStep + 1;
+    while (next < questions.length && shouldSkipQuestion(next, currentAnswers)) {
+      next++;
+    }
+    return next;
+  };
+
+  const getPrevStep = (currentStep: number, currentAnswers: (number | null)[]) => {
+    let prev = currentStep - 1;
+    while (prev >= 0 && shouldSkipQuestion(prev, currentAnswers)) {
+      prev--;
+    }
+    return prev >= 0 ? prev : 0;
+  };
+
   const handleAnswer = (optionIndex: number) => {
-    const newAnswers = [...answers, optionIndex];
+    const newAnswers = [...answers];
+    newAnswers[step] = optionIndex;
+
+    // Limpiar respuestas subsiguientes por si retrocede y cambia la vía del árbol lógico
+    for (let i = step + 1; i < questions.length; i++) {
+      newAnswers[i] = null;
+    }
+
     setAnswers(newAnswers);
 
-    if (step < questions.length - 1) {
-      setStep(step + 1);
+    const nextStep = getNextStep(step, newAnswers);
+    if (nextStep < questions.length) {
+      setStep(nextStep);
     } else {
-      // Calcular puntuación final usando la puntuación de cada opción elegida
-      const finalScore = newAnswers.reduce((total, optionIdx, qIdx) => {
+      // Calcular puntuación final filtrando las preguntas omitidas/no respondidas
+      const finalScore = newAnswers.reduce((total: number, optionIdx, qIdx) => {
+        if (optionIdx === null || optionIdx === -1) return total;
         return total + questions[qIdx].options[optionIdx].score;
       }, 0);
       setScore(Math.min(finalScore, 100));
@@ -166,9 +215,20 @@ export default function SecurityQuiz() {
 
   const resetQuiz = () => {
     setStep(0);
-    setAnswers([]);
+    setAnswers(new Array(questions.length).fill(null));
     setIsFinished(false);
     setScore(0);
+  };
+
+  // Generador de reporte PDF del lado del cliente
+  const handleDownloadPDF = () => {
+    const vectores = calcularVectores();
+    const { positives, vulnerabilities, recommendations: finalRecs } = getAuditDetails();
+    const viviendaType = answers[0] !== null && answers[0] !== undefined
+      ? questions[0].options[answers[0]]?.text || "Piso/Ático"
+      : "Vivienda";
+    
+    generateSecurityReportPDF(score, vectores, positives, vulnerabilities, finalRecs, viviendaType);
   };
 
   // Cálculo de los 3 Vectores de la Auditoría Técnica
@@ -186,27 +246,60 @@ export default function SecurityQuiz() {
     const q9Idx = answers[8]; // Tiempo (8)
     const q10Idx = answers[9]; // Batería (9)
 
-    // Vector 1: Resistencia y Prevención Física (Máximo: 10 + 15 + 10 = 35)
+    // Vector 1: Resistencia y Prevención Física
     let fisicoScore = 0;
-    if (q1Idx !== undefined) fisicoScore += questions[0].options[q1Idx].score;
-    if (q4Idx !== undefined) fisicoScore += questions[3].options[q4Idx].score;
-    if (q7Idx !== undefined) fisicoScore += questions[6].options[q7Idx].score;
-    const fisicoPct = Math.round((fisicoScore / 35) * 100);
+    let maxFisico = 0;
+    if (q1Idx !== undefined && q1Idx !== null) {
+      fisicoScore += questions[0].options[q1Idx].score;
+      maxFisico += 10;
+    }
+    if (q4Idx !== undefined && q4Idx !== null) {
+      fisicoScore += questions[3].options[q4Idx].score;
+      maxFisico += 15;
+    }
+    if (q7Idx !== undefined && q7Idx !== null && !shouldSkipQuestion(6, answers)) {
+      fisicoScore += questions[6].options[q7Idx].score;
+      maxFisico += 10;
+    }
+    const fisicoPct = maxFisico > 0 ? Math.round((fisicoScore / maxFisico) * 100) : 0;
 
-    // Vector 2: Detección Activa y Control Digital (Máximo: 20 + 15 + 10 = 45)
+    // Vector 2: Detección Activa y Control Digital
     let deteccionScore = 0;
-    if (q2Idx !== undefined) deteccionScore += questions[1].options[q2Idx].score;
-    if (q3Idx !== undefined) deteccionScore += questions[2].options[q3Idx].score;
-    if (q6Idx !== undefined) deteccionScore += questions[5].options[q6Idx].score;
-    const deteccionPct = Math.round((deteccionScore / 45) * 100);
+    let maxDeteccion = 0;
+    if (q2Idx !== undefined && q2Idx !== null) {
+      deteccionScore += questions[1].options[q2Idx].score;
+      maxDeteccion += 20;
+    }
+    if (q3Idx !== undefined && q3Idx !== null) {
+      deteccionScore += questions[2].options[q3Idx].score;
+      maxDeteccion += 15;
+    }
+    if (q6Idx !== undefined && q6Idx !== null && !shouldSkipQuestion(5, answers)) {
+      deteccionScore += questions[5].options[q6Idx].score;
+      maxDeteccion += 10;
+    }
+    const deteccionPct = maxDeteccion > 0 ? Math.round((deteccionScore / maxDeteccion) * 100) : 0;
 
-    // Vector 3: Resiliencia y Mitigación Operativa (Máximo: 10 + 10 + 10 + 10 = 40)
+    // Vector 3: Resiliencia y Mitigación Operativa
     let resilienciaScore = 0;
-    if (q5Idx !== undefined) resilienciaScore += questions[4].options[q5Idx].score;
-    if (q8Idx !== undefined) resilienciaScore += questions[7].options[q8Idx].score;
-    if (q9Idx !== undefined) resilienciaScore += questions[8].options[q9Idx].score;
-    if (q10Idx !== undefined) resilienciaScore += questions[9].options[q10Idx].score;
-    const resilienciaPct = Math.round((resilienciaScore / 40) * 100);
+    let maxResiliencia = 0;
+    if (q5Idx !== undefined && q5Idx !== null && !shouldSkipQuestion(4, answers)) {
+      resilienciaScore += questions[4].options[q5Idx].score;
+      maxResiliencia += 10;
+    }
+    if (q8Idx !== undefined && q8Idx !== null) {
+      resilienciaScore += questions[7].options[q8Idx].score;
+      maxResiliencia += 10;
+    }
+    if (q9Idx !== undefined && q9Idx !== null) {
+      resilienciaScore += questions[8].options[q9Idx].score;
+      maxResiliencia += 10;
+    }
+    if (q10Idx !== undefined && q10Idx !== null) {
+      resilienciaScore += questions[9].options[q10Idx].score;
+      maxResiliencia += 10;
+    }
+    const resilienciaPct = maxResiliencia > 0 ? Math.round((resilienciaScore / maxResiliencia) * 100) : 0;
 
     return {
       fisico: Math.min(fisicoPct, 100),
@@ -258,25 +351,31 @@ export default function SecurityQuiz() {
       vulnerabilities.push("Puerta estándar sin sensores activos: No recibirás aviso antes de que fuercen físicamente el marco de entrada.");
     }
 
-    // Ausencias
-    if (q5Idx === 2) {
-      vulnerabilities.push("Segunda residencia casi siempre vacía: Sin simulación o videovigilancia robusta, el riesgo de usurpación se multiplica exponencialmente.");
-    } else if (q5Idx === 1 || q5Idx === 3) {
-      vulnerabilities.push("Ausencia predictiva: Los viajes recurrentes abren ventanas horarias fáciles de auditar por delincuentes locales.");
+    // Ausencias (evaluar solo si no fue omitida)
+    if (q5Idx !== null && q5Idx !== undefined && !shouldSkipQuestion(4, answers)) {
+      if (q5Idx === 2) {
+        vulnerabilities.push("Segunda residencia casi siempre vacía: Sin simulación o videovigilancia robusta, el riesgo de usurpación se multiplica exponencialmente.");
+      } else if (q5Idx === 1 || q5Idx === 3) {
+        vulnerabilities.push("Ausencia predictiva: Los viajes recurrentes abren ventanas horarias fáciles de auditar por delincuentes locales.");
+      }
     }
 
-    // Control de llamadas (Mirilla)
-    if (q6Idx === 0) {
-      positives.push("Control presencial frontal: Capacidad de disuadir timbrazos ficticios respondiendo de forma remota.");
-    } else {
-      vulnerabilities.push("Fallo en control de llamadas: El timbrado de marcado táctico para monitorizar tu presencia no está cubierto.");
+    // Control de llamadas (evaluar solo si no fue omitida)
+    if (q6Idx !== null && q6Idx !== undefined && !shouldSkipQuestion(5, answers)) {
+      if (q6Idx === 0) {
+        positives.push("Control presencial frontal: Capacidad de disuadir timbrazos ficticios respondiendo de forma remota.");
+      } else {
+        vulnerabilities.push("Fallo en control de llamadas: El timbrado de marcado táctico para monitorizar tu presencia no está cubierto.");
+      }
     }
 
-    // Iluminación
-    if (q7Idx === 0) {
-      positives.push("Señalización lumínica preventiva e inteligente para eliminar puntos ciegos nocturnos.");
-    } else {
-      vulnerabilities.push("Escasa visibilidad del perímetro en horas críticas, facilitando el sabotaje de cerraduras bajo la sombra.");
+    // Iluminación (solo se evalúa si el usuario no tiene la pregunta omitida)
+    if (q7Idx !== null && q7Idx !== undefined && q7Idx !== -1 && !shouldSkipQuestion(6, answers)) {
+      if (q7Idx === 0) {
+        positives.push("Señalización lumínica preventiva e inteligente para eliminar puntos ciegos nocturnos.");
+      } else {
+        vulnerabilities.push("Escasa visibilidad del perímetro en horas críticas, facilitando el sabotaje de cerraduras bajo la sombra.");
+      }
     }
 
     // Respaldo de batería UPS
@@ -305,10 +404,10 @@ export default function SecurityQuiz() {
     const itemReasons: string[] = ["", "", "", "", "", ""];
 
     if (detectedCategory === "vivienda") {
-      // v1 - TP-Link Tapo C335
+      // v1 - TP-Link Tapo C225
       productScores[0] = 1;
       if (q3Idx !== 0) productScores[0] += 3;
-      itemReasons[0] = "Dado que careces de protección visual interior constante, te sugerimos la cámara Tapo C335: graba en resolución 2K y cuenta con un obturador físico real para garantizar tu privacidad absoluta en casa.";
+      itemReasons[0] = "Dado que careces de protección visual interior constante, te sugerimos la cámara Tapo C225: graba en resolución 2K y cuenta con un obturador físico real para garantizar tu privacidad absoluta en casa.";
 
       // v2 - Eufy Video Doorbell E340
       productScores[1] = 1;
@@ -695,7 +794,13 @@ export default function SecurityQuiz() {
               />
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center flex-wrap">
+              <button 
+                onClick={handleDownloadPDF}
+                className="px-10 py-5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-3 transition-all shadow-2xl shadow-emerald-600/20 active:scale-[0.98]"
+              >
+                <Download className="w-4 h-4" /> Descargar Auditoría (PDF)
+              </button>
               <button 
                 onClick={resetQuiz}
                 className="px-10 py-5 glass hover:bg-white/10 rounded-2xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-3 transition-all"
@@ -739,12 +844,26 @@ export default function SecurityQuiz() {
       </Helmet>
       <div className="container mx-auto px-6 max-w-3xl">
         <div className="mb-20">
-          <Link to="/" className="group inline-flex items-center gap-3 text-neutral-500 font-bold mb-16 hover:text-white transition-all uppercase tracking-widest text-[10px]">
-            <div className="w-8 h-8 rounded-full glass flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-              <ChevronLeft className="w-4 h-4" />
-            </div>
-            Cancelar Evaluación
-          </Link>
+          <div className="flex flex-wrap items-center gap-6 mb-16 justify-between">
+            {step > 0 ? (
+              <button 
+                onClick={() => setStep(getPrevStep(step, answers))}
+                className="group inline-flex items-center gap-3 text-neutral-400 font-bold hover:text-white transition-all uppercase tracking-widest text-[10px] cursor-pointer"
+              >
+                <div className="w-8 h-8 rounded-full glass flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <ChevronLeft className="w-4 h-4" />
+                </div>
+                Pregunta Anterior
+              </button>
+            ) : (
+              <Link to="/" className="group inline-flex items-center gap-3 text-neutral-500 font-bold hover:text-white transition-all uppercase tracking-widest text-[10px]">
+                <div className="w-8 h-8 rounded-full glass flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                  <ChevronLeft className="w-4 h-4" />
+                </div>
+                Cancelar Evaluación
+              </Link>
+            )}
+          </div>
           
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2 px-3 py-1 glass rounded-lg">

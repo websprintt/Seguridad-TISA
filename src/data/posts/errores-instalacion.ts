@@ -65,9 +65,9 @@ Basta un corte limpio con unos alicates y la cámara desaparece antes incluso de
 
 En instalaciones exteriores de alto nivel, es indispensable usar componentes de calidad que aíslen la infraestructura de sabotajes físicos y agua:
 
-* Cableado oculto o protegido mediante [canalización de tubo rígido metálico o PVC reforzado](https://www.amazon.es/s?k=tubo+rigido+pvc+instalacion+electrica)
-* Uso de una [caja de conexiones estanca IP66 o superior en Amazon](https://www.amazon.es/s?k=caja+estanca+exterior+ip66) para proteger empalmes y conectores
-* Empleo de [cables Ethernet Cat6 aptos para exterior en Amazon](https://www.amazon.es/s?k=cable+ethernet+cat6+exterior) con cubierta con protección UV
+* Cableado oculto o protegido mediante [canalización de tubo rígido metálico o PVC reforzado](https://www.amazon.es/s?k=tubo+rigido+pvc+instalacion+electrica&tag=tisaseguridad-21)
+* Uso de una [caja de conexiones estanca IP66 o superior en Amazon](https://www.amazon.es/s?k=caja+estanca+exterior+ip66&tag=tisaseguridad-21) para proteger empalmes y conectores
+* Empleo de [cables Ethernet Cat6 aptos para exterior en Amazon](https://www.amazon.es/s?k=cable+ethernet+cat6+exterior&tag=tisaseguridad-21) con cubierta con protección UV
 * Cero cable de red expuesto o visible junto al soporte de la cámara
 
 Una regla simple: si el cable puede verse, probablemente también puede sabotearse.
@@ -120,7 +120,7 @@ Los puntos críticos deben ir siempre cableados mediante cable de datos (Etherne
 * Acceso trasero o patio
 * Grabador central de vídeo (NVR)
 
-Si utilizas cámaras WiFi o a batería en zonas secundarias o en casas de campo para prevenir intrusiones por sorpresa (puedes leer más métodos en nuestra [guía técnica para evitar okupaciones](/blog/evitar-okupas-guia-segunda-vivienda)), al menos asegúrate de que graben localmente en una tarjeta de memoria SD interna aunque se pierda la conexión a internet. Te recomiendo encarecidamente optar por comprar una [tarjeta de memoria MicroSD High Endurance en Amazon](https://www.amazon.es/s?k=microsd+high+endurance), especialmente optimizada para soportar reescritura continua 24/7 sin corromperse.
+Si utilizas cámaras WiFi o a batería en zonas secundarias o en casas de campo para prevenir intrusiones por sorpresa (puedes leer más métodos en nuestra [guía técnica para evitar okupaciones](/blog/evitar-okupas-guia-segunda-vivienda)), al menos asegúrate de que graben localmente en una tarjeta de memoria SD interna aunque se pierda la conexión a internet. Te recomiendo encarecidamente optar por comprar una [tarjeta de memoria MicroSD High Endurance en Amazon](https://www.amazon.es/s?k=microsd+high+endurance&tag=tisaseguridad-21), especialmente optimizada para soportar reescritura continua 24/7 sin corromperse.
 
 ## 5. El error silencioso: confiar toda tu seguridad a la nube
 
@@ -137,8 +137,8 @@ Además, recuerda que sufrir un asalto puede acarrear graves facturas inesperada
 La mejor configuración siempre es un diseño híbrido con varias capas de seguridad independientes de fallos de red:
 
 * Capa 1 (Nube): Para la visualización remota y recibir alertas rápidas al móvil de inmediato.
-* Capa 2 (Grabación local): Un [Kit de NVR y cámaras PoE Reolink en Amazon](https://www.amazon.es/s?k=reolink+kit+nvr+4k) o almacenamiento físico oculto e independiente de internet.
-* Capa 3 (Respaldo de energía): Un pequeño sistema de alimentación ininterrumpida como un [SAI para router y alarmas en Amazon](https://www.amazon.es/s?k=sai+ups+para+router) para mantener funcionando el router y el grabador aunque corten la luz exterior.
+* Capa 2 (Grabación local): Un [Kit de NVR y cámaras PoE Reolink en Amazon](https://www.amazon.es/s?k=reolink+kit+nvr+4k&tag=tisaseguridad-21) o almacenamiento físico oculto e independiente de internet.
+* Capa 3 (Respaldo de energía): Un pequeño sistema de alimentación ininterrumpida como un [SAI para router y alarmas en Amazon](https://www.amazon.es/s?k=sai+ups+para+router&tag=tisaseguridad-21) para mantener funcionando el router y el grabador aunque corten la luz exterior.
 
 Si cortan la luz o el suministro de fibra de internet, el sistema sigue vivo. Eso es seguridad activa real.
 

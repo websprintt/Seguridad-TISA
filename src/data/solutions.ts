@@ -24,7 +24,7 @@ export const solutionCategories: SolutionCategory[] = [
     products: [
       {
         id: "v1",
-        name: "TP-Link Tapo C335",
+        name: "TP-Link Tapo C225",
         description: "Protege tu hogar con resolución 2K y privacidad absoluta. Cuenta con un obturador físico que esconde mecánicamente la lente cuando estás en casa.",
         advantages: [
           "Privacidad física real: La lente se oculta físicamente dentro de la carcasa cuando la desactivas.",
@@ -32,7 +32,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Inteligencia Artificial Avanzada: Distingue entre personas, mascotas, vehículos y sonidos anómalos (como la rotura de un cristal) para evitar alertas falsas."
         ],
         whyRecommend: "Porque la seguridad en el hogar no debe comprometer tu privacidad. Es la cámara interior más inteligente del mercado actual, con un precio imbatible y una calidad de imagen nocturna impecable.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Tapo+C335",
+        amazonUrl: "https://amzn.to/4fM6G2k",
         image: "https://m.media-amazon.com/images/I/71PBEdXg96L._AC_SL1500_.jpg",
         category: "Cámara Interior"
       },
@@ -46,7 +46,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Batería o cableado: Máxima versatilidad para instalarlo en cinco minutos en cualquier tipo de fachada."
         ],
         whyRecommend: "Es la opción más eficiente y moderna para el control de accesos. Elimina por completo los costes ocultos de otras marcas y ofrece una cobertura de seguridad en la puerta principal que ningún videoportero de una sola lente puede igualar.",
-        amazonUrl: "https://www.amazon.es/s?k=Eufy+Video+Doorbell+E340",
+        amazonUrl: "https://amzn.to/44dU2C5",
         image: "https://m.media-amazon.com/images/I/61Sfuf3fyEL._AC_SL1500_.jpg",
         category: "Videoportero"
       },
@@ -60,7 +60,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Hub con sirena integrada: El puente de conexión actúa también como una alarma sonora que se activa si detecta un intruso."
         ],
         whyRecommend: "A diferencia de los sensores WiFi tradicionales que agotan las pilas en meses y sufren retrasos, este sistema es profesional, ultra-rápido y sirve como una alarma doméstica escalable y sin cuotas.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Tapo+T110+Hub+H100",
+        amazonUrl: "https://amzn.to/4gnGXxl",
         image: "https://m.media-amazon.com/images/I/71MhoffWqyL._AC_SL1500_.jpg",
         category: "Sensores"
       },
@@ -74,7 +74,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Seguimiento automatizado 360°: Detecta el movimiento y rota sola para rastrear al objetivo por todo el jardín o fachada."
         ],
         whyRecommend: "Es el producto estrella para el exterior del hogar. Reúne resolución 3K, almacenamiento local gratuito, rotación total y autosuficiencia energética en un solo dispositivo. No existe una alternativa más moderna y eficiente.",
-        amazonUrl: "https://www.amazon.es/s?k=eufy+SoloCam+S340",
+        amazonUrl: "https://amzn.to/3SrzP9h",
         image: "https://m.media-amazon.com/images/I/61f+qXLtQcL._AC_SL1500_.jpg",
         category: "Cámara Exterior"
       },
@@ -88,7 +88,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Extra de Brillo (1055 Lúmenes): Al ser más potentes que las bombillas estándar, la luz se nota perfectamente desde la calle incluso con las persianas semi-bajadas."
         ],
         whyRecommend: "La simulación de presencia es la forma más barata y efectiva de disuadir a los ladrones. Este modelo específico de Tapo ofrece la máxima fiabilidad tecnológica actual, es muy brillante y cuesta una fracción del precio de los sistemas antiguos que requerían comprar costosas centralitas aparte.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Tapo+L535E",
+        amazonUrl: "https://amzn.to/4gqv4Xu",
         image: "https://m.media-amazon.com/images/I/6155xjQxhfL._AC_SL1500_.jpg",
         category: "Simulación"
       },
@@ -102,7 +102,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Control por voz y táctil: Mira tus cámaras diciendo 'Alexa, enséñame el patio' o tocando la pantalla con los widgets directos del panel de control."
         ],
         whyRecommend: "Porque un hogar seguro necesita un cuadro de mandos centralizado. A diferencia de los altavoces Echo Show comunes que están pensados para el entretenimiento (música, fotos, recetas), el Echo Hub está diseñado exclusivamente para la domótica y la seguridad, ofreciendo la experiencia estética y funcional de una alarma profesional pero con total libertad y modernidad.",
-        amazonUrl: "https://www.amazon.es/s?k=Amazon+Echo+Hub",
+        amazonUrl: "https://amzn.to/4fVSt33",
         image: "https://m.media-amazon.com/images/I/61mR-D6SVJL._AC_SL1000_.jpg",
         category: "Control"
       }
@@ -123,7 +123,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Inteligencia en Red: El NVR de 2TB gestiona las grabaciones de forma local y segura, permitiendo el acceso remoto encriptado desde el móvil del propietario."
         ],
         whyRecommend: "Considero que la estabilidad en un negocio no es negociable. El cableado PoE te garantiza que ninguna frecuencia WiFi inhibida dejará a tu local a ciegas. Su IA de detección humana es la más precisa en este rango de precio, ahorrándote la pesadilla de despertarte de madrugada por falsas alarmas provocadas por sombras o insectos.",
-        amazonUrl: "https://www.amazon.es/s?k=Reolink+RLK8-800B4",
+        amazonUrl: "https://amzn.to/4xAqfB9",
         image: "https://m.media-amazon.com/images/I/61MceWFXjxL._AC_SL1500_.jpg",
         category: "CCTV Pack"
       },
@@ -137,7 +137,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Integración Omada: Gestión centralizada en la nube si el negocio crece y añade más puntos de acceso o interruptores."
         ],
         whyRecommend: "Sé por mis experiencias que de nada sirve blindar la puerta de tu local si dejas la puerta digital abierta. Este router crea un muro de ciberseguridad que impide que pirateen tus cámaras desde internet. Además, su capacidad de gestionar dos líneas de internet a la vez es mi recomendación definitiva para que tu negocio nunca se quede desconectado ni pierda la vigilancia online.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Omada+ER605+V2",
+        amazonUrl: "https://amzn.to/4eb3ITS",
         image: "https://m.media-amazon.com/images/I/61qdLu4Hw2L._AC_SL1000_.jpg",
         category: "Networking"
       },
@@ -151,7 +151,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Visión Nocturna DarkFighter: Captura imágenes nítidas en condiciones de oscuridad casi total donde otras cámaras solo ven negro."
         ],
         whyRecommend: "Esta cámara de Hikvision es, según mi opinión, de las mejores cuando se busca una protección perimetral estricta y profesional. Su analítica de vídeo con IA es extraordinaria: en lugar de hacerte perder horas buscando en las grabaciones qué ha pasado, mi criterio para recomendarla es su capacidad de filtrar los vídeos al instante mostrando solo los momentos donde detecta intrusos reales. Es la cámara que necesitas para proteger tus activos más valiosos.",
-        amazonUrl: "https://www.amazon.es/s?k=Hikvision+DS-2CD2186G2-I",
+        amazonUrl: "https://amzn.to/3QjTkA5",
         image: "https://m.media-amazon.com/images/I/41QHN9yiRTL._AC_.jpg",
         category: "Cámara Pro"
       },
@@ -164,9 +164,9 @@ export const solutionCategories: SolutionCategory[] = [
           "Alertas de Aglomeración: Capaz de enviar una notificación si se supera el aforo permitido en una zona crítica.",
           "Audio Bidireccional: Micrófono integrado de alta fidelidad para escuchar lo que ocurre en la zona de cajas o atención al cliente."
         ],
-        whyRecommend: "Este modelo no solo protege, sino que aportar valor a la gestión de tu negocio. Recomiendo su instalación en la entrada principal de locales porque cumple una doble función perfecta: vigila el acceso con la máxima resolución y, simultáneamente, te proporciona métricas exactas de aforo y afluencia de clientes para ayudarte a tomar mejores decisiones comerciales.",
-        amazonUrl: "https://www.amazon.es/s?k=Reolink+RLC-810A",
-        image: "https://m.media-amazon.com/images/I/41QHN9yiRTL._AC_.jpg",
+        whyRecommend: "Este modelo no solo protege, sino que aportar valor a la gestión de tu negocio. Recomiendo su instalación en la entrada principal de locales porque cumple una doble función perfecta: vigila el acceso con la máxima resolución and, simultáneamente, te proporciona métricas exactas de aforo y afluencia de clientes para ayudarte a tomar mejores decisiones comerciales.",
+        amazonUrl: "https://amzn.to/3ScYUEY",
+        image: "https://m.media-amazon.com/images/I/51KPV8w+SDL._AC_SL1500_.jpg",
         category: "Grabación"
       },
       {
@@ -179,7 +179,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Batería de larga duración: Hasta 180 días de autonomía con una sola carga."
         ],
         whyRecommend: "Si tu local es de alquiler o la normativa de tu oficina te impide hacer obras para pasar cables, esta es la única opción inalámbrica que me atrevo a recomendarte como profesional. La elijo porque su señal encriptada es sumamente estable frente a interferencias y porque su resolución 4K real te asegura el nivel de detalle que vas a necesitar ante cualquier reclamación o incidente legal en tu empresa.",
-        amazonUrl: "https://www.amazon.es/s?k=eufy+Security+Cam+3C",
+        amazonUrl: "https://amzn.to/4vhSPpu",
         image: "https://m.media-amazon.com/images/I/51iX6MRu1+L._AC_SL1125_.jpg",
         category: "Inalámbrico Pro"
       },
@@ -193,7 +193,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Resistencia térmica: Componentes preparados para soportar el calor constante dentro de los armarios de servidores de los negocios."
         ],
         whyRecommend: "Insisto firmemente en que no escatimes en el almacenamiento. Mi recomendación por la gama 'Purple Pro' se basa en la experiencia: un negocio exige cámaras de mucha resolución grabando 24/7 y procesando datos de inteligencia artificial a la vez. Este componente es el único que te garantiza que el día que necesites descargar una prueba crucial para un seguro o un juicio, el vídeo estará ahí, intacto y sin saltos de fotogramas.",
-        amazonUrl: "https://www.amazon.es/s?k=WD+Purple+Pro+4TB",
+        amazonUrl: "https://amzn.to/4xwms7M",
         image: "https://m.media-amazon.com/images/I/81gNvA7tOpL._AC_SX679_.jpg",
         category: "Almacenamiento"
       }
@@ -214,7 +214,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Plena validez legal: Acelera el desalojo inmediato al aportar pruebas en flagrante delito que exige la policía para intervenir."
         ],
         whyRecommend: "Para una segunda residencia, una cámara WiFi común no basta, ya que los ocupas saben que basta con bajar el plomo de la luz para apagarla. Recomiendo el ecosistema de Ajax porque cumple de verdad con mi promesa de 'Anti-ocupación Real'. Te asegura el control total a distancia y te da la verificación visual instantánea que exige la policía para intervenir de inmediato, todo sin depender de la corriente eléctrica.",
-        amazonUrl: "https://www.amazon.es/s?k=Ajax+StarterKit+Cam",
+        amazonUrl: "https://amzn.to/4vSAsqT",
         image: "https://m.media-amazon.com/images/I/5137yX3icxL._AC_SL1500_.jpg",
         category: "Sistema Anti-Ocupación"
       },
@@ -228,7 +228,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Detección Inteligente IA: Su motor integrado filtra movimientos de viento y animales, alertándote solo de personas."
         ],
         whyRecommend: "Mantengo el concepto de cámara 4G de tu lista, pero doy el salto a la versión Go Ultra 4K. Es mi elección experta para segundas residencias porque, al no depender del router de la casa ni de la red eléctrica, se convierte en tu vigilante perimetral más fiable. Aunque saboteen la electricidad de la vivienda, esta cámara te seguirá transmitiendo vídeo en directo en la máxima resolución del mercado.",
-        amazonUrl: "https://www.amazon.es/s?k=Reolink+Go+Ultra",
+        amazonUrl: "https://amzn.to/3Sd9Q5w",
         image: "https://m.media-amazon.com/images/I/61w5k1SUxOL._AC_SL1500_.jpg",
         category: "Cámara 4G Autónoma"
       },
@@ -242,7 +242,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Almacenamiento Local Gratuito: Guarda clips históricos internamente en la HomeBase sin suscripciones adicionales."
         ],
         whyRecommend: "He seleccionado la SoloCam S340 como la cámara exterior principal porque soluciona el gran problema de las casas de vacaciones: los meses de ausencia. Al cargarse con el sol, mi criterio para recomendarla es que elimina el riesgo de quedarte a ciegas por un fallo de batería. Además, su doble lente te ofrece una capacidad de verificación visual rápida y de alta fidelidad que las cámaras tradicionales fijas no pueden igualar.",
-        amazonUrl: "https://www.amazon.es/s?k=eufy+SoloCam+S340",
+        amazonUrl: "https://amzn.to/3SrzP9h",
         image: "https://m.media-amazon.com/images/I/61f+qXLtQcL._AC_SL1500_.jpg",
         category: "Solar con Rotación"
       },
@@ -255,8 +255,8 @@ export const solutionCategories: SolutionCategory[] = [
           "Años de batería continua: Asegura el funcionamiento continuo del sensor autónomo y previene descargas accidentales en tu ausencia.",
           "Alertas en red compartida: Enlaza múltiples smartphones para avisar a vecinos o familiares cercanos si estás de viaje."
         ],
-        whyRecommend: "El vandalismo no es el único peligro cuando una casa pasa meses cerrada; un cortocircuito puede destruirla por completo. Recomiendo mantener este dispositivo de X-Sense porque su fiabilidad está más que contrastada. Es mi sugerencia imprescindible para garantizarte la tranquilidad total a distancia, permitiéndote reaccionar y llamar a los bomberos antes de que el fuego se propague.",
-        amazonUrl: "https://www.amazon.es/s?k=X-Sense+XS01-WX",
+        whyRecommend: "El vandalismo no es el único peligro cuando una casa pasa meses cerrada; un cortorcidamente puede destruirla por completo. Recomiendo mantener este dispositivo de X-Sense porque su fiabilidad está más que contrastada. Es mi sugerencia imprescindible para garantizarte la tranquilidad total a distancia, permitiéndote reaccionar y llamar a los bomberos antes de que el fuego se propague.",
+        amazonUrl: "https://amzn.to/4oxWNaR",
         image: "https://m.media-amazon.com/images/I/61EhpGxZ4iL._AC_SL1500_.jpg",
         category: "Seguridad Incendio"
       },
@@ -270,7 +270,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Instalación interna invisible: Se monta sobre el bombín actual interior sin alterar el aspecto exterior de la vivienda."
         ],
         whyRecommend: "He sustituido la opción de SwitchBot por el nuevo estándar de Nuki porque en una segunda residencia necesitas la máxima fiabilidad mecánica. Recomiendo este modelo porque su sistema de encriptación es de nivel bancario y te permite solucionar imprevistos a distancia (como dejar pasar a un fontanero si hay una fuga) sin tener que conducir durante horas para abrir la puerta tú mismo.",
-        amazonUrl: "https://www.amazon.es/s?k=Nuki+Smart+Lock+Ultra",
+        amazonUrl: "https://amzn.to/4eNkGI7",
         image: "https://m.media-amazon.com/images/I/71KS2hREWwL._AC_SL1500_.jpg",
         category: "Control de Acceso"
       },
@@ -284,7 +284,7 @@ export const solutionCategories: SolutionCategory[] = [
           "Ecosistema expandible: El hub local activa sirenas sonoras disuasorias disuadiendo al sospechoso en el momento."
         ],
         whyRecommend: "Recomiendo colocar estos sensores en todos los puntos vulnerables de tu segunda residencia porque actúan como tu primera línea de defensa activa. Mi criterio técnico para elegirlos por encima de los sensores WiFi comunes es su velocidad: te avisarán al móvil de inmediato si alguien intenta manipular una persiana, permitiéndote abrir las cámaras de seguridad al instante para realizar una verificación rápida de la situación.",
-        amazonUrl: "https://www.amazon.es/s?k=TP-Link+Tapo+T110+Hub+H100",
+        amazonUrl: "https://amzn.to/4gnGXxl",
         image: "https://m.media-amazon.com/images/I/51ouEZ2OcML._AC_SX679_.jpg",
         category: "Alerta Perimetral"
       }

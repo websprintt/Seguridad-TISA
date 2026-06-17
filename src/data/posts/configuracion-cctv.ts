@@ -45,8 +45,8 @@ Para un diseño robusto frente a las limitaciones que analizamos en la investiga
 * **Escenas de 4K (8 Megapíxeles):** Configurar bitrate objetivo de **5.5 Mbps a 8.0 Mbps**.
 
 Para el soporte de este flujo incesante de lectura y escritura 24/7, es indispensable descartar los discos duros genéricos para ordenadores personales (que fallan en pocos meses) y adquirir almacenamiento de alta durabilidad:
-* Elige soportes profesionales optimizados de videovigilancia como la gama de [Discos Duros Western Digital Purple en Amazon](https://www.amazon.es/s?k=western+digital+purple).
-* O bien, el estándar industrial de [Discos Duros Seagate SkyHawk en Amazon](https://www.amazon.es/s?k=seagate+skyhawk) de alta resistencia contra picos de temperatura.
+* Elige soportes profesionales optimizados de videovigilancia como la gama de [Discos Duros Western Digital Purple en Amazon](https://www.amazon.es/s?k=western+digital+purple&tag=tisaseguridad-21).
+* O bien, el estándar industrial de [Discos Duros Seagate SkyHawk en Amazon](https://www.amazon.es/s?k=seagate+skyhawk&tag=tisaseguridad-21) de alta resistencia contra picos de temperatura.
 
 ### 2. Analítica perimetral: dejar de grabar basura visual
 
@@ -73,7 +73,7 @@ Para impedir estos sucesos y evitar fallar de la forma que describimos en nuestr
 
 * **Evita el Port Forwarding:** No expongas nunca servicios locales directamente al puerto público de internet.
 * **Implementa redes Zero Trust:** Utiliza herramientas sencillas, gratuitas y de grado industrial como **WireGuard** o **Tailscale**. Permiten crear una red privada virtual (VPN) sumamente ágil entre tu smartphone y tu grabador local, sin abrir un solo puerto de tu router hacia el exterior.
-* **Usa cableado de calidad:** Para cámaras cableadas externas, prefiere conexiones alimentadas por el propio cable de datos PoE conectados a un [Switch PoE Gigabit de alto rendimiento en Amazon](https://www.amazon.es/s?k=switch+poe+gigabit), blindándolo del sabotaje electromagnético provocado por los inhibidores inalámbricos tradicionales.
+* **Usa cableado de calidad:** Para cámaras cableadas externas, prefiere conexiones alimentadas por el propio cable de datos PoE conectados a un [Switch PoE Gigabit de alto rendimiento en Amazon](https://www.amazon.es/s?k=switch+poe+gigabit&tag=tisaseguridad-21), blindándolo del sabotaje electromagnético provocado por los inhibidores inalámbricos tradicionales.
 
 ### 4. Ajuste forense nocturno: donde se gana o se pierde la evidencia
 
@@ -103,7 +103,7 @@ Un CCTV profesionalmente ajustado en local te otorga la soberanía del sistema d
 ## FAQ: Configuración CCTV Avanzada
 
 **¿Cuál es el mejor disco duro para montar en un grabador NVR?**
-No uses jamás discos duros convencionales para PC. Emplea exclusivamente unidades con firmware especializado en escritura secuencial continua 24/7 y gestión inteligente de vibraciones, de las que destacan la línea [Western Digital Purple en Amazon](https://www.amazon.es/s?k=western+digital+purple) o la familia [Seagate SkyHawk en Amazon](https://www.amazon.es/s?k=seagate+skyhawk).
+No uses jamás discos duros convencionales para PC. Emplea exclusivamente unidades con firmware especializado en escritura secuencial continua 24/7 y gestión inteligente de vibraciones, de las que destacan la línea [Western Digital Purple en Amazon](https://www.amazon.es/s?k=western+digital+purple&tag=tisaseguridad-21) o la familia [Seagate SkyHawk en Amazon](https://www.amazon.es/s?k=seagate+skyhawk&tag=tisaseguridad-21).
 
 **¿Debo programar grabación continua o solo videorregistro por eventos?**
 La mejor configuración técnica para seguridad crítica consiste en programar grabación continua (24/7) en un flujo de transmisión secundario de menor resolución (Substream) y activar la grabación a máxima resolución UltraHD (Mainstream) únicamente cuando se active una regla de analítica de cruce de línea o intrusión. Así contarás con todo el contexto temporal sin saturar innecesariamente tus sistemas de almacenamiento.
@@ -112,5 +112,5 @@ La mejor configuración técnica para seguridad crítica consiste en programar g
 No siempre, de hecho con frecuencia ocurre lo contrario. Un sensor de resolución 4K empaqueta un número enorme de píxeles extremadamente pequeños en una superficie muy reducida, lo que perjudica severamente la captación de luz directa de noche. Para tomas nocturnas nítidas sin recurrir a potentes focos externos de apoyo, a menudo sensores 2K o 5MP premium provistos de tamaño físico grande rinden sustancialmente mejor que sistemas 4K económicos convencionales.
 
 **¿Cómo accedo con seguridad a mi grabador de forma remota?**
-Desactiva el Port Forwarding en tu router de inmediato. El camino técnico moderno y seguro implica habilitar soluciones de VPN privada local o redes de confianza Zero Trust en tus equipos, como la integración nativa que traen kits avanzados como el [Kit PoE de NVR Reolink en Amazon](https://www.amazon.es/s?k=reolink+kit+nvr+4k) o mediante configuraciones de software estables.`
+Desactiva el Port Forwarding en tu router de inmediato. El camino técnico moderno y seguro implica habilitar soluciones de VPN privada local o redes de confianza Zero Trust en tus equipos, como la integración nativa que traen kits avanzados como el [Kit PoE de NVR Reolink en Amazon](https://www.amazon.es/s?k=reolink+kit+nvr+4k&tag=tisaseguridad-21) o mediante configuraciones de software estables.`
 };

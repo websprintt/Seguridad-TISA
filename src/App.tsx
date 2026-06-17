@@ -1078,7 +1078,13 @@ const Home = () => {
         <meta property="og:description" content="Especialista en proteger lo que más importa. Sistemas de seguridad avanzados para hogares y empresas." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tisaseguridad.shop" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TISA SEGURIDAD | Alarmas y Cámaras de Seguridad" />
+        <meta name="twitter:description" content="Especialista en proteger lo que más importa. Sistemas de seguridad avanzados para hogares y empresas." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp" />
       </Helmet>
       <Hero />
       <Problems />

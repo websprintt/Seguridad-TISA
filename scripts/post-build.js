@@ -28,17 +28,17 @@ const ROUTE_META = {
   'evaluacion': {
     title: 'Test de Seguridad Escudo TISA | Evalúa tu Vivienda',
     description: 'Realiza nuestro test de seguridad profesional gratuito para auditar puntos vulnerables en tu vivienda o comercio.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp',
   },
   'contacto': {
     title: 'Contacto | TISA Seguridad',
     description: 'Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías de alarmas y asesoramiento técnico profesional en España.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp',
   },
   'blog': {
     title: 'Blog de Seguridad y Alarmas | TISA Seguridad',
     description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp',
   },
   'blog/guia-configuracion-cctv-segura': {
     title: 'Guía profesional para configurar CCTV en 2026 | TISA Seguridad',
@@ -58,7 +58,7 @@ const ROUTE_META = {
   },
   'blog/mejor-camara-exterior-wifi-2026': {
     title: 'Mejor cámara exterior WiFi: Comparativa real 2026 | TISA Seguridad',
-    description: 'Descubre las mejores cámaras del mercado en 2026. Analizamos IA generativa local, sistemas multi-lente y almacenamiento local.',
+    description: 'Descubre las mejores cámaras del mercado en 2026. Analizamos IA generativa local, sistemas multi-lente and almacenamiento local.',
   },
   'blog/evitar-okupas-guia-segunda-vivienda': {
     title: 'Cómo evitar okupas en una segunda vivienda en 2026 | TISA Seguridad',
@@ -82,17 +82,17 @@ const ROUTE_META = {
   'aviso-legal': {
     title: 'Aviso Legal | TISA Seguridad',
     description: 'Aviso legal, términos de uso y condiciones de navegación para el portal de Seguridad TISA.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp',
   },
   'politica-de-privacidad': {
     title: 'Política de Privacidad | TISA Seguridad',
     description: 'Información detallada sobre el tratamiento de tus datos personales, cumplimiento del de RGPD y privacidad en TISA.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp',
   },
   'politica-de-cookies': {
     title: 'Política de Cookies | TISA Seguridad',
     description: 'Uso de cookies propias y de terceros para analítica web y personalización de enlaces de afiliados en TISA.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp',
   }
 };
 
@@ -274,7 +274,7 @@ function run() {
     let pageHtml = baseHtml;
 
     // Determine the route-specific preview image
-    let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp';
+    let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp';
     if (route.startsWith('blog/')) {
       const slug = route.substring(5);
       const post = allPosts.find(p => p.slug === slug);

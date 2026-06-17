@@ -21,13 +21,13 @@ const ContactPage = () => {
         <meta property="og:description" content="Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías y asesoramiento técnico profesional en España." />
         <meta property="og:url" content="https://tisaseguridad.shop/contacto" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contacto | TISA Seguridad" />
         <meta name="twitter:description" content="Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías y asesoramiento técnico profesional en España." />
-        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp" />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/websprintt/Seguridad-TISA/4eda08cb13506fc51b80c5b0247d396be2bd8416/img/banner.webp" />
       </Helmet>
 
       <div className="container mx-auto px-6 max-w-6xl">

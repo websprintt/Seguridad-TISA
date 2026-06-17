@@ -37,7 +37,7 @@ const ROUTE_META = {
   },
   'blog': {
     title: 'Blog de Seguridad y Alarmas | TISA Seguridad',
-    description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España.',
+    description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas and consejos de seguridad profesional en toda España.',
     image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
   },
   'blog/guia-configuracion-cctv-segura': {
@@ -102,7 +102,6 @@ const ROUTE_META = {
 function markdownToHtml(md) {
   if (!md) return '';
 
-  // Escaping angle brackets minimally
   let html = md
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -152,7 +151,6 @@ function markdownToHtml(md) {
 
   let finalHtml = result.join('\n');
 
-  // Markdown inline formats
   finalHtml = finalHtml.replace(/\*\*([\s\S]*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>');
   finalHtml = finalHtml.replace(/\*([\s\S]*?)\*/g, '<em class="text-neutral-200">$1</em>');
   finalHtml = finalHtml.replace(/_([\s\S]*?)_/g, '<em class="text-neutral-200">$1</em>');
@@ -162,9 +160,6 @@ function markdownToHtml(md) {
   return finalHtml;
 }
 
-/**
- * Extracts fields from the TS files in src/data/posts/
- */
 function parseBlogPostFile(slug) {
   const fileName = SLUG_TO_FILE[slug];
   if (!fileName) return null;
@@ -198,9 +193,6 @@ function parseBlogPostFile(slug) {
   return { slug, title, excerpt, date, readTime, content, image };
 }
 
-/**
- * Extracts solutions products from src/data/solutions.ts
- */
 function parseSolutionsProducts(categoryKey) {
   const filePath = path.join(__dirname, '../src/data/solutions.ts');
   if (!fs.existsSync(filePath)) {
@@ -219,7 +211,6 @@ function parseSolutionsProducts(categoryKey) {
   }
 
   const products = [];
-  // Split products by their open bracket
   const productBlocks = segment.split('{\n        id: "');
 
   for (let i = 1; i < productBlocks.length; i++) {
@@ -250,11 +241,9 @@ function run() {
 
   const baseHtml = fs.readFileSync(INDEX_HTML_PATH, 'utf-8');
 
-  // Copy a generic fallback for standard SPA fallback 404
   console.log('Generating general 404 fallback from index.html...');
   fs.writeFileSync(path.join(DIST_DIR, '404.html'), baseHtml, 'utf-8');
 
-  // Parse all posts beforehand so we can list them on the '/blog' route
   const allPosts = [];
   for (const slug of Object.keys(SLUG_TO_FILE)) {
     const parsed = parseBlogPostFile(slug);
@@ -269,19 +258,20 @@ function run() {
     }
 
     const canonicalUrl = `https://tisaseguridad.shop/${route}`;
-
-    // Perform specific replacements
     let pageHtml = baseHtml;
 
-    // Fix relative assets path for subdirectories when base is "./"
+    // CORRECCIÓN CLAVE: Ajustar profundidad tanto de assets como de la carpeta img/ estática
     const depth = route.split('/').filter(Boolean).length;
     if (depth > 0) {
       const relPrefix = '../'.repeat(depth);
       pageHtml = pageHtml.replace(/\.\/assets\//g, `${relPrefix}assets/`);
       pageHtml = pageHtml.replace(/\.\/manifest\.json/g, `${relPrefix}manifest.json`);
+      // Arregla las llamadas directas que inyectaba Vite relativas a las imágenes
+      pageHtml = pageHtml.replace(/href="\/img\//g, `href="${relPrefix}img/`);
+      pageHtml = pageHtml.replace(/src="\/img\//g, `src="${relPrefix}img/`);
+      pageHtml = pageHtml.replace(/href="\/manifest\.json"/g, `href="${relPrefix}manifest.json"`);
     }
 
-    // Determine the route-specific preview image
     let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp';
     if (route.startsWith('blog/')) {
       const slug = route.substring(5);
@@ -377,7 +367,6 @@ function run() {
         `;
       }
     } else if (route === 'blog') {
-      // List all posts dynamically so Google can crawl and parse all internal links
       const postsListHtml = allPosts.map(post => `
         <div class="p-8 rounded-xl border border-neutral-900 bg-neutral-950 hover:border-blue-500/30 transition-all duration-300">
           <span class="text-xs text-blue-400 font-mono font-bold uppercase tracking-widest block mb-2">${post.date} • ${post.readTime}</span>
@@ -405,7 +394,7 @@ function run() {
         </div>
       `;
     } else if (route.startsWith('soluciones/')) {
-      const catKey = route.substring(11); // Solutions list: "vivienda", "negocios", or "residencias"
+      const catKey = route.substring(11);
       const products = parseSolutionsProducts(catKey);
 
       const productsHtml = products.map(prod => `
@@ -433,7 +422,6 @@ function run() {
         </div>
       `;
     } else {
-      // Basic aesthetic structured page placeholder inside root for other legal/generic pages
       preRenderedContent = `
         <div class="pt-40 pb-32 bg-neutral-950 min-h-screen">
           <div class="container mx-auto px-6 max-w-3xl">
@@ -448,7 +436,6 @@ function run() {
       `;
     }
 
-    // Embed the static render right inside <div id="root">
     pageHtml = pageHtml.replace(
       /<div\s+id="root">\s*<\/div>/i,
       `<div id="root">${preRenderedContent}</div>`

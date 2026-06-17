@@ -1,7 +1,37 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import fs from 'fs';
 import { defineConfig, loadEnv } from 'vite';
+
+// Plugin personalizado para forzar la copia física de la carpeta img a dist/img
+const forceCopyImgPlugin = () => {
+  return {
+    name: 'force-copy-img',
+    closeBundle() {
+      const srcDir = path.resolve(__dirname, 'public/img');
+      const destDir = path.resolve(__dirname, 'dist/img');
+
+      if (fs.existsSync(srcDir)) {
+        if (!fs.existsSync(destDir)) {
+          fs.mkdirSync(destDir, { recursive: true });
+        }
+        
+        const files = fs.readdirSync(srcDir);
+        for (const file of files) {
+          const srcFile = path.join(srcDir, file);
+          const destFile = path.join(destDir, file);
+          if (fs.statSync(srcFile).isFile()) {
+            fs.copyFileSync(srcFile, destFile);
+          }
+        }
+        console.log('--- [VITE] Carpeta public/img copiada forzosamente a dist/img con éxito ---');
+      } else {
+        console.warn('--- [VITE] ALERTA: No se encontró la carpeta original public/img ---');
+      }
+    }
+  };
+};
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
@@ -9,7 +39,7 @@ export default defineConfig(({ mode }) => {
   return {
     // Absolute base path ensures build targets resolve perfectly from custom domain root
     base: '/',
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), forceCopyImgPlugin()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

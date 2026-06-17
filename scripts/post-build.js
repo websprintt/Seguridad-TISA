@@ -23,22 +23,22 @@ const ROUTE_META = {
   'servicios-de-blindaje': {
     title: 'Sistemas de Blindaje y Seguridad | TISA Seguridad',
     description: 'Soluciones diseñadas específicamente para cada escenario real que enfrentas cada día. Análisis de sistemas para viviendas, negocios y segundas residencias.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp',
+    image: 'https://tisaseguridad.shop/img/casas.webp',
   },
   'evaluacion': {
     title: 'Test de Seguridad Escudo TISA | Evalúa tu Vivienda',
     description: 'Realiza nuestro test de seguridad profesional gratuito para auditar puntos vulnerables en tu vivienda o comercio.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://tisaseguridad.shop/img/logo-full.webp',
   },
   'contacto': {
     title: 'Contacto | TISA Seguridad',
     description: 'Contacta con Fredys Matos para consultas sobre sistemas de seguridad, auditorías de alarmas y asesoramiento técnico profesional en España.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://tisaseguridad.shop/img/logo-full.webp',
   },
   'blog': {
     title: 'Blog de Seguridad y Alarmas | TISA Seguridad',
-    description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas and consejos de seguridad profesional en toda España.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    description: 'Aprende a proteger tu hogar. Guías sobre cámaras de vigilancia, alarmas anti-okupas y consejos de seguridad profesional en toda España.',
+    image: 'https://tisaseguridad.shop/img/logo-full.webp',
   },
   'blog/guia-configuracion-cctv-segura': {
     title: 'Guía profesional para configurar CCTV en 2026 | TISA Seguridad',
@@ -67,32 +67,32 @@ const ROUTE_META = {
   'soluciones/vivienda': {
     title: 'Sistemas de Seguridad para tu Vivienda | TISA Seguridad',
     description: 'Cámaras WiFi inteligentes con obturador físico antiespía, sensores perimetrales de ventanas y videoporteros sin cuotas.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/casas.webp',
+    image: 'https://tisaseguridad.shop/img/casas.webp',
   },
   'soluciones/negocios': {
     title: 'CCTV y Seguridad Profesional para Negocios | TISA Seguridad',
     description: 'Sistemas CCTV de alta definición 4K PoE estables, almacenamiento de alta de capacidad de vídeo y seguridad de red local.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/negocios.webp',
+    image: 'https://tisaseguridad.shop/img/negocios.webp',
   },
   'soluciones/residencias': {
     title: 'Alarmas y Protección para Segundas Residencias | TISA Seguridad',
     description: 'Sistemas anti-ocupas autónomos homologados, alimentados por panel solar y conectividad 4G para proteger tu residencia vacacional.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/625bd7b2a4b216624f909a9f1587aa269893a25c/img/okupas.webp',
+    image: 'https://tisaseguridad.shop/img/okupas.webp',
   },
   'aviso-legal': {
     title: 'Aviso Legal | TISA Seguridad',
     description: 'Aviso legal, términos de uso y condiciones de navegación para el portal de Seguridad TISA.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://tisaseguridad.shop/img/logo-full.webp',
   },
   'politica-de-privacidad': {
     title: 'Política de Privacidad | TISA Seguridad',
     description: 'Información detallada sobre el tratamiento de tus datos personales, cumplimiento del de RGPD y privacidad en TISA.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://tisaseguridad.shop/img/logo-full.webp',
   },
   'politica-de-cookies': {
     title: 'Política de Cookies | TISA Seguridad',
     description: 'Uso de cookies propias y de terceros para analítica web y personalización de enlaces de afiliados en TISA.',
-    image: 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp',
+    image: 'https://tisaseguridad.shop/img/logo-full.webp',
   }
 };
 
@@ -223,7 +223,7 @@ function parseSolutionsProducts(categoryKey) {
     const description = descMatch ? descMatch[1] : '';
 
     const whyMatch = block.match(/whyRecommend:\s*"(.*?)"/);
-    const whyRecommend = whyMatch ? whyMatch[1] : '';
+    const whyRecommend = whyMatch ? whyRecommend[1] : '';
 
     if (name && description) {
       products.push({ name, description, whyRecommend });
@@ -260,19 +260,16 @@ function run() {
     const canonicalUrl = `https://tisaseguridad.shop/${route}`;
     let pageHtml = baseHtml;
 
-    // CORRECCIÓN CLAVE: Ajustar profundidad tanto de assets como de la carpeta img/ estática
+    // Al usar base fija '/' en Vite, las llamadas a assets e imágenes se mantienen fijas absolutas desde la raíz.
+    // Solo ajustamos rutas relativas si se detecta un patrón local explícito.
     const depth = route.split('/').filter(Boolean).length;
     if (depth > 0) {
       const relPrefix = '../'.repeat(depth);
       pageHtml = pageHtml.replace(/\.\/assets\//g, `${relPrefix}assets/`);
       pageHtml = pageHtml.replace(/\.\/manifest\.json/g, `${relPrefix}manifest.json`);
-      // Arregla las llamadas directas que inyectaba Vite relativas a las imágenes
-      pageHtml = pageHtml.replace(/href="\/img\//g, `href="${relPrefix}img/`);
-      pageHtml = pageHtml.replace(/src="\/img\//g, `src="${relPrefix}img/`);
-      pageHtml = pageHtml.replace(/href="\/manifest\.json"/g, `href="${relPrefix}manifest.json"`);
     }
 
-    let routeImage = meta.image || 'https://raw.githubusercontent.com/websprintt/Seguridad-TISA/cc4253c367c4a8f7f65d97764e71117dbd996067/img/logo-full.webp';
+    let routeImage = meta.image || 'https://tisaseguridad.shop/img/logo-full.webp';
     if (route.startsWith('blog/')) {
       const slug = route.substring(5);
       const post = allPosts.find(p => p.slug === slug);

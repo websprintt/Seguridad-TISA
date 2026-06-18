@@ -228,7 +228,22 @@ export default function SecurityQuiz() {
       ? questions[0].options[answers[0]]?.text || "Piso/Ático"
       : "Vivienda";
     
-    generateSecurityReportPDF(score, vectores, positives, vulnerabilities, finalRecs, viviendaType);
+    const q5Idx = answers[4];
+    const q10Idx = answers[9];
+    
+    const dictamen1 = q5Idx === 2 ? (
+      "Al identificar tu propiedad como una SEGUNDA RESIDENCIA deshabitada usualmente, existe el peligro de que en caso de ocupación o asalto de larga duración, la justicia lo catalogue formalmente como 'Usurpación de inmuebles'. Si no cuentas con registros en vídeo que acrediten que el asalto se ha efectuado en las últimas 48 horas (un hecho delictivo flagrante en curso), los agentes locales no dispondrán de cobertura legal de desalojo directo sin requerimiento judicial, obligándote a pasar por un trámite judicial muy dilatado en el tiempo."
+    ) : (
+      "Al tratarse de tu MORADA PRINCIPAL o habitual, tienes el amparo legal de expulsión policial bajo el cargo penal de 'Allanamiento de morada'. No obstante, el principal escollo que sufren los propietarios es demostrar con seguridad que la irrupción ha ocurrido en las horas previas. Proporcionar grabaciones de videovigilancia automática en tu terminal móvil es el salvoconducto técnico para exigir un desalojo policial directo."
+    );
+    
+    const dictamen2 = q10Idx === 1 ? (
+      "Has indicado que tu sistema carece de alimentación eléctrica redundante. En la actualidad, las intrusiones profesionales se planifican manipulando con antelación el tendido de luz en el exterior (caja general de fusibles en fachada o contadores). Si desactivan los plomos, tu videovigilancia y tu router de fibra se apagarán por completo al instante. Es prioritario integrar un sistema de alarma que trabaje con baterías de backup dedicadas (SAI o UPS) para asegurar el envío de la señal."
+    ) : (
+      "Mantener redundancia eléctrica asegura que la videovigilancia local registre todo lo sucedido aunque un intruso intente sabotear los plomos de luz perimetral antes de manipular la cerradura principal. Continúa garantizando esta resiliencia."
+    );
+    
+    generateSecurityReportPDF(score, vectores, positives, vulnerabilities, finalRecs, viviendaType, dictamen1, dictamen2);
   };
 
   // Cálculo de los 3 Vectores de la Auditoría Técnica
@@ -541,24 +556,24 @@ export default function SecurityQuiz() {
           <meta name="robots" content="noindex, follow" />
           <link rel="canonical" href="https://tisaseguridad.shop/evaluacion" />
         </Helmet>
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            className="glass-dark rounded-5xl border border-white/5 p-12 md:p-20 text-center shadow-2xl relative overflow-hidden"
+            className="glass-dark rounded-3xl sm:rounded-5xl border border-white/5 p-6 sm:p-12 md:p-20 text-center shadow-2xl relative overflow-hidden"
           >
             <div className={`absolute top-0 left-0 w-full h-3 ${score > 70 ? 'bg-green-500' : score > 40 ? 'bg-yellow-500' : 'bg-red-500'}`} />
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
             
-            <div className="relative inline-flex items-center justify-center w-32 h-32 rounded-full glass mb-12 border border-white/10">
-              <span className={`text-5xl font-display font-bold ${score > 70 ? 'text-green-500' : score > 40 ? 'text-yellow-500' : 'text-red-500'}`}>
+            <div className="relative inline-flex items-center justify-center w-24 h-24 sm:w-32 sm:h-32 rounded-full glass mb-6 sm:mb-12 border border-white/10">
+              <span className={`text-4xl sm:text-5xl font-display font-bold ${score > 70 ? 'text-green-500' : score > 40 ? 'text-yellow-500' : 'text-red-500'}`}>
                 {score}
               </span>
               <div className="absolute inset-0 rounded-full border-4 border-white/5" />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-display font-bold mb-8 tracking-tighter leading-tight">Escaneado <br /><span className="text-blue-500 font-semibold">Técnico Completado</span></h1>
-            <p className="text-xl text-neutral-400 mb-16 font-light leading-relaxed max-w-2xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-4 sm:mb-8 tracking-tighter leading-tight">Escaneado <br /><span className="text-blue-500 font-semibold">Técnico Completado</span></h1>
+            <p className="text-[13px] sm:text-base md:text-xl text-neutral-400 mb-8 sm:mb-16 font-light leading-relaxed max-w-2xl mx-auto">
               Tu índice global de blindaje residencial es de <strong className="text-white font-semibold">{score}/100</strong>. 
               {score < 50 ? " Tu vivienda presenta vulnerabilidades críticas que comprometen seriamente tu tranquilidad ante allanamientos e intrusiones organizadas." : 
                score < 80 ? " Cuentas con medidas iniciales de seguridad, pero existen puntos ciegos técnicos que permiten accesos sin detección inmediata." : 
@@ -566,16 +581,16 @@ export default function SecurityQuiz() {
             </p>
 
             {/* Diagnóstico Detallado */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-20">
-              <div className="p-10 glass rounded-4xl border border-white/5 relative overflow-hidden group">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-left mb-10 sm:mb-20">
+              <div className="p-5 sm:p-8 md:p-10 glass rounded-2xl sm:rounded-4xl border border-white/5 relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-1 h-full bg-green-500/50" />
-                <div className="flex items-center gap-4 mb-6 text-green-500">
-                  <CheckCircle2 className="w-6 h-6 shrink-0" />
-                  <span className="font-bold uppercase tracking-[0.2em] text-[10px]">Análisis Preventivo Positivo</span>
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 text-green-500">
+                  <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+                  <span className="font-bold uppercase tracking-[0.2em] text-[10px] md:text-[11px]">Análisis Preventivo Positivo</span>
                 </div>
-                <ul className="space-y-4 text-sm text-neutral-400 font-light">
+                <ul className="space-y-3 sm:space-y-4 text-[11px] sm:text-sm text-neutral-400 font-light leading-relaxed">
                   {positives.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
+                    <li key={idx} className="flex items-start gap-2.5 sm:gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-green-500/60 mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -583,15 +598,15 @@ export default function SecurityQuiz() {
                 </ul>
               </div>
               
-              <div className="p-10 glass rounded-4xl border border-white/5 relative overflow-hidden group">
+              <div className="p-5 sm:p-8 md:p-10 glass rounded-2xl sm:rounded-4xl border border-white/5 relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-1 h-full bg-red-500/50" />
-                <div className="flex items-center gap-4 mb-6 text-red-500">
-                  <AlertTriangle className="w-6 h-6 shrink-0" />
-                  <span className="font-bold uppercase tracking-[0.2em] text-[10px]">Vulnerabilidades Halladas</span>
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 text-red-500">
+                  <AlertTriangle className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+                  <span className="font-bold uppercase tracking-[0.2em] text-[10px] md:text-[11px]">Vulnerabilidades Halladas</span>
                 </div>
-                <ul className="space-y-4 text-sm text-neutral-400 font-light">
+                <ul className="space-y-3 sm:space-y-4 text-[11px] sm:text-sm text-neutral-400 font-light leading-relaxed">
                   {vulnerabilities.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
+                    <li key={idx} className="flex items-start gap-2.5 sm:gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-red-500/60 mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -601,11 +616,11 @@ export default function SecurityQuiz() {
             </div>
 
             {/* Vectores de Seguridad */}
-            <div className="mb-20 text-left">
-              <h2 className="text-2xl font-display font-bold mb-10 tracking-widest uppercase text-xs text-blue-500 text-center">Vectores de Seguridad Analizados</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="mb-12 sm:mb-20 text-left">
+              <h2 className="text-xl sm:text-2xl font-display font-bold mb-6 sm:mb-10 tracking-widest uppercase text-xs text-blue-500 text-center">Vectores de Seguridad Analizados</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 {/* Vector I */}
-                <div className="p-8 glass rounded-4xl border border-white/5 relative overflow-hidden flex flex-col justify-between group">
+                <div className="p-5 sm:p-6 md:p-8 glass rounded-2xl sm:rounded-4xl border border-white/5 relative overflow-hidden flex flex-col justify-between group">
                   <div>
                     <span className="text-[9px] font-bold uppercase tracking-widest text-blue-400 block mb-2">Vector I</span>
                     <h4 className="text-md font-bold text-white mb-4">Resistencia Física</h4>
@@ -630,7 +645,7 @@ export default function SecurityQuiz() {
                 </div>
 
                 {/* Vector II */}
-                <div className="p-8 glass rounded-4xl border border-white/5 relative overflow-hidden flex flex-col justify-between group">
+                <div className="p-5 sm:p-6 md:p-8 glass rounded-2xl sm:rounded-4xl border border-white/5 relative overflow-hidden flex flex-col justify-between group">
                   <div>
                     <span className="text-[9px] font-bold uppercase tracking-widest text-amber-400 block mb-2">Vector II</span>
                     <h4 className="text-md font-bold text-white mb-4">Detección y Alerta</h4>
@@ -655,7 +670,7 @@ export default function SecurityQuiz() {
                 </div>
 
                 {/* Vector III */}
-                <div className="p-8 glass rounded-4xl border border-white/5 relative overflow-hidden flex flex-col justify-between group">
+                <div className="p-5 sm:p-6 md:p-8 glass rounded-2xl sm:rounded-4xl border border-white/5 relative overflow-hidden flex flex-col justify-between group">
                   <div>
                     <span className="text-[9px] font-bold uppercase tracking-widest text-purple-400 block mb-2">Vector III</span>
                     <h4 className="text-md font-bold text-white mb-4">Resiliencia y Autonomía</h4>
@@ -682,7 +697,7 @@ export default function SecurityQuiz() {
             </div>
 
             {/* Dictamen Jurídico y Técnico del Experto */}
-            <div className="mb-20 text-left p-6 sm:p-10 glass rounded-4xl border border-white/5 relative overflow-hidden">
+            <div className="mb-12 sm:mb-20 text-left p-4 sm:p-10 glass rounded-2xl sm:rounded-4xl border border-white/5 relative overflow-hidden">
               <div className="absolute top-0 right-0 p-8 text-neutral-800 pointer-events-none hidden sm:block">
                 <ShieldAlert className="w-40 h-40 opacity-[0.03]" />
               </div>
@@ -693,31 +708,50 @@ export default function SecurityQuiz() {
                 className="flex items-center justify-between cursor-pointer sm:cursor-default sm:pointer-events-none select-none"
               >
                 <div>
-                  <h3 className="text-sm font-bold text-blue-500 uppercase tracking-widest">Dictamen Técnico y Jurídico</h3>
+                  <h3 className="text-xs sm:text-sm font-bold text-blue-500 uppercase tracking-widest">Dictamen Técnico y Jurídico</h3>
                   <h4 className="text-xl font-display font-bold text-white mt-2 hidden sm:block">Perspectiva de la Legislación en España (2026)</h4>
                 </div>
                 
                 {/* Chevron indicador solo en móvil */}
                 <div className="sm:hidden text-neutral-400 p-2 glass rounded-xl border border-white/5">
                   {isDictamenOpen ? (
-                    <ChevronUp className="w-5 h-5 text-blue-500" />
+                    <ChevronUp className="w-4 h-4 text-blue-500" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-neutral-400" />
+                    <ChevronDown className="w-4 h-4 text-neutral-400" />
                   )}
                 </div>
               </div>
 
               {/* Título secundario para móvil (se muestra abajo del header interactivo si está colpsado/desplegado) */}
-              <h4 className="text-lg font-display font-bold text-white mt-4 sm:hidden">
+              <h4 className="text-base font-display font-bold text-white mt-3 sm:hidden">
                 Perspectiva de la Legislación en España (2026)
               </h4>
 
               {/* Contenido colapsable en móvil, siempre visible a partir de sm (desktop) */}
-              <div className={`mt-6 transition-all duration-300 ${isDictamenOpen ? "block" : "hidden sm:block"}`}>
-                <p className="text-neutral-400 font-light text-sm leading-relaxed mb-6">
+              <div className={`mt-4 sm:mt-6 transition-all duration-300 ${isDictamenOpen ? "block" : "hidden sm:block"}`}>
+                <p className="text-neutral-400 font-light text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
                   El protocolo de actuación de las Fuerzas y Cuerpos de Seguridad del Estado (Policía Nacional y Guardia Civil) está determinado de forma estricta por la naturaleza de la propiedad y tu capacidad de acreditación inmediata de ocupación:
                 </p>
-                <div className="space-y-4">
+
+                {/* Vista móvil: un solo cajón grande general en lugar de sub cajones individuales */}
+                <div className="block sm:hidden p-4 bg-white/[0.02] rounded-xl border border-white/5">
+                  <p className="text-[11px] text-neutral-300 leading-relaxed font-light">
+                    <strong className="text-white font-semibold uppercase tracking-wider text-blue-400 block mb-1">⚖️ Dictamen Técnico</strong>
+                    {q5Idx === 2 ? (
+                      "Al ser una segunda residencia deshabitada usualmente, una intrusión de larga duración podría catalogarse penalmente como 'Usurpación de inmuebles'. Sin pruebas en vídeo de las últimas 48 horas (delito flagrante), los agentes locales no dispondrán de vía rápida de desalojo directo sin orden judicial, demorando el proceso de recuperación legal. "
+                    ) : (
+                      "Tratándose de tu morada habitual, dispones del amparo por 'Allanamiento de morada'. El principal escollo práctico que surge es demostrar fehacientemente la inmediatez de la intrusión (delito flagrante). Aportar videovigilancia automática a tu terminal móvil es el salvoconducto técnico para exigir un desalojo policial directo. "
+                    )}
+                    {q10Idx === 1 ? (
+                      "Por otra parte, al carecer de batería de respaldo (UPS/SAI), un sabotaje intencionado de los fusibles exteriores desactiva tu CCTV y fibra. Es urgente añadir protección redundante para salvaguardar la alerta remota."
+                    ) : (
+                      "Mantener la redundancia eléctrica actual garantiza que la transmisión de alertas prevenga accesos no deseados incluso ante intentos de sabotaje del tendido eléctrico general."
+                    )}
+                  </p>
+                </div>
+
+                {/* Vista desktop: cajones individuales originales */}
+                <div className="hidden sm:block space-y-4">
                   <div className="p-5 bg-white/[0.02] rounded-3xl border border-white/5 transition-all hover:bg-white/[0.04]">
                     <p className="text-xs text-neutral-300 leading-relaxed font-light">
                       <strong className="text-white font-semibold">Allanamiento de Morada vs Usurpación: </strong> 
@@ -744,17 +778,47 @@ export default function SecurityQuiz() {
             </div>
 
             {/* Blindaje Recomendado */}
-            <div className="mb-20">
-              <h2 className="text-2xl font-display font-bold mb-10 tracking-widest uppercase text-xs text-blue-500">Plan de Acción y Blindaje Recomendado</h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            <div className="mb-12 sm:mb-20">
+              <h2 className="text-xl sm:text-2xl font-display font-bold mb-6 sm:mb-10 tracking-widest uppercase text-xs text-blue-500">Plan de Acción y Blindaje Recomendado</h2>
+              
+              {/* Vista móvil: un solo cajón grande general con las recomendaciones compactamente expuestas */}
+              <div className="block sm:hidden p-4 bg-white/[0.02] rounded-xl border border-white/5 space-y-4 text-left">
+                {finalRecs.map((rec, idx) => (
+                  <div key={rec.id} className={`${idx > 0 ? "border-t border-white/5 pt-3" : ""}`}>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-white p-1 shrink-0 flex items-center justify-center">
+                        <img src={rec.image} alt={rec.name} className="max-w-full max-h-full object-contain" referrerPolicy="no-referrer" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-[11px] font-bold text-white uppercase tracking-wider truncate">{rec.name}</h3>
+                        <p className="text-[9px] text-blue-400 font-semibold tracking-wider mt-0.5">Prioridad #{idx + 1}</p>
+                      </div>
+                    </div>
+                    <p className="text-[11px] text-neutral-300 font-light leading-normal mb-2 italic">
+                      "{rec.reason}"
+                    </p>
+                    <a
+                      href={rec.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-1.5 bg-white text-black hover:bg-blue-600 hover:text-white rounded-lg text-[9px] font-bold uppercase tracking-widest flex items-center justify-center gap-1.5 transition-all"
+                    >
+                      Consultar <ShoppingCart className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              {/* Vista desktop: cajones individuales originales */}
+              <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 text-left">
                 {finalRecs.map((rec) => (
                   <motion.div 
                     key={rec.id} 
                     whileHover={{ y: -5 }}
-                    className="glass p-8 rounded-4xl border border-white/5 flex flex-col items-center group justify-between"
+                    className="glass p-5 sm:p-8 rounded-2xl sm:rounded-4xl border border-white/5 flex flex-col items-center group justify-between"
                   >
                     <div className="w-full">
-                      <div className="w-full aspect-square bg-white rounded-3xl overflow-hidden mb-6 relative border border-white/10 flex items-center justify-center">
+                      <div className="w-full aspect-square bg-white rounded-2xl sm:rounded-3xl overflow-hidden mb-4 sm:mb-6 relative border border-white/10 flex items-center justify-center">
                         <img 
                           src={rec.image} 
                           alt={rec.name} 
@@ -765,9 +829,9 @@ export default function SecurityQuiz() {
                           <Award className="w-5 h-5 text-neutral-900" />
                         </div>
                       </div>
-                      <h3 className="text-xs font-bold mb-4 text-white uppercase tracking-widest text-center">{rec.name}</h3>
-                      <div className="p-4 bg-white/[0.02] rounded-2xl mb-6 border border-white/5">
-                        <p className="text-[10px] text-neutral-400 font-light leading-relaxed italic">
+                      <h3 className="text-xs font-bold mb-3 sm:mb-4 text-white uppercase tracking-widest text-center">{rec.name}</h3>
+                      <div className="p-0 sm:p-4 bg-transparent sm:bg-white/[0.02] rounded-none sm:rounded-2xl mb-4 sm:mb-6 border-0 sm:border border-white/5">
+                        <p className="text-[11px] sm:text-[10px] text-neutral-400 font-light leading-relaxed italic text-center sm:text-left">
                           "{rec.reason}"
                         </p>
                       </div>
@@ -776,7 +840,7 @@ export default function SecurityQuiz() {
                       href={rec.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-4 bg-white text-black hover:bg-blue-600 hover:text-white rounded-2xl text-[10px] font-bold uppercase tracking-widest flex items-center justify-center gap-3 transition-all active:scale-[0.98]"
+                      className="w-full py-3.5 sm:py-4 bg-white text-black hover:bg-blue-600 hover:text-white rounded-xl sm:rounded-2xl text-[10px] font-bold uppercase tracking-widest flex items-center justify-center gap-3 transition-all active:scale-[0.98]"
                     >
                       Consultar <ShoppingCart className="w-4 h-4" />
                     </a>
@@ -785,13 +849,21 @@ export default function SecurityQuiz() {
               </div>
             </div>
 
-            <div className="mb-16 py-10 border-y border-white/5 flex flex-col items-center">
+            <div className="mb-12 py-10 border-y border-white/5 flex flex-col items-center">
               <p className="text-sm text-neutral-500 mb-6 font-bold uppercase tracking-widest text-center">Comparte tu diagnóstico con alguien que necesite proteger su hogar</p>
               <ShareButtons 
                 title="He evaluado la seguridad de mi hogar con Escudo TISA" 
                 url={window.location.origin + "/evaluacion"}
                 description={`Mi puntuación de seguridad es de ${score}/100. ¡Haz el test tú también!`}
               />
+            </div>
+
+            {/* Aviso Informativo Disclaimer */}
+            <div className="mb-12 p-5 bg-white/[0.02] rounded-2xl border border-white/5 text-left max-w-2xl mx-auto">
+              <span className="text-[9px] font-semibold uppercase tracking-widest text-amber-500 block mb-2">⚖️ Aviso Importante y Exclusión de Responsabilidad</span>
+              <p className="text-[11px] text-neutral-400 font-light leading-relaxed">
+                Este pre-diagnóstico técnico es de carácter <strong>estrictamente informativo y preventivo</strong>. Todas las recomendaciones y análisis facilitados se basan en mis conocimientos técnicos y experiencias prácticas en el sector, por lo que constituyen únicamente una guía de orientación conceptual. No sustituyen de ninguna manera la visita técnica, el estudio físico ni la auditoría formal de seguridad que una <strong>empresa o profesional homologado de ese tipo</strong> debe realizar reglamentariamente de forma directa en su propiedad.
+              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center flex-wrap">
@@ -807,12 +879,6 @@ export default function SecurityQuiz() {
               >
                 <RefreshCw className="w-4 h-4" /> Reiniciar Test
               </button>
-              <Link 
-                to="/#experiencia" 
-                className="px-10 py-5 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-3 transition-all shadow-2xl shadow-blue-600/20 active:scale-[0.98]"
-              >
-                Auditoría Profesional <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
           </motion.div>
         </div>
@@ -888,23 +954,23 @@ export default function SecurityQuiz() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
-            className="glass-dark rounded-5xl border border-white/5 p-10 md:p-16 shadow-2xl relative overflow-hidden"
+            className="glass-dark rounded-3xl sm:rounded-5xl border border-white/5 p-6 sm:p-10 md:p-16 shadow-2xl relative overflow-hidden"
           >
             <div className="absolute -top-24 -left-24 w-48 h-48 bg-blue-600/5 rounded-full blur-[80px] pointer-events-none" />
             
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-16 leading-[1.1] tracking-tighter text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-10 md:mb-16 leading-[1.15] tracking-tighter text-white">
               {currentQuestion.text}
             </h2>
 
-            <div className="grid gap-5">
+            <div className="grid gap-3 sm:gap-5">
               {currentQuestion.options.map((option, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleAnswer(idx)}
-                  className="w-full p-8 glass hover:bg-blue-600 border border-white/5 transition-all group flex items-center justify-between rounded-3xl text-left"
+                  className="w-full py-3 px-4 sm:p-6 md:p-8 glass hover:bg-blue-600 border border-white/5 transition-all group flex items-center justify-between rounded-2xl sm:rounded-3xl text-left gap-4"
                 >
-                  <span className="font-bold text-neutral-400 group-hover:text-white transition-colors tracking-tight text-lg">{option.text}</span>
-                  <div className="w-8 h-8 rounded-full glass border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all">
+                  <span className="font-bold text-neutral-400 group-hover:text-white transition-colors tracking-tight text-[12px] sm:text-base md:text-lg flex-1 leading-snug">{option.text}</span>
+                  <div className="w-8 h-8 rounded-full glass border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all shrink-0">
                     <ChevronRight className="w-5 h-5 text-neutral-600 group-hover:text-blue-600 transition-colors" />
                   </div>
                 </button>
